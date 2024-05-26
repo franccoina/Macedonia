@@ -251,6 +251,19 @@ body.open main {
     text-align: center;
 }
 
+.bar-buscador {
+    background-color: transparent;
+    outline: none;
+    box-shadow: none;
+}
+
+.bar-buscador:focus,
+.bar-buscador:active{
+    background-color: transparent; 
+    outline: none;
+    box-shadow: none;
+}
+
 /*------------------------------ food images gallery ------------------------------*/
 
 .img-restaurant {
