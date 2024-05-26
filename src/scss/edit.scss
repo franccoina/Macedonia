@@ -18,12 +18,10 @@
 /* Styling for the section element */
 section {
   z-index: 1;
-  background-image: linear-gradient(
-    0deg,
-    rgba(0, 0, 0, 0.5) 0%,
-    rgba(0, 0, 0, 1) 30%
-  );
-  padding: 20px; 
+  background-image: linear-gradient(0deg,
+      rgba(0, 0, 0, 0.5) 0%,
+      rgba(0, 0, 0, 1) 30%);
+  padding: 20px;
 }
 
 /* Background image settings */
@@ -31,8 +29,8 @@ section {
   z-index: -1;
   position: fixed;
   display: flex;
-  height: 100vh; 
-  width: 100vw; 
+  height: 100vh;
+  width: 100vw;
   background: url("../../public/img/food-login-bg.webp") no-repeat;
   background-position: center;
   background-size: cover;
@@ -43,7 +41,7 @@ section {
   color: white;
   display: flex;
   justify-content: center;
-  font-size: 24px; 
+  font-size: 24px;
 }
 
 .separator {
@@ -54,7 +52,7 @@ section {
 .button-container {
   display: flex;
   justify-content: center;
-  flex-wrap: wrap; 
+  flex-wrap: wrap;
 }
 
 /* DB button styling */
@@ -66,13 +64,13 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 10px; 
+  margin: 10px;
 }
 
 /* CRUD container styling */
 .crud-container {
   margin-top: 50px;
-  padding: 20px; 
+  padding: 20px;
 }
 
 /* CRUD options styling */
@@ -81,27 +79,27 @@ section {
   justify-content: space-around;
   border-bottom: 2px solid rgb(255, 255, 255);
   padding: 20px;
-  flex-wrap: wrap; 
+  flex-wrap: wrap;
 }
 
 .crud-options {
   text-decoration: none;
   color: white;
-  margin: 10px; 
+  margin: 10px;
 }
 
 /* Form styling */
 .form {
   display: flex;
   justify-content: center;
-  flex-wrap: wrap; 
+  flex-wrap: wrap;
 }
 
 .form-edit-create {
   padding-top: 50px;
   display: grid;
-  grid-template-columns: repeat(10, 1fr); 
-  grid-template-rows: repeat(16, 60px); 
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: repeat(25, 60px);
   gap: 20px;
 }
 
@@ -112,7 +110,7 @@ textarea {
   border-radius: 10px;
   background-color: #ffffffb3;
   padding: 10px;
-  width: 100%; 
+  width: 100%;
 }
 
 input::placeholder,
@@ -121,11 +119,11 @@ textarea::placeholder {
 }
 
 
-.caption{
+.caption {
   color: white;
 }
 
-.caption-logo{
+.caption-logo {
   grid-column: 7 / 11;
 }
 
@@ -163,7 +161,7 @@ textarea::placeholder {
   grid-row: 5 / 6;
 }
 
-.caption-about-restaurant{
+.caption-about-restaurant {
   grid-column: 1 / 11;
   grid-row: 6 / 7;
 }
@@ -239,12 +237,38 @@ textarea::placeholder {
 /* Keyword textarea styling */
 .form-key-word {
   grid-column: 1 / 11;
-  grid-row: 11 / 13;
+  grid-row: 12 / 14;
+}
+
+// requirements styling
+
+.first-requirements {
+  grid-column: 1 / 11;
+  grid-row: 1 / 2;
+}
+
+.second-requirements {
+  grid-column: 1 / 11;
+  grid-row: 6 / 7;
+}
+
+.third-requirements {
+  grid-column: 1 / 11;
+  grid-row: 11 / 12;
+}
+
+.fourth-requirements {
+  grid-column: 1 / 11;
+  grid-row: 14 / 15;
+}
+
+.requirements{
+  color: white;
 }
 
 /* responsive caption */
 .caption {
-  font-size: 24px; 
+  font-size: 24px;
 }
 
 
