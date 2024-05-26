@@ -149,7 +149,7 @@
   }
   
   body.open .menu a {
-    animation: appear 0.5s both;
+    animation: appear 0.5s ease-in-out;
   }
   
   body.open main {
@@ -315,6 +315,8 @@
     background-size: cover;
     width: 300px;
   }
+
+ /*------------------------------ about us, info and functions ------------------------------*/
   
   .about-section1{
     padding-top: 50px;
@@ -536,8 +538,9 @@
     body.open .menu{
       transition: none;
     }
+    
     body.open .menu a{
-      animation:none;
+      animation: appear 0.3s ease-in-out;
     }
 
     body.open .navbar-burger {
@@ -553,9 +556,6 @@
       height: 65px;
       translate: 0 10px;
       visibility: visible;
-    }
-    .about-title1, .about-title2, .about-title3{
-      font-size: 10vw;
     }
     .footer-form{
       text-align: center;
@@ -598,9 +598,6 @@
       translate: 0 20px;
       visibility: visible;
       transition: 1s;
-    }
-    .about-title1, .about-title2, .about-title3{
-      font-size: 10vw;
     }
     .footer-form{
       text-align: center;
