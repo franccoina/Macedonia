@@ -11,7 +11,7 @@
 
 :root {
     --page-bg: #ffffff;
-    --navbar-bg: #ffffffe6;
+    --navbar-bg: #000000e6;
 
     --grad-orange: #ff812fb3;
     --grad-brown: #8f6028b3;
@@ -41,24 +41,16 @@
 
 /*------------------------------ tags and general sttings ------------------------------*/
 
-main,
-header,
-footer {
-    background-color: var(--page-bg);
+body{
+    background-image: url("../../public/img/food-login-bg.webp");
+    background-size: cover;
+    background-position: center;
 }
 
-h2 {
-    font-size: 7vw;
-}
-
-h1 {
-    font-size: 10vw;
-}
-
-h5 {
-    color: var(--whitepacity-light);
-    font-weight: normal;
-    font-size: 30px;
+h1{
+    font-size: 5vw;
+    color: #fff;
+    text-align: center;
 }
 
 li {
@@ -86,28 +78,28 @@ a{
 .menu-home {
     animation-delay: 0.1s;
     & p{
-        color: var(--orange);
+        color: var(--white);
     }
 }
 
 .menu-explora {
     animation-delay: 0.3s;
     & p{
-        color: var(--orange);
+        color: var(--white);
     }
 }
 
 .menu-administra {
     animation-delay: 0.5s;
     & p{
-        color: var(--orange);
+        color: var(--white);
     }
 }
 
 .menu-contacta {
     animation-delay: 0.7s;
     & p{
-        color: var(--orange);
+        color: var(--white);
     }
 }
 
@@ -181,155 +173,96 @@ body.open main {
     }
 }
 
-/*------------------------------ titles ------------------------------*/
+/*------------------------------ login ------------------------------*/
 
-.title {
-    translate: 0 100px;
-    display: flex;
-    justify-content: flex-end;
-    color: var(--orangepacity);
-
-    & h1 {
-        font-size: 14vw;
-    }
+.fade{
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(0deg, rgba(0,0,0,0.3) 0%, rgba(0,0,0,1) 30%);
 }
 
-.title-1 {
-    display: flex;
-    justify-content: flex-start;
-    color: var(--orange);
-  }
-  
-  .title-2 {
+#login{
     display: flex;
     justify-content: center;
-    color: var(--orange);
-  }
-  
-  .title-3 {
-    display: flex;
-    justify-content: flex-end;
-    color: var(--orange);
-  }
-
-/*------------------------------ searching bar ------------------------------*/
-
-#research {
+    padding-top: 120px;
     width: 100%;
-    height: inherit;
+}
+.form-box{
+    position: relative;
+    background: transparent;
+    border: 2px solid rgba(255,255,255,0.5);
+    border-radius: 20px;
+    backdrop-filter: blur(15px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form{
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
+    align-items: center;
 }
 
-.bi-search {
-    font-size: 20px;
-    color: var(--blackpacity);
+.inputbox{
+    position: relative;
+    margin: 30px 0;
+    width: 310px;
+    border-bottom: 2px solid var(--white);
 }
 
-.buscador {
-    box-shadow: 2px 2px 8px 1px var(--shadows);
-    margin-top: 40px;
-    margin-bottom: 30px;
+.inputbox input {
     width: 100%;
-    height: 20%;
-    gap: 15px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.bar-buscador {
-    width: 60%;
-    padding: 15px;
-    border-radius: 5px;
+    height: 50px;
+    background: transparent;
     border: none;
+    outline: none;
+    padding:0 35px 0 5px;
+    color: var(--white);
+}
+.inputbox i{
+    position: absolute;
+    right: 8px;
+    color: var(--white);
+    top: 20px;
 }
 
-.bar-buscador::placeholder {
+input[type="text"]::placeholder{
+    color: var(--white);
+}
+
+input[type="password"]::placeholder{
+    color: var(--white);
+}
+
+.submit{
+    width: 80%;
+    height: 40px;
+    cursor: pointer;
+}
+
+.contacta-link{
+    color: var(--white);
     text-align: center;
+    width: 80%;
 }
-
-/*------------------------------ food images gallery ------------------------------*/
-
-.img-restaurant {
-    width: 100%;
-    height: auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 40px;
-    max-width: 1880px;
-    margin: 0 auto;
-    padding-bottom: 120px;
+.contacta-link p a{
+    color: var(--white);
+    font-weight: 600;
 }
-
-.img-restaurant section {
-    justify-self: end;
-    display: flex;
-    flex-direction: column;
-    align-items: end;
-    justify-content: center;
-    width: 100%;
-    transition: 0.8s;
-}
-
-.img-restaurant div {
-    height: 12rem;
-    transition: 0.8s;
-    border-radius: 10px;
-}
-
-.img-restaurant div:hover {
-    transform: scale(1.1);
-    transition: 0.8s;
-}
-
-.img-restaurant video {
-    transition: 0.8s;
-    border-radius: 10px;
-    height: 12rem;
-}
-
-.img-restaurant video:hover {
-    transform: scale(1.1);
-    transition: 0.8s;
-}
-
-.img-restaurant-pic1 {
-    background-image: url("https://images.pexels.com/photos/12706240/pexels-photo-12706240.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
-    background-size: cover;
-    width: 250px;
-}
-
-.img-restaurant-pic2 {
-    background-image: url("https://images.pexels.com/photos/20844826/pexels-photo-20844826/free-photo-of-comida-restaurante-pez-pescado.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
-    background-size: cover;
-    width: 200px;
-}
-
-.img-restaurant-pic3 {
-    background-image: url("https://images.pexels.com/photos/1907227/pexels-photo-1907227.jpeg");
-    background-size: cover;
-    width: 250px;
-}
-
-.img-restaurant-pic4 {
-    background-image: url("https://images.pexels.com/photos/8112966/pexels-photo-8112966.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
-    background-size: cover;
-    width: 300px;
+.contacta-link p a:hover{
+    text-decoration: underline;
 }
 
 
 /*------------------------------ footer or contact section ------------------------------*/
 
 #footer {
-    padding-top: 250px;
+    padding-top: 90px;
     padding-bottom: 25px;
-    background-image: linear-gradient(0deg,
-            var(--orange) 35%,
-            var(--white) 100%);
 }
 
 .footer-content {
@@ -366,29 +299,6 @@ body.open main {
 /*mobile*/
 @media (min-width: 320px) and (max-width: 769px) {
 
-    .img-restaurant {
-        max-width: 320px;
-    }
-
-    .img-restaurant-pic1 {
-        width: 140px;
-        translate: 50px 50px;
-    }
-
-    .img-restaurant-pic2 {
-        width: 140px;
-        translate: 50px;
-    }
-
-    .img-restaurant-pic3,
-    .img-restaurant-pic4 {
-        display: none;
-    }
-
-    .img-restaurant div {
-        height: 8rem;
-    }
-
     .menu,
     .menu-home,
     .menu-administra,
@@ -414,14 +324,9 @@ body.open main {
         width: 30px;
     }
 
-    .buscador,
     p {
         font-weight: normal;
-        font-size: 20px;
-    }
-
-    .title {
-        padding-right: 45px;
+        font-size: 15px;
     }
 
     /* … */
@@ -429,28 +334,6 @@ body.open main {
 
 /* tablet */
 @media (min-width: 770px) and (max-width: 1023px) {
-
-    .img-restaurant {
-        max-width: 770px;
-    }
-
-    .img-restaurant-pic1 {
-        width: 300px;
-    }
-
-    .img-restaurant-pic2 {
-        display: none;
-    }
-
-    .img-restaurant-pic3,
-    .img-restaurant-pic4 {
-        translate: 45px;
-    }
-
-    .img-restaurant section {
-        padding-right: 45px;
-    }
-
     body.open .navbar-burger {
         position: fixed;
         translate: 0 15px;
@@ -466,14 +349,9 @@ body.open main {
         transition: 1s;
     }
 
-    .buscador,
     p {
         font-weight: normal;
-        font-size: 25px;
-    }
-
-    .title {
-        padding-right: 80px;
+        font-size: 15px;
     }
 
     /* … */
@@ -481,19 +359,6 @@ body.open main {
 
 /* portatil */
 @media (min-width: 1024px) and (max-width: 1879px) {
-
-    .img-restaurant {
-        max-width: 1024px;
-    }
-
-    .img-restaurant-pic1,
-    .img-restaurant-pic3 {
-        width: 180px;
-    }
-
-    .img-restaurant-pic4 {
-        display: none;
-    }
 
     body.open .navbar-burger {
         position: fixed;
@@ -511,14 +376,9 @@ body.open main {
         transition: 1s;
     }
 
-    .buscador,
     p {
         font-weight: normal;
-        font-size: 25px;
-    }
-
-    .title {
-        padding-right: 85px;
+        font-size: 15px;
     }
 
     /* … */
@@ -533,14 +393,6 @@ body.open main {
         transition: 1s;
     }
 
-    .img-restaurant div {
-        width: 300px;
-    }
-
-    .img-restaurant section {
-        padding-right: 85px;
-    }
-
     .navbar-burger img {
         padding-top: 40px;
         width: 50px;
@@ -552,14 +404,9 @@ body.open main {
         transition: 1s;
     }
 
-    .buscador,
     p {
         font-weight: normal;
-        font-size: 35px;
-    }
-
-    .title {
-        padding-right: 105px;
+        font-size: 25px;
     }
 
     /* … */

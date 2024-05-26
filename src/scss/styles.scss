@@ -63,6 +63,10 @@
     background: transparent;
     cursor: pointer;
   }
+
+  a{
+    text-decoration: none;
+}
   
   /*------------------------------ navbar ------------------------------*/
   
@@ -73,19 +77,31 @@
   
   .menu-home {
     animation-delay: 0.1s;
-  }
-  
-  .menu-explora {
+    & p{
+        color: var(--orange);
+    }
+}
+
+.menu-explora {
     animation-delay: 0.3s;
-  }
-  
-  .menu-administra {
+    & p{
+        color: var(--orange);
+    }
+}
+
+.menu-administra {
     animation-delay: 0.5s;
-  }
-  
-  .menu-contacta {
+    & p{
+        color: var(--orange);
+    }
+}
+
+.menu-contacta {
     animation-delay: 0.7s;
-  }
+    & p{
+        color: var(--orange);
+    }
+}
   
   .navbar-burger {
     z-index: 6;
@@ -115,6 +131,14 @@
     border-radius: 100px;
     visibility: hidden;
   }
+
+  #navbar section{
+    display: none;
+}
+
+body.open #navbar section{
+  display: block;
+}
   
   .menu {
     z-index: 4;
@@ -129,23 +153,18 @@
     height: 100%;
     background: var(--navbar-bg);
     opacity: 0;
-    display: none;
-    visibility: hidden;
     transition: 1s;
   }
   
   body.open .menu {
     transition: 1s;
     opacity: 1;
-    visibility: visible;
     position: fixed;
     display: flex;
   }
   
   .menu a {
-    color: var(--orange);
     font-size: 4vw;
-    text-decoration: none;
   }
   
   body.open .menu a {
@@ -514,9 +533,6 @@
   .footer-icons{
     align-self: center;
     text-indent: 10px;
-    & a{
-      color: var(--black);
-    }
   }
   
   /*------------------------------ media querys ------------------------------*/
