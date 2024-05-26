@@ -164,7 +164,7 @@ textarea::placeholder {
   grid-row: 5 / 6;
 }
 
-.caption-about-restaurant{
+.caption-about-restaurant {
   grid-column: 1 / 11;
   grid-row: 6 / 7;
 }
@@ -240,7 +240,33 @@ textarea::placeholder {
 /* Keyword textarea styling */
 .form-key-word {
   grid-column: 1 / 11;
-  grid-row: 11 / 13;
+  grid-row: 12 / 14;
+}
+
+// requirements styling
+
+.first-requirements {
+  grid-column: 1 / 11;
+  grid-row: 1 / 2;
+}
+
+.second-requirements {
+  grid-column: 1 / 11;
+  grid-row: 6 / 7;
+}
+
+.third-requirements {
+  grid-column: 1 / 11;
+  grid-row: 11 / 12;
+}
+
+.fourth-requirements {
+  grid-column: 1 / 11;
+  grid-row: 14 / 15;
+}
+
+.requirements{
+  color: white;
 }
 
 /* responsive caption */
