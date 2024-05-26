@@ -1,0 +1,402 @@
+// Import all of Bootstrap's CSS
+@import "bootstrap/scss/bootstrap";
+
+//Import Bootstrap's icons
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+
+//Import normalize
+@import url(./normalize.scss);
+
+/*------------------------------ document settings ------------------------------*/
+
+:root {
+    --page-bg: #ffffff;
+    --navbar-bg: #ff812fb3;
+
+    --grad-orange: #ff812fb3;
+    --grad-brown: #8f6028b3;
+    --grad-black: #000000b3;
+
+    --grad-coffee: #622b09cc;
+    --grad-gray: #f7f7f7;
+
+    --orange: #d86820;
+    --black: #000000;
+    --white: #ffffff;
+    --whitepacity: #ffffffc4;
+    --whitepacity-light: #ffffff80;
+    --blackpacity: #0000008e;
+    --shadows: #00000033;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: "Wix Madefor Display", sans-serif;
+    font-style: normal;
+}
+
+/*------------------------------ tags and general sttings ------------------------------*/
+
+main,
+header,
+footer {
+    background-color: var(--page-bg);
+}
+
+h2 {
+    font-size: 7vw;
+}
+
+h5 {
+    color: var(--whitepacity-light);
+    font-weight: normal;
+    font-size: 30px;
+}
+
+li {
+    list-style: none;
+}
+
+button {
+    border: 0;
+    padding: 0;
+    background: transparent;
+    cursor: pointer;
+}
+
+/*------------------------------ navbar ------------------------------*/
+
+#navbar {
+    display: flex;
+    justify-content: center;
+}
+
+.menu-home {
+    animation-delay: 0.1s;
+}
+
+.menu-explora {
+    animation-delay: 0.3s;
+}
+
+.menu-administra {
+    animation-delay: 0.5s;
+}
+
+.menu-contacta {
+    animation-delay: 0.7s;
+}
+
+.navbar-burger {
+    z-index: 6;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 80px;
+    transition: 0.3s;
+}
+
+body.open .navbar-burger {
+    position: fixed;
+    transition: 0.3s;
+}
+
+.menu {
+    z-index: 4;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    width: 100%;
+    height: 100%;
+    background: var(--navbar-bg);
+    opacity: 0;
+    visibility: hidden;
+    transition: 1s;
+}
+
+body.open .menu {
+    transition: 1s;
+    opacity: 1;
+    visibility: visible;
+    position: fixed;
+    display: flex;
+}
+
+.menu a {
+    color: var(--white);
+    font-size: 4vw;
+    text-decoration: none;
+}
+
+body.open .menu a {
+    animation: appear 0.5s both;
+}
+
+body.open main {
+    filter: blur(10px);
+}
+
+@keyframes appear {
+    0% {
+        opacity: 0;
+        translate: 0 50px;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+/*------------------------------ banner carousel ------------------------------*/
+
+
+/*------------------------------ footer or contact section ------------------------------*/
+
+#footer {
+    padding-top: 250px;
+    padding-bottom: 25px;
+    background-image: linear-gradient(0deg,
+            var(--orange) 35%,
+            var(--white) 100%);
+}
+
+.footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+
+    & div {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    & div {
+        gap: 20px;
+        justify-self: flex-start;
+    }
+}
+
+.footer-form {
+    display: flex;
+    justify-content: center;
+}
+
+.footer-icons {
+    align-self: center;
+    text-indent: 10px;
+
+    & a {
+        color: var(--black);
+    }
+}
+
+/*------------------------------ media querys ------------------------------*/
+
+/*mobile*/
+@media (min-width: 320px) and (max-width: 769px) {
+
+    .img-gallery,
+    .top-gallery {
+        max-width: 320px;
+    }
+
+    .img-gallery-pic3,
+    .img-gallery-pic5,
+    .img-gallery-pic2,
+    .img-gallery-pic9,
+    .img-gallery-pic1,
+    .img-gallery-pic12 {
+        display: none;
+    }
+
+    .explora-pic,
+    .explora-pic2,
+    .experiencia-pic,
+    .reserva-pic {
+        width: 50vw;
+    }
+
+    .menu,
+    .menu-home,
+    .menu-administra,
+    .menu-contacta,
+    .menu-explora {
+        transition: none;
+    }
+
+    body.open .menu {
+        transition: none;
+    }
+
+    body.open .menu a {
+        animation: none;
+    }
+
+    body.open .navbar-burger {
+        position: fixed;
+    }
+
+    .navbar-burger img {
+        padding-top: 5px;
+        width: 30px;
+    }
+
+    .about-title1,
+    .about-title2,
+    .about-title3 {
+        font-size: 10vw;
+    }
+
+    .footer-form {
+        text-align: center;
+    }
+
+    p {
+        font-weight: normal;
+        font-size: 20px;
+    }
+
+    /* … */
+}
+
+/* tablet */
+@media (min-width: 770px) and (max-width: 1023px) {
+
+    .img-gallery,
+    .top-gallery {
+        max-width: 770px;
+    }
+
+    .explora-pic,
+    .explora-pic2,
+    .experiencia-pic,
+    .reserva-pic {
+        width: 45vw;
+    }
+
+    .contacta {
+        padding-top: 50px;
+    }
+
+    body.open .navbar-burger {
+        position: fixed;
+        translate: 0 15px;
+        transition: 1s;
+    }
+
+    .navbar-burger img {
+        width: 30px;
+        transition: 1s;
+    }
+
+    body.open .navbar-burger img {
+        transition: 1s;
+    }
+
+    .about-title1,
+    .about-title2,
+    .about-title3 {
+        font-size: 10vw;
+    }
+
+    .footer-form {
+        text-align: center;
+    }
+
+    p {
+        font-weight: normal;
+        font-size: 25px;
+    }
+
+    /* … */
+}
+
+/* portatil */
+@media (min-width: 1024px) and (max-width: 1879px) {
+
+    .img-gallery,
+    .top-gallery {
+        max-width: 1024px;
+    }
+
+    .explora-pic,
+    .explora-pic2,
+    .experiencia-pic,
+    .reserva-pic {
+        width: 45vw;
+    }
+
+    .contacta {
+        padding-top: 100px;
+    }
+
+    body.open .navbar-burger {
+        position: fixed;
+        translate: 0 10px;
+        transition: 1s;
+    }
+
+    .navbar-burger img {
+        padding-top: 50px;
+        width: 30px;
+        transition: 1s;
+    }
+
+    body.open .navbar-burger img {
+        transition: 1s;
+    }
+
+    p {
+        font-weight: normal;
+        font-size: 25px;
+    }
+
+    /* … */
+}
+
+/* PC */
+@media (min-width: 1880px) {
+    .contacta {
+        padding-top: 150px;
+    }
+
+    body.open .navbar-burger {
+        position: fixed;
+        translate: 0 100px;
+        transition: 1s;
+    }
+
+    .navbar-burger img {
+        padding-top: 40px;
+        width: 50px;
+        transition: 1s;
+    }
+
+    body.open .navbar-burger img {
+        padding-top: 20px;
+        transition: 1s;
+    }
+
+    p {
+        font-weight: normal;
+        font-size: 35px;
+    }
+
+    /* … */
+}
