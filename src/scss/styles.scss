@@ -30,23 +30,17 @@
   }
 
   * {
-    box-sizing: border-box;
+    box-sizing:border-box;
     padding: 0;
     margin: 0;
     font-family: "Wix Madefor Display", sans-serif;
-    font-weight:700;
     font-style:normal;
   }
   
   /*------------------------------ tags and general sttings ------------------------------*/
   
-  html{
+  main, header, footer{
     background-color: var(--page-bg);
-  }
-  
-  p{
-    font-weight: normal;
-    font-size: 19px;
   }
   
   h2{
@@ -101,13 +95,12 @@
     align-items: center;
     width: 80px;
     height: 80px;
-    transition: 1s;
+    transition: 0.3s;
   }
   
   body.open .navbar-burger {
     position: fixed;
-    translate: 0 60px;
-    transition: 1s;
+    transition: 0.3s;
   }
   
   .navbar-burger-fade {
@@ -120,15 +113,7 @@
       var(--grad-black) 100%
     );
     border-radius: 100px;
-    width: 80px;
-    height: 80px;
     visibility: hidden;
-  }
-  
-  body.open .navbar-burger-fade {
-    visibility: visible;
-    translate: 0 60px;
-    transition: 1s;
   }
   
   .menu {
@@ -197,7 +182,7 @@
     position: relative;
   }
   
-  .img-carousel1{
+  .img-carousel{
     position: absolute;
     left: 0;
     right: 0;
@@ -386,12 +371,10 @@
   }
   
   .about-subtitle1, .about-subtitle3{
-    font-size: 20px;
     color: var(--white);
   }
   
   .about-subtitle2{
-    font-size: 20px;
     color: var(--black);
   }
   
@@ -541,8 +524,45 @@
     .img-gallery, .top-gallery {
       max-width: 320px;
     }
+    .img-gallery-pic3, .img-gallery-pic5, .img-gallery-pic2, .img-gallery-pic9, .img-gallery-pic1, .img-gallery-pic12{
+      display: none;
+    }
     .explora-pic,.explora-pic2,.experiencia-pic,.reserva-pic{
       width: 50vw;
+    }
+    .menu, .menu-home, .menu-administra, .menu-contacta, .menu-explora{
+      transition:none;
+    }
+    body.open .menu{
+      transition: none;
+    }
+    body.open .menu a{
+      animation:none;
+    }
+
+    body.open .navbar-burger {
+      position: fixed;
+    }
+    .navbar-burger img{
+      padding-top: 5px;
+      width: 30px;
+    }
+    
+    body.open .navbar-burger-fade{
+      width: 65px;
+      height: 65px;
+      translate: 0 10px;
+      visibility: visible;
+    }
+    .about-title1, .about-title2, .about-title3{
+      font-size: 10vw;
+    }
+    .footer-form{
+      text-align: center;
+    }
+    p{
+      font-weight: normal;
+      font-size: 20px;
     }
     /* … */
   }
@@ -557,6 +577,39 @@
     .contacta{
       padding-top: 50px;
     }
+    
+    body.open .navbar-burger {
+      position: fixed;
+      translate: 0 15px;
+      transition: 1s;
+    }
+    .navbar-burger img{
+      width: 30px;
+      transition: 1s;
+    }
+
+    body.open .navbar-burger img{
+      transition: 1s;
+    }
+    
+    body.open .navbar-burger-fade{
+      width: 70px;
+      height: 70px;
+      translate: 0 20px;
+      visibility: visible;
+      transition: 1s;
+    }
+    .about-title1, .about-title2, .about-title3{
+      font-size: 10vw;
+    }
+    .footer-form{
+      text-align: center;
+    }
+    p{
+      font-weight: normal;
+      font-size: 25px;
+    }
+    
     /* … */
   }
    /* portatil */
@@ -570,6 +623,32 @@
     .contacta{
       padding-top: 100px;
     }
+    body.open .navbar-burger {
+      position: fixed;
+      translate: 0 10px;
+      transition: 1s;
+    }
+    .navbar-burger img{
+      padding-top: 50px;
+      width: 30px;
+      transition: 1s;
+    }
+
+    body.open .navbar-burger img{
+      transition: 1s;
+    }
+    
+    body.open .navbar-burger-fade{
+      width: 70px;
+      height: 70px;
+      translate: 0 40px;
+      visibility: visible;
+      transition: 1s;
+    }
+    p{
+      font-weight: normal;
+      font-size: 25px;
+    }
     /* … */
   }
   
@@ -577,6 +656,33 @@
   @media (min-width: 1880px) {
     .contacta{
       padding-top: 150px;
+    }
+    body.open .navbar-burger {
+      position: fixed;
+      translate: 0 100px;
+      transition: 1s;
+    }
+    .navbar-burger img{
+      padding-top: 40px;
+      width: 50px;
+      transition: 1s;
+    }
+
+    body.open .navbar-burger img{
+      padding-top: 20px;
+      transition: 1s;
+    }
+    
+    body.open .navbar-burger-fade{
+      width: 100px;
+      height: 100px;
+      translate: 0 100px;
+      visibility: visible;
+      transition: 1s;
+    }
+    p{
+      font-weight: normal;
+      font-size: 35px;
     }
     /* … */
   }
