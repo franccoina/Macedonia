@@ -44,7 +44,19 @@
 main,
 header,
 footer {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
     background-color: var(--page-bg);
+}
+
+body {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 h2 {
@@ -72,7 +84,7 @@ button {
     cursor: pointer;
 }
 
-a{
+a {
     text-decoration: none;
 }
 
@@ -85,28 +97,32 @@ a{
 
 .menu-home {
     animation-delay: 0.1s;
-    & p{
+
+    & p {
         color: var(--orange);
     }
 }
 
 .menu-explora {
     animation-delay: 0.3s;
-    & p{
+
+    & p {
         color: var(--orange);
     }
 }
 
 .menu-administra {
     animation-delay: 0.5s;
-    & p{
+
+    & p {
         color: var(--orange);
     }
 }
 
 .menu-contacta {
     animation-delay: 0.7s;
-    & p{
+
+    & p {
         color: var(--orange);
     }
 }
@@ -127,13 +143,13 @@ body.open .navbar-burger {
     transition: 0.3s;
 }
 
-#navbar section{
+#navbar section {
     display: none;
 }
 
-body.open #navbar section{
+body.open #navbar section {
     display: block;
-  }
+}
 
 .menu {
     z-index: 4;
@@ -198,19 +214,19 @@ body.open main {
     display: flex;
     justify-content: flex-start;
     color: var(--orange);
-  }
-  
-  .title-2 {
+}
+
+.title-2 {
     display: flex;
     justify-content: center;
     color: var(--orange);
-  }
-  
-  .title-3 {
+}
+
+.title-3 {
     display: flex;
     justify-content: flex-end;
     color: var(--orange);
-  }
+}
 
 /*------------------------------ searching bar ------------------------------*/
 
@@ -258,8 +274,8 @@ body.open main {
 }
 
 .bar-buscador:focus,
-.bar-buscador:active{
-    background-color: transparent; 
+.bar-buscador:active {
+    background-color: transparent;
     outline: none;
     box-shadow: none;
 }
@@ -334,15 +350,14 @@ body.open main {
     width: 300px;
 }
 
-
 /*------------------------------ footer or contact section ------------------------------*/
 
 #footer {
-    padding-top: 250px;
+    padding-top: 85px;
     padding-bottom: 25px;
     background-image: linear-gradient(0deg,
-        var(--orange) 35%,
-        var(--white) 100%);
+            var(--orange) 35%,
+            var(--white) 100%);
 }
 
 .footer-content {
@@ -361,8 +376,9 @@ body.open main {
     display: flex;
     flex-direction: column;
     align-items: center;
+
     & div {
-        gap: 50px;
+        gap: 30px;
         justify-self: flex-start;
     }
 }
@@ -383,12 +399,16 @@ body.open main {
 
     .img-restaurant-pic1 {
         width: 140px;
-        translate: 50px 50px;
+        position: relative;
+        top: 70px;
+        right: 10px;
     }
 
     .img-restaurant-pic2 {
         width: 140px;
-        translate: 50px;
+        position: relative;
+        top: 20px;
+        left: 10px;
     }
 
     .img-restaurant-pic3,
@@ -428,7 +448,7 @@ body.open main {
     .buscador,
     p {
         font-weight: normal;
-        font-size: 20px;
+        font-size: 18px;
     }
 
     .title {
@@ -455,7 +475,8 @@ body.open main {
 
     .img-restaurant-pic3,
     .img-restaurant-pic4 {
-        translate: 45px;
+        position: relative;
+        left: 40px
     }
 
     .img-restaurant section {
@@ -480,7 +501,7 @@ body.open main {
     .buscador,
     p {
         font-weight: normal;
-        font-size: 25px;
+        font-size: 23px;
     }
 
     .title {
@@ -574,4 +595,68 @@ body.open main {
     }
 
     /* … */
+}
+
+
+
+
+
+
+
+
+
+#reserva {
+    background-color: var(--orange);
+}
+
+.form-booking {
+    padding-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(16, 20px);
+    gap: 20px;
+}
+
+input,
+textarea {
+    border: white 1px solid;
+    border-radius: 10px;
+    background-color: #ffffffb3;
+    padding: 10px;
+    width: 100%;
+}
+
+.form-name {
+    grid-column: 1 / 6;
+}
+
+.form-email {
+    grid-column: 6 / 11;
+}
+
+.form-phone-number {
+    grid-column: 2 / 4;
+    grid-row: 3 / 4;
+}
+
+.form-date {
+    grid-column: 4 / 8;
+    grid-row: 3 / 4;
+}
+
+.form-hour {
+    grid-column: 8 / 10;
+    grid-row: 3 / 4;
+}
+
+.form-people {
+    grid-column: 4 / 6;
+    grid-row: 5 / 6;
+}
+
+.submit {
+    grid-column: 6 / 8;
+    grid-row: 7 / 9;
+    border-radius: 10px;
+    background-color: #ffffffb3;
 }

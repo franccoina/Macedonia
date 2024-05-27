@@ -17,7 +17,7 @@ nav.addEventListener("click", () => {
 (function () {
     let userOnline = localStorage.getItem("userOnline");
     if (userOnline != null) {
-        window.location.href = "../pages/create.html";
+        window.location.href = "./create.html";
     }
 })();
 
@@ -40,7 +40,7 @@ form.addEventListener("submit", async function (event) {
         if (user.password === password.value) {
             alert("Bienvenido");
             localStorage.setItem("userOnline", JSON.stringify(user));
-            window.location.href = "../pages/create.html";
+            window.location.href = "./create.html";
         } else {
             alert("La contraseña no es correcta");
         }

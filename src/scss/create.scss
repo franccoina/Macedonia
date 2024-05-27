@@ -7,9 +7,6 @@
 //Import normalize
 @import url(./normalize.scss);
 
-
-
-
 * {
   box-sizing: border-box;
   padding: 0;
@@ -19,12 +16,15 @@
 /* Styling for the section element */
 section {
   z-index: 1;
-  background-image: linear-gradient(
-    0deg,
-    rgba(0, 0, 0, 0.5) 0%,
-    rgba(0, 0, 0, 1) 30%
-  );
-  padding: 20px; 
+  background-image: linear-gradient(0deg,
+      #00000080 0%,
+      #000000 30%);
+  padding: 20px;
+}
+
+footer {
+  background-color: #00000080;
+  padding-bottom: 25px;
 }
 
 /* Background image settings */
@@ -32,8 +32,8 @@ section {
   z-index: -1;
   position: fixed;
   display: flex;
-  height: 100vh; 
-  width: 100vw; 
+  height: 100vh;
+  width: 100vw;
   background: url("../../public/img/food-login-bg.webp") no-repeat;
   background-position: center;
   background-size: cover;
@@ -44,18 +44,25 @@ section {
   color: white;
   display: flex;
   justify-content: center;
-  font-size: 24px; 
+  font-size: 24px;
+}
+
+.crud-options h2 {
+  font-style: oblique;
+  font-weight: lighter;
 }
 
 .separator {
+  font-weight: lighter;
   font-size: 5vw;
+  font-style: oblique;
 }
 
 /* Button container styling */
 .button-container {
   display: flex;
   justify-content: center;
-  flex-wrap: wrap; 
+  flex-wrap: wrap;
 }
 
 /* DB button styling */
@@ -67,13 +74,12 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 10px; 
+  margin: 10px;
 }
 
 /* CRUD container styling */
 .crud-container {
-  margin-top: 50px;
-  padding: 20px; 
+  padding: 20px;
 }
 
 /* CRUD options styling */
@@ -82,27 +88,27 @@ section {
   justify-content: space-around;
   border-bottom: 2px solid rgb(255, 255, 255);
   padding: 20px;
-  flex-wrap: wrap; 
+  flex-wrap: wrap;
 }
 
 .crud-options {
   text-decoration: none;
   color: white;
-  margin: 10px; 
+  margin: 10px;
 }
 
 /* Form styling */
 .form {
   display: flex;
   justify-content: center;
-  flex-wrap: wrap; 
+  flex-wrap: wrap;
 }
 
 .form-edit-create {
   padding-top: 50px;
   display: grid;
-  grid-template-columns: repeat(10, 1fr); 
-  grid-template-rows: repeat(16, 60px); 
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: repeat(16, 60px);
   gap: 20px;
 }
 
@@ -113,7 +119,7 @@ textarea {
   border-radius: 10px;
   background-color: #ffffffb3;
   padding: 10px;
-  width: 100%; 
+  width: 100%;
 }
 
 input::placeholder,
@@ -122,11 +128,11 @@ textarea::placeholder {
 }
 
 
-.caption{
+.caption {
   color: white;
 }
 
-.caption-logo{
+.caption-logo {
   grid-column: 7 / 11;
 }
 
@@ -265,13 +271,41 @@ textarea::placeholder {
   grid-row: 14 / 15;
 }
 
-.requirements{
+.requirements {
   color: white;
 }
 
 /* responsive caption */
 .caption {
-  font-size: 24px; 
+  font-size: 24px;
+}
+
+.footer-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  & div {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  & div {
+    gap: 30px;
+    justify-self: flex-start;
+  }
+}
+
+.footer-icons {
+  align-self: center;
+  text-indent: 10px;
 }
 
 

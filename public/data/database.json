@@ -1,1 +1,32 @@
-{}
+{
+    "users": [
+      {
+        "id": "001",
+        "name": "John",
+        "lastName": "Doe",
+        "username": "johndoe",
+        "password": "password"
+      },
+      {
+        "id": "002",
+        "name": "Jane",
+        "lastName": "Doe",
+        "username": "janedoe",
+        "password": "password"
+      },
+      {
+        "id": "003",
+        "name": "Jules",
+        "lastName": "Doe",
+        "username": "julesdoe",
+        "password": "password"
+      },
+      {
+        "id": "004",
+        "name": "Julie",
+        "lastName": "Doe",
+        "username": "juliedoe",
+        "password": "password"
+      }
+    ]
+  }

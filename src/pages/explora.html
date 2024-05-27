@@ -62,7 +62,7 @@
                 </section>
             </nav>
         </header>
-        <main>
+        <main class="w-100">
             <article class="title">
                 <h1>explora</h1>
             </article>
@@ -116,7 +116,41 @@
                     </div>
                 </article>
             </section>
-            <section></section>
+            <section id="reserva">
+                <article class="container">
+                    <div>
+                        <h2>Haz una reserva</h2>
+                        <p>Reserva ya tu mesa y disfruta de una maravillosa experiencia gastronómica</p>
+                    </div>
+                    <form class="form-booking">
+                        <div class="form-name">
+                            <label for="name">Nombre</label>
+                            <input type="text" id="name" placeholder="Nombre completo">
+                        </div>
+                        <div class="form-email">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" placeholder="Email">
+                        </div>
+                        <div class="form-phone-number">
+                            <label for="phone">Numero</label>
+                            <input type="tel" id="phone" placeholder="Numero">
+                        </div>
+                        <div class="form-date">
+                            <label for="date">Fecha</label>
+                            <input type="date" id="date">
+                        </div>
+                        <div class="form-hour">
+                            <label for="time">Hora</label>
+                            <input type="time" id="time">
+                        </div>
+                        <div class="form-people">
+                            <label for="party-size">Numero de personas</label>
+                            <input type="text" id="party-size" placeholder="Personas">
+                        </div>
+                        <button type="submit" class="submit">Haz una reserva</button>
+                    </form>
+                </article>
+            </section>
         </main>
         <footer>
             <section id="footer">
@@ -184,7 +218,6 @@
                 </article>
             </section>
         </footer>
-        <script type="module" src="../js/translator.js"></script>        
         <script type="module" src="../js/explora.js"></script>
 
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
