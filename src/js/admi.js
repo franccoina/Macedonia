@@ -8,8 +8,8 @@ import * as bootstrap from 'bootstrap'
 
 let nav = document.getElementById("navbarBtn");
 nav.addEventListener("click", () => {
-  console.log("entrando");
-  document.body.classList.toggle("open");
+    console.log("entrando");
+    document.body.classList.toggle("open");
 });
 
 //funcion para el login
@@ -35,15 +35,12 @@ form.addEventListener("submit", async function (event) {
     let user = await checkUsername(username);
     if (user === false) {
         alert("El usuario no existe");
-    } 
-    else {
-        if (user.password === password.value) {
-            alert("Bienvenido");
-            localStorage.setItem("userOnline", JSON.stringify(user));
-            window.location.href = "./create.html";
-        } else {
-            alert("La contraseña no es correcta");
-        }
+    } else if (user.password === password.value) {
+        alert("Bienvenido");
+        localStorage.setItem("userOnline", JSON.stringify(user));
+        window.location.href = "./create.html";
+    } else {
+        alert("La contraseña no es correcta");
     }
 });
 

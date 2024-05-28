@@ -7,13 +7,37 @@
 //Import normalize
 @import url(./normalize.scss);
 
+/*------------------------------ document settings ------------------------------*/
+
+:root {
+  --grad-orange: #ff812fb3;
+  --grad-brown: #8f6028b3;
+  --grad-black: #000000b3;
+
+  --grad-coffee: #622b09cc;
+  --grad-gray: #f7f7f7;
+
+  --orange: #d86820;
+  --black: #000000;
+  --white: #ffffff;
+
+  --orangepacity: #d9672066;
+  --whitepacity: hsla(0, 0%, 100%, 0.2);
+  --whitepacity-light: #ffffff80;
+  --blackpacity: #0000008e;
+  --shadows: #00000033;
+}
+
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  font-family: "Wix Madefor Display", sans-serif;
+  font-style: normal;
 }
 
-/* Styling for the section element */
+/*------------------------------ tags and general sttings ------------------------------*/
+
 section {
   z-index: 1;
   background-image: linear-gradient(0deg,
@@ -27,6 +51,14 @@ footer {
   padding-bottom: 25px;
 }
 
+h1 {
+  font-size: 40px;
+  font-weight: lighter;
+  color: var(--whitepacity);
+}
+
+/*------------------------------ background ------------------------------*/
+
 /* Background image settings */
 .bg-img {
   z-index: -1;
@@ -39,23 +71,14 @@ footer {
   background-size: cover;
 }
 
-/* Title styling */
-.title-4 {
-  color: white;
-  display: flex;
-  justify-content: center;
-  font-size: 24px;
+/*------------------------------ options for the administer: register, edit, resevations ------------------------------*/
+.btn-logout {
+  height: 40px;
 }
 
 .crud-options h2 {
   font-style: oblique;
   font-weight: lighter;
-}
-
-.separator {
-  font-weight: lighter;
-  font-size: 5vw;
-  font-style: oblique;
 }
 
 /* Button container styling */
@@ -97,6 +120,8 @@ footer {
   margin: 10px;
 }
 
+/*------------------------------ form for CRUD ------------------------------*/
+
 /* Form styling */
 .form {
   display: flex;
@@ -135,7 +160,6 @@ textarea::placeholder {
 .caption-logo {
   grid-column: 7 / 11;
 }
-
 
 /* Individual input fields styling */
 .form-name {
@@ -280,6 +304,8 @@ textarea::placeholder {
   font-size: 24px;
 }
 
+/*------------------------------ footer and navigation links ------------------------------*/
+
 .footer-content {
   display: flex;
   align-items: center;
@@ -296,11 +322,6 @@ textarea::placeholder {
   display: flex;
   flex-direction: column;
   align-items: center;
-
-  & div {
-    gap: 30px;
-    justify-self: flex-start;
-  }
 }
 
 .footer-icons {
@@ -308,6 +329,7 @@ textarea::placeholder {
   text-indent: 10px;
 }
 
+/*------------------------------ media querys ------------------------------*/
 
 @media (max-width: 767px) {
   .caption {
@@ -321,7 +343,6 @@ textarea::placeholder {
     font-size: 20px;
   }
 }
-
 
 @media (min-width: 992px) {
   .caption {

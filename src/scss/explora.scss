@@ -13,23 +13,27 @@
     --page-bg: #ffffff;
     --navbar-bg: #ffffffe6;
 
-    --grad-orange: #ff812fb3;
-    --grad-brown: #8f6028b3;
     --grad-black: #000000b3;
+    --grad-beige: #a57758b3;
 
-    --grad-coffee: #622b09cc;
-    --grad-gray: #f7f7f7;
+    --grad-grey: #1c1c1ccc;
+    --grad-brown: #553518cc;
+    --grad-orange: #d86820cc;
+    --grad-gray: #cacaca;
 
     --orange: #d86820;
+    --brown: #865d28;
     --black: #000000;
     --white: #ffffff;
 
-    --orangepacity: #d8672066;
+    --brownpacity: #875e2966;
+    --orangepacity: #d9672066;
     --whitepacity: #ffffffc4;
     --whitepacity-light: #ffffff80;
     --blackpacity: #0000008e;
     --shadows: #00000033;
 }
+
 
 * {
     box-sizing: border-box;
@@ -199,8 +203,20 @@ body.open main {
 
 /*------------------------------ titles ------------------------------*/
 
-.title {
-    translate: 0 100px;
+.title1 {
+    translate: 0 120px;
+    display: flex;
+    justify-content: flex-start;
+    color: var(--orange);
+
+    & h1 {
+        font-size: 7vw;
+        font-style: oblique;
+    }
+}
+
+.title2 {
+    translate: 0 70px;
     display: flex;
     justify-content: flex-end;
     color: var(--orangepacity);
@@ -208,24 +224,6 @@ body.open main {
     & h1 {
         font-size: 14vw;
     }
-}
-
-.title-1 {
-    display: flex;
-    justify-content: flex-start;
-    color: var(--orange);
-}
-
-.title-2 {
-    display: flex;
-    justify-content: center;
-    color: var(--orange);
-}
-
-.title-3 {
-    display: flex;
-    justify-content: flex-end;
-    color: var(--orange);
 }
 
 /*------------------------------ searching bar ------------------------------*/
@@ -281,6 +279,10 @@ body.open main {
 }
 
 /*------------------------------ food images gallery ------------------------------*/
+
+#gallery {
+    padding-top: 80px;
+}
 
 .img-restaurant {
     width: 100%;
@@ -356,7 +358,8 @@ body.open main {
     padding-top: 85px;
     padding-bottom: 25px;
     background-image: linear-gradient(0deg,
-            var(--orange) 35%,
+            var(--grad-grey) 30%,
+            var(--grad-gray) 85%,
             var(--white) 100%);
 }
 
@@ -442,7 +445,7 @@ body.open main {
 
     .navbar-burger img {
         padding-top: 5px;
-        width: 30px;
+        width: 40px;
     }
 
     .buscador,
@@ -451,8 +454,10 @@ body.open main {
         font-size: 18px;
     }
 
-    .title {
+    .title1,
+    .title2 {
         padding-right: 45px;
+        padding-left: 45px;
     }
 
     /* … */
@@ -490,7 +495,7 @@ body.open main {
     }
 
     .navbar-burger img {
-        width: 30px;
+        width: 40px;
         transition: 1s;
     }
 
@@ -504,8 +509,10 @@ body.open main {
         font-size: 23px;
     }
 
-    .title {
+    .title1,
+    .title2 {
         padding-right: 80px;
+        padding-left: 80px;
     }
 
     /* … */
@@ -535,7 +542,7 @@ body.open main {
 
     .navbar-burger img {
         padding-top: 50px;
-        width: 30px;
+        width: 45px;
         transition: 1s;
     }
 
@@ -549,8 +556,10 @@ body.open main {
         font-size: 25px;
     }
 
-    .title {
+    .title1,
+    .title2 {
         padding-right: 85px;
+        padding-left: 85px;
     }
 
     /* … */
@@ -575,7 +584,7 @@ body.open main {
 
     .navbar-burger img {
         padding-top: 40px;
-        width: 50px;
+        width: 55px;
         transition: 1s;
     }
 
@@ -590,8 +599,10 @@ body.open main {
         font-size: 35px;
     }
 
-    .title {
+    .title1,
+    .title2 {
         padding-right: 105px;
+        padding-left: 105px;
     }
 
     /* … */
@@ -606,7 +617,7 @@ body.open main {
 
 
 #reserva {
-    background-color: var(--orange);
+    background-color: var(--grad-gray);
 }
 
 .form-booking {
