@@ -12,6 +12,7 @@ nav.addEventListener("click", () => {
     document.body.classList.toggle("open");
 });
 
+
 //funcion para el login
 
 (function () {
@@ -59,4 +60,13 @@ async function checkUsername(username) {
     }
 }
 
+//funcion para ver a julian
+
+async function ip(){
+    let response = await fetch("http://localhost:3000/users");
+    let data = await response.json();
+    console.log(data[0].restaurantes[0].reservas);
+}
+
+await ip()
 
