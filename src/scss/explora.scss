@@ -11,23 +11,29 @@
 
 :root {
     --page-bg: #ffffff;
-    --navbar-bg: #ff812fb3;
+    --navbar-bg: #ffffffe6;
 
-    --grad-orange: #ff812fb3;
-    --grad-brown: #8f6028b3;
     --grad-black: #000000b3;
-
-    --grad-coffee: #622b09cc;
-    --grad-gray: #f7f7f7;
+    --grad-beige: #a57758b3;
+  
+    --grad-grey: #1c1c1ccc;
+    --grad-brown: #553518cc;
+    --grad-orange: #d86820cc;
+    --grad-gray: #cacaca;
 
     --orange: #d86820;
+    --brown: #865d28;
     --black: #000000;
     --white: #ffffff;
+  
+    --brownpacity: #875e2966;
+    --orangepacity: #d9672066;
     --whitepacity: #ffffffc4;
     --whitepacity-light: #ffffff80;
     --blackpacity: #0000008e;
     --shadows: #00000033;
 }
+
 
 * {
     box-sizing: border-box;
@@ -42,11 +48,27 @@
 main,
 header,
 footer {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
     background-color: var(--page-bg);
+}
+
+body {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 h2 {
     font-size: 7vw;
+}
+
+h1 {
+    font-size: 10vw;
 }
 
 h5 {
@@ -66,6 +88,10 @@ button {
     cursor: pointer;
 }
 
+a {
+    text-decoration: none;
+}
+
 /*------------------------------ navbar ------------------------------*/
 
 #navbar {
@@ -75,23 +101,39 @@ button {
 
 .menu-home {
     animation-delay: 0.1s;
+
+    & p {
+        color: var(--orange);
+    }
 }
 
 .menu-explora {
     animation-delay: 0.3s;
+
+    & p {
+        color: var(--orange);
+    }
 }
 
 .menu-administra {
     animation-delay: 0.5s;
+
+    & p {
+        color: var(--orange);
+    }
 }
 
 .menu-contacta {
     animation-delay: 0.7s;
+
+    & p {
+        color: var(--orange);
+    }
 }
 
 .navbar-burger {
     z-index: 6;
-    position: fixed;
+    position: absolute;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -103,6 +145,14 @@ button {
 body.open .navbar-burger {
     position: fixed;
     transition: 0.3s;
+}
+
+#navbar section {
+    display: none;
+}
+
+body.open #navbar section {
+    display: block;
 }
 
 .menu {
@@ -118,26 +168,22 @@ body.open .navbar-burger {
     height: 100%;
     background: var(--navbar-bg);
     opacity: 0;
-    visibility: hidden;
     transition: 1s;
 }
 
 body.open .menu {
     transition: 1s;
     opacity: 1;
-    visibility: visible;
     position: fixed;
     display: flex;
 }
 
 .menu a {
-    color: var(--white);
     font-size: 4vw;
-    text-decoration: none;
 }
 
 body.open .menu a {
-    animation: appear 0.5s both;
+    animation: appear 0.5s ease-in-out;
 }
 
 body.open main {
@@ -155,16 +201,165 @@ body.open main {
     }
 }
 
-/*------------------------------ banner carousel ------------------------------*/
+/*------------------------------ titles ------------------------------*/
 
+.title1 {
+    translate: 0 120px;
+    display: flex;
+    justify-content: flex-start;
+    color: var(--orange);
+
+    & h1 {
+        font-size: 7vw;
+        font-style: oblique;
+    }
+}
+
+.title2 {
+    translate: 0 70px;
+    display: flex;
+    justify-content: flex-end;
+    color: var(--orangepacity);
+
+    & h1 {
+        font-size: 14vw;
+    }
+}
+
+/*------------------------------ searching bar ------------------------------*/
+
+#research {
+    width: 100%;
+    height: inherit;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.bi-search {
+    font-size: 20px;
+    color: var(--blackpacity);
+}
+
+.buscador {
+    box-shadow: 2px 2px 8px 1px var(--shadows);
+    margin-top: 40px;
+    margin-bottom: 30px;
+    width: 100%;
+    height: 20%;
+    gap: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bar-buscador {
+    width: 60%;
+    padding: 15px;
+    border-radius: 5px;
+    border: none;
+}
+
+.bar-buscador::placeholder {
+    text-align: center;
+}
+
+.bar-buscador {
+    background-color: transparent;
+    outline: none;
+    box-shadow: none;
+}
+
+.bar-buscador:focus,
+.bar-buscador:active {
+    background-color: transparent;
+    outline: none;
+    box-shadow: none;
+}
+
+/*------------------------------ food images gallery ------------------------------*/
+
+#gallery{
+    padding-top: 80px;
+}
+
+.img-restaurant {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    max-width: 1880px;
+    margin: 0 auto;
+    padding-bottom: 120px;
+}
+
+.img-restaurant section {
+    justify-self: end;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: center;
+    width: 100%;
+    transition: 0.8s;
+}
+
+.img-restaurant div {
+    height: 12rem;
+    transition: 0.8s;
+    border-radius: 10px;
+}
+
+.img-restaurant div:hover {
+    transform: scale(1.1);
+    transition: 0.8s;
+}
+
+.img-restaurant video {
+    transition: 0.8s;
+    border-radius: 10px;
+    height: 12rem;
+}
+
+.img-restaurant video:hover {
+    transform: scale(1.1);
+    transition: 0.8s;
+}
+
+.img-restaurant-pic1 {
+    background-image: url("https://images.pexels.com/photos/12706240/pexels-photo-12706240.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+    background-size: cover;
+    width: 250px;
+}
+
+.img-restaurant-pic2 {
+    background-image: url("https://images.pexels.com/photos/20844826/pexels-photo-20844826/free-photo-of-comida-restaurante-pez-pescado.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+    background-size: cover;
+    width: 200px;
+}
+
+.img-restaurant-pic3 {
+    background-image: url("https://images.pexels.com/photos/1907227/pexels-photo-1907227.jpeg");
+    background-size: cover;
+    width: 250px;
+}
+
+.img-restaurant-pic4 {
+    background-image: url("https://images.pexels.com/photos/8112966/pexels-photo-8112966.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+    background-size: cover;
+    width: 300px;
+}
 
 /*------------------------------ footer or contact section ------------------------------*/
 
 #footer {
-    padding-top: 250px;
+    padding-top: 85px;
     padding-bottom: 25px;
     background-image: linear-gradient(0deg,
-            var(--orange) 35%,
+    var(--grad-grey) 30%,
+    var(--grad-gray) 85%,
             var(--white) 100%);
 }
 
@@ -172,7 +367,6 @@ body.open main {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 20px;
 
     & div {
         display: flex;
@@ -187,23 +381,14 @@ body.open main {
     align-items: center;
 
     & div {
-        gap: 20px;
+        gap: 30px;
         justify-self: flex-start;
     }
-}
-
-.footer-form {
-    display: flex;
-    justify-content: center;
 }
 
 .footer-icons {
     align-self: center;
     text-indent: 10px;
-
-    & a {
-        color: var(--black);
-    }
 }
 
 /*------------------------------ media querys ------------------------------*/
@@ -211,25 +396,31 @@ body.open main {
 /*mobile*/
 @media (min-width: 320px) and (max-width: 769px) {
 
-    .img-gallery,
-    .top-gallery {
+    .img-restaurant {
         max-width: 320px;
     }
 
-    .img-gallery-pic3,
-    .img-gallery-pic5,
-    .img-gallery-pic2,
-    .img-gallery-pic9,
-    .img-gallery-pic1,
-    .img-gallery-pic12 {
+    .img-restaurant-pic1 {
+        width: 140px;
+        position: relative;
+        top: 70px;
+        right: 10px;
+    }
+
+    .img-restaurant-pic2 {
+        width: 140px;
+        position: relative;
+        top: 20px;
+        left: 10px;
+    }
+
+    .img-restaurant-pic3,
+    .img-restaurant-pic4 {
         display: none;
     }
 
-    .explora-pic,
-    .explora-pic2,
-    .experiencia-pic,
-    .reserva-pic {
-        width: 50vw;
+    .img-restaurant div {
+        height: 8rem;
     }
 
     .menu,
@@ -245,7 +436,7 @@ body.open main {
     }
 
     body.open .menu a {
-        animation: none;
+        animation: appear 0.2s ease-in-out;
     }
 
     body.open .navbar-burger {
@@ -254,22 +445,18 @@ body.open main {
 
     .navbar-burger img {
         padding-top: 5px;
-        width: 30px;
+        width: 40px;
     }
 
-    .about-title1,
-    .about-title2,
-    .about-title3 {
-        font-size: 10vw;
-    }
-
-    .footer-form {
-        text-align: center;
-    }
-
+    .buscador,
     p {
         font-weight: normal;
-        font-size: 20px;
+        font-size: 18px;
+    }
+
+    .title1, .title2{
+        padding-right: 45px;
+        padding-left: 45px;
     }
 
     /* … */
@@ -278,20 +465,26 @@ body.open main {
 /* tablet */
 @media (min-width: 770px) and (max-width: 1023px) {
 
-    .img-gallery,
-    .top-gallery {
+    .img-restaurant {
         max-width: 770px;
     }
 
-    .explora-pic,
-    .explora-pic2,
-    .experiencia-pic,
-    .reserva-pic {
-        width: 45vw;
+    .img-restaurant-pic1 {
+        width: 300px;
     }
 
-    .contacta {
-        padding-top: 50px;
+    .img-restaurant-pic2 {
+        display: none;
+    }
+
+    .img-restaurant-pic3,
+    .img-restaurant-pic4 {
+        position: relative;
+        left: 40px
+    }
+
+    .img-restaurant section {
+        padding-right: 45px;
     }
 
     body.open .navbar-burger {
@@ -301,7 +494,7 @@ body.open main {
     }
 
     .navbar-burger img {
-        width: 30px;
+        width: 40px;
         transition: 1s;
     }
 
@@ -309,19 +502,15 @@ body.open main {
         transition: 1s;
     }
 
-    .about-title1,
-    .about-title2,
-    .about-title3 {
-        font-size: 10vw;
-    }
-
-    .footer-form {
-        text-align: center;
-    }
-
+    .buscador,
     p {
         font-weight: normal;
-        font-size: 25px;
+        font-size: 23px;
+    }
+
+    .title1, .title2{
+        padding-right: 80px;
+        padding-left: 80px;
     }
 
     /* … */
@@ -330,20 +519,17 @@ body.open main {
 /* portatil */
 @media (min-width: 1024px) and (max-width: 1879px) {
 
-    .img-gallery,
-    .top-gallery {
+    .img-restaurant {
         max-width: 1024px;
     }
 
-    .explora-pic,
-    .explora-pic2,
-    .experiencia-pic,
-    .reserva-pic {
-        width: 45vw;
+    .img-restaurant-pic1,
+    .img-restaurant-pic3 {
+        width: 180px;
     }
 
-    .contacta {
-        padding-top: 100px;
+    .img-restaurant-pic4 {
+        display: none;
     }
 
     body.open .navbar-burger {
@@ -354,7 +540,7 @@ body.open main {
 
     .navbar-burger img {
         padding-top: 50px;
-        width: 30px;
+        width: 45px;
         transition: 1s;
     }
 
@@ -362,9 +548,15 @@ body.open main {
         transition: 1s;
     }
 
+    .buscador,
     p {
         font-weight: normal;
         font-size: 25px;
+    }
+
+    .title1, .title2{
+        padding-right: 85px;
+        padding-left: 85px;
     }
 
     /* … */
@@ -372,9 +564,6 @@ body.open main {
 
 /* PC */
 @media (min-width: 1880px) {
-    .contacta {
-        padding-top: 150px;
-    }
 
     body.open .navbar-burger {
         position: fixed;
@@ -382,9 +571,17 @@ body.open main {
         transition: 1s;
     }
 
+    .img-restaurant div {
+        width: 300px;
+    }
+
+    .img-restaurant section {
+        padding-right: 85px;
+    }
+
     .navbar-burger img {
         padding-top: 40px;
-        width: 50px;
+        width: 55px;
         transition: 1s;
     }
 
@@ -393,10 +590,80 @@ body.open main {
         transition: 1s;
     }
 
+    .buscador,
     p {
         font-weight: normal;
         font-size: 35px;
     }
 
+    .title1, .title2{
+        padding-right: 105px;
+        padding-left: 105px;
+    }
+
     /* … */
+}
+
+
+
+
+
+
+
+
+
+#reserva {
+    background-color: var(--grad-gray);
+}
+
+.form-booking {
+    padding-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(16, 20px);
+    gap: 20px;
+}
+
+input,
+textarea {
+    border: white 1px solid;
+    border-radius: 10px;
+    background-color: #ffffffb3;
+    padding: 10px;
+    width: 100%;
+}
+
+.form-name {
+    grid-column: 1 / 6;
+}
+
+.form-email {
+    grid-column: 6 / 11;
+}
+
+.form-phone-number {
+    grid-column: 2 / 4;
+    grid-row: 3 / 4;
+}
+
+.form-date {
+    grid-column: 4 / 8;
+    grid-row: 3 / 4;
+}
+
+.form-hour {
+    grid-column: 8 / 10;
+    grid-row: 3 / 4;
+}
+
+.form-people {
+    grid-column: 4 / 6;
+    grid-row: 5 / 6;
+}
+
+.submit {
+    grid-column: 6 / 8;
+    grid-row: 7 / 9;
+    border-radius: 10px;
+    background-color: #ffffffb3;
 }

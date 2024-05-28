@@ -45,9 +45,10 @@
             <nav id="navbar">
                 <button class="navbar-burger" id="navbarBtn">
                     <img
-                        src="./public/img/logo-simplificado.webp"
+                        src="./public/img/navbar-burger-white.webp"
                         alt="navbar-burger-logo" />
                 </button>
+                <section>
                 <article class="menu">
                     <a class="menu-home" href="./index.html#carousel">
                         <p>HOME</p> </a>
@@ -55,9 +56,10 @@
                         <p>EXPLORA</p> </a>
                     <a class="menu-administra" href="./src/pages/admi.html">
                         <p>ADMINISTRA</p> </a>
-                    <a class="menu-Contacta" href="./index.html#contacta">
+                        <a class="menu-contacta" href="./index.html#contacta">
                         <p>CONTACTA</p> </a>
                 </article>
+                </section>
                 <div class="navbar-burger-fade"></div>
             </nav>
         </header>
@@ -65,15 +67,17 @@
             <section id="carousel">
                 <article
                     id="carouselExample"
-                    class="carousel slide"
+                    class="carousel slide no-horizontal-scroll"
                     data-ride="carousel"
-                    data-pause="false">
+                    data-pause="false"
+                    data-interval="5000">
                     <video
                         class="banner w-100"
-                        src="./public/vid/2894881-uhd_3840_2160_24fps.mp4"
+                        src="./public/vid/video-cocina1.mp4"
                         autoplay="true"
                         loop="true"
-                        muted></video>
+                        muted
+                        alt="video-cocina-1"></video>
                     <div class="carousel-item active">
                         <img
                             src="./public/img/logo-macedonia.webp"
@@ -81,14 +85,8 @@
                             alt />
                     </div>
                     <div class="carousel-item">
-                        <video
-                            class="banner w-100"
-                            src="./public/vid/8094300-hd_1920_1080_25fps.mp4"
-                            autoplay="true"
-                            loop="true"
-                            muted></video>
                         <img
-                            src="./public/img/logo-macedonia.webp"
+                            src=""
                             class="container img-carousel img-fluid"
                             alt />
                     </div>
@@ -125,52 +123,26 @@
             </section>
             <section class="about">
                 <br />
-                <article class="about-section1 text-center">
-                    <h3 class="about-title1">¡Vive una Experiencia!</h3>
-                    <p class="about-subtitle1">
+                <article class="about-section2 text-center">
+                    <h3 class="about-title2">¡Vive una Experiencia!</h3>
+                    <p class="about-subtitle2">
                         Atrévete a emprender un tour gastronómico con nosotros.
                         Conectamos
                         amantes de la comida con sabores auténticos de los
                         negocios más
                         exclusivos.
                     </p>
-                    <p class="about-text1">
-                        Nuestros clientes confian en nosotros, y nosotros en
-                        ellos.
-                    </p>
-                    <br />
-                    <img
-                        class="experiencia-pic"
-                        src="./public/img/experiencia-pic.webp"
-                        width="900vw"
-                        alt />
-                </article>
-                <article class="about-section2 text-center">
-                    <h3 class="about-title2">¿Tienes un negocio?</h3>
-                    <p class="about-subtitle2">
-                        Si eres dueño de uno, comparte lo mejor de tu negocio en
-                        nuestro
-                        administrador.
-                    </p>
                     <p class="about-text2">
-                        Gestione sus presentación al público y reservas.
+                        Confianza, exclusividad y aventura.
                     </p>
                     <br />
-                    <button class="btn btn-outline-dark" type="button">
-                        Ir a Administra
-                    </button>
-                    <img
-                        class="reserva-pic"
-                        src="./public/img/reserva-pic.webp"
-                        width="900vw"
-                        alt />
                 </article>
-                <article class="about-section3 text-center">
-                    <h4 class="about-title3">¿Tienes ganas de descubrir?</h4>
-                    <p class="about-subtitle3">
+                <article class="about-section1 text-center">
+                    <h4 class="about-title1">¿Tienes ganas de descubrir?</h4>
+                    <p class="about-subtitle1">
                         Busca y filtra novedosos restaurantes de calidad.
                     </p>
-                    <p class="about-text3">Aventúrate a las mejores
+                    <p class="about-text1">Aventúrate a las mejores
                         experiencias.</p>
                     <br />
                     <button class="btn btn-outline-light" type="button">
@@ -181,6 +153,20 @@
                         src="./public/img/explora-pic.webp"
                         width="900vw"
                         alt />
+                        <br><br>
+                        <h3 class="about-title2">¿Tienes un negocio?</h3>
+                        <p class="about-subtitle2">
+                            Si eres dueño de uno, comparte lo mejor de tu negocio en
+                            nuestro
+                            administrador.
+                        </p>
+                        <p class="about-text2">
+                            Gestione su presentación al público y todo tipo de reservas.
+                        </p>
+                        <br />
+                        <button class="btn btn-outline-dark" type="button">
+                            Ir a Administra
+                        </button>
                     <img
                         class="explora-pic2"
                         src="./public/img/explora2-pic.webp"

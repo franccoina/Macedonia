@@ -45,9 +45,10 @@
             <nav id="navbar">
                 <button class="navbar-burger" id="navbarBtn">
                     <img
-                        src="../../public/img/logo-simplificado-naranja.webp"
+                        src="../../public/img/navbar-burger-orange.webp"
                         alt="navbar-burger-logo" />
                 </button>
+                <section>
                 <article class="menu">
                     <a class="menu-home" href="../../index.html#carousel">
                         <p>HOME</p> </a>
@@ -55,43 +56,92 @@
                         <p>EXPLORA</p> </a>
                     <a class="menu-administra" href="./admi.html">
                         <p>ADMINISTRA</p> </a>
-                    <a class="menu-Contacta" href="../../index.html#contacta">
+                        <a class="menu-contacta" href="../../index.html#contacta">
                         <p>CONTACTA</p> </a>
                 </article>
+                </section>
             </nav>
         </header>
-        <main>
+        <main class="w-100">
+            <article class="title1">
+                <h1>¡Descubre!</h1>
+            </article>
+            <article class="title2">
+                <h1>explora</h1>
+            </article>
             <section id="gallery">
-                <article class="container mt-5 px-5">
-                    <div class="title-1">
-                        <h2>parrila</h2>
-                    </div>
-                    <div class="title-2">
-                        <h2>restaurante &</h2>
-                    </div>
-                    <div class="title-3">
-                        <h2>café</h2>
+                <article id="research">
+                    <div class="buscador">
+                        <i class="bi bi-search"></i>
+                        <input class="bar-buscador" type="search"
+                            placeholder="¿Cómo quieres comer hoy?">
                     </div>
                 </article>
                 <article class="mt-5">
-                    <div class="img-gallery">
-                        <div class="img-gallery-pic1" alt="food-pic-1"></div>
-                        <div class="img-gallery-pic2" alt="food-pic-2"></div>
-                        <div class="img-gallery-pic3" alt="food-pic-3"></div>
-                        <div class="img-gallery-pic4" alt="food-pic-4"></div>
-                        <div class="img-gallery-pic5" alt="food-pic-5"></div>
-                        <div class="img-gallery-pic6" alt="food-pic-6"></div>
-                        <div class="img-gallery-pic7" alt="food-pic-7"></div>
-                        <div class="img-gallery-pic8" alt="food-pic-8"></div>
-                        <div class="img-gallery-pic9" alt="food-pic-9"></div>
-                        <div class="img-gallery-pic10" alt="food-pic-10"></div>
-                        <div class="img-gallery-pic11" alt="food-pic-11"></div>
-                        <div class="img-gallery-pic12" alt="food-pic-12"></div>
+                    <div class="img-restaurant">
+                        <section>
+                            <h3> <strong>La Ladera</strong> </h3>
+                            <p>Medellín, CO</p>
+                        </section>
+                        <video src="../../public/vid/video-cocina1.mp4"
+                            autoplay="true"
+                            loop="true"
+                            muted alt="video-restaurant"></video>
+                        <div class="img-restaurant-pic1" alt="food-pic-1"></div>
+                        <div class="img-restaurant-pic2" alt="food-pic-2"></div>
+                        <div class="img-restaurant-pic3" alt="food-pic-3"></div>
+                        <div class="img-restaurant-pic4" alt="food-pic-4"></div>
+                    </div>
+                    <div class="img-restaurant">
+                        <section>
+                            <h3> <strong>Cielo & Mar</strong> </h3>
+                            <p>Cartagena, CO</p>
+                        </section>
+                        <video src="../../public/vid/video-cocina1.mp4"
+                            autoplay="true"
+                            loop="true"
+                            muted alt="video-restaurant"></video>
+                        <div class="img-restaurant-pic1" alt="food-pic-1"></div>
+                        <div class="img-restaurant-pic2" alt="food-pic-2"></div>
+                        <div class="img-restaurant-pic3" alt="food-pic-3"></div>
+                        <div class="img-restaurant-pic4" alt="food-pic-4"></div>
                     </div>
                 </article>
             </section>
-            <section>
-                
+            <section id="reserva">
+                <article class="container">
+                    <div>
+                        <h2>Haz una reserva</h2>
+                        <p>Reserva ya tu mesa y disfruta de una maravillosa experiencia gastronómica</p>
+                    </div>
+                    <form class="form-booking">
+                        <div class="form-name">
+                            <label for="name">Nombre</label>
+                            <input type="text" id="name" placeholder="Nombre completo">
+                        </div>
+                        <div class="form-email">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" placeholder="Email">
+                        </div>
+                        <div class="form-phone-number">
+                            <label for="phone">Numero</label>
+                            <input type="tel" id="phone" placeholder="Numero">
+                        </div>
+                        <div class="form-date">
+                            <label for="date">Fecha</label>
+                            <input type="date" id="date">
+                        </div>
+                        <div class="form-hour">
+                            <label for="time">Hora</label>
+                            <input type="time" id="time">
+                        </div>
+                        <div class="form-people">
+                            <label for="party-size">Numero de personas</label>
+                            <input type="text" id="party-size" placeholder="Personas">
+                        </div>
+                        <button type="submit" class="submit">Haz una reserva</button>
+                    </form>
+                </article>
             </section>
         </main>
         <footer>
@@ -160,8 +210,6 @@
                 </article>
             </section>
         </footer>
-        <script type="module" src="../js/translator.js"></script>
-        <script type="module" src="../js/main.js"></script>
         <script type="module" src="../js/explora.js"></script>
 
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
