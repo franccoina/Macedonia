@@ -22,7 +22,7 @@
   --white: #ffffff;
 
   --orangepacity: #d9672066;
-  --whitepacity: ffffff66;
+  --whitepacity: hsla(0, 0%, 100%, 0.2);
   --whitepacity-light: #ffffff80;
   --blackpacity: #0000008e;
   --shadows: #00000033;
@@ -41,13 +41,13 @@
 section {
   z-index: 1;
   background-image: linear-gradient(0deg,
-      #000000b3 0%,
-      #000000 10%);
+      #00000080 0%,
+      #000000 30%);
   padding: 20px;
 }
 
 footer {
-  background-color: #000000b3;
+  background-color: #00000080;
   padding-bottom: 25px;
 }
 
