@@ -1,5 +1,5 @@
 // Import our custom CSS
-import '../scss/booking.scss'
+import '../scss/create.scss'
 
 // Import all of Bootstrap's JS
 import * as bootstrap from 'bootstrap'
