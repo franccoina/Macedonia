@@ -9,3 +9,4 @@ nav.addEventListener("click", () => {
   console.log("entrando");
   document.body.classList.toggle("open");
 });
+
