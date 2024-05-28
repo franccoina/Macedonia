@@ -29,9 +29,9 @@
 }
 
 * {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
   font-family: "Wix Madefor Display", sans-serif;
   font-style: normal;
 }
@@ -39,11 +39,11 @@
 /*------------------------------ tags and general sttings ------------------------------*/
 
 section {
-    z-index: 1;
-    background-image: linear-gradient(0deg,
+  z-index: 1;
+  background-image: linear-gradient(0deg,
       #00000080 0%,
       #000000 30%);
-    padding: 20px;
+  padding: 20px;
 }
 
 footer {
@@ -54,27 +54,25 @@ footer {
 h1 {
   font-size: 40px;
   font-weight: lighter;
-  color: var(
-    --whitepacity
-  );
+  color: var(--whitepacity);
 }
 
 /*------------------------------ background ------------------------------*/
 
 /* Background image settings */
 .bg-img {
-    z-index: -1;
-    position: fixed;
-    display: flex;
-    height: 100vh;
-    width: 100vw;
-    background: url("../../public/img/food-login-bg.webp") no-repeat;
-    background-position: center;
-    background-size: cover;
+  z-index: -1;
+  position: fixed;
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  background: url("../../public/img/food-login-bg.webp") no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 /*------------------------------ options for the administer: register, edit, resevations ------------------------------*/
-.btn-logout{
+.btn-logout {
   height: 40px;
 }
 
@@ -85,41 +83,41 @@ h1 {
 
 /* Button container styling */
 .button-container {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 /* DB button styling */
 .db-button {
-    background-color: white;
-    border-radius: 50%;
-    width: 100px;
-    height: 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 10px;
+  background-color: white;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
 }
 
 /* CRUD container styling */
 .crud-container {
-    padding: 20px;
+  padding: 20px;
 }
 
 /* CRUD options styling */
 .div-crud {
-    display: flex;
-    justify-content: space-around;
-    border-bottom: 2px solid rgb(255, 255, 255);
-    padding: 20px;
-    flex-wrap: wrap;
+  display: flex;
+  justify-content: space-around;
+  border-bottom: 2px solid rgb(255, 255, 255);
+  padding: 20px;
+  flex-wrap: wrap;
 }
 
 .crud-options {
-    text-decoration: none;
-    color: white;
-    margin: 10px;
+  text-decoration: none;
+  color: white;
+  margin: 10px;
 }
 
 /*------------------------------ footer and navigation links ------------------------------*/
@@ -133,7 +131,7 @@ h1 {
     display: flex;
     align-items: center;
     gap: 20px;
-}
+  }
 }
 
 .footer-links {
@@ -161,7 +159,6 @@ h1 {
     font-size: 20px;
   }
 }
-
 
 @media (min-width: 992px) {
   .caption {

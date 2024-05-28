@@ -43,7 +43,7 @@ section {
   background-image: linear-gradient(0deg,
       #00000080 0%,
       #000000 30%);
-  padding: 20px; 
+  padding: 20px;
 }
 
 footer {
@@ -54,9 +54,7 @@ footer {
 h1 {
   font-size: 40px;
   font-weight: lighter;
-  color: var(
-    --whitepacity
-  );
+  color: var(--whitepacity);
 }
 
 /*------------------------------ background ------------------------------*/
@@ -66,15 +64,15 @@ h1 {
   z-index: -1;
   position: fixed;
   display: flex;
-  height: 100vh; 
-  width: 100vw; 
+  height: 100vh;
+  width: 100vw;
   background: url("../../public/img/food-login-bg.webp") no-repeat;
   background-position: center;
   background-size: cover;
 }
 
 /*------------------------------ options for the administer: register, edit, resevations ------------------------------*/
-.btn-logout{
+.btn-logout {
   height: 40px;
 }
 
@@ -87,7 +85,7 @@ h1 {
 .button-container {
   display: flex;
   justify-content: center;
-  flex-wrap: wrap; 
+  flex-wrap: wrap;
 }
 
 /* DB button styling */
@@ -99,12 +97,12 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 10px; 
+  margin: 10px;
 }
 
 /* CRUD container styling */
 .crud-container {
-  padding: 20px; 
+  padding: 20px;
 }
 
 /* CRUD options styling */
@@ -113,13 +111,13 @@ h1 {
   justify-content: space-around;
   border-bottom: 2px solid rgb(255, 255, 255);
   padding: 20px;
-  flex-wrap: wrap; 
+  flex-wrap: wrap;
 }
 
 .crud-options {
   text-decoration: none;
   color: white;
-  margin: 10px; 
+  margin: 10px;
 }
 
 /*------------------------------ form for CRUD ------------------------------*/
@@ -128,14 +126,14 @@ h1 {
 .form {
   display: flex;
   justify-content: center;
-  flex-wrap: wrap; 
+  flex-wrap: wrap;
 }
 
 .form-edit-create {
   padding-top: 50px;
   display: grid;
-  grid-template-columns: repeat(10, 1fr); 
-  grid-template-rows: repeat(16, 60px); 
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: repeat(16, 60px);
   gap: 20px;
 }
 
@@ -146,7 +144,7 @@ textarea {
   border-radius: 10px;
   background-color: #ffffffb3;
   padding: 10px;
-  width: 100%; 
+  width: 100%;
 }
 
 input::placeholder,
@@ -303,7 +301,7 @@ textarea::placeholder {
 
 /* responsive caption */
 .caption {
-  font-size: 24px; 
+  font-size: 24px;
 }
 
 /*------------------------------ footer and navigation links ------------------------------*/
@@ -312,6 +310,7 @@ textarea::placeholder {
   display: flex;
   align-items: center;
   justify-content: center;
+
   & div {
     display: flex;
     align-items: center;
@@ -344,7 +343,6 @@ textarea::placeholder {
     font-size: 20px;
   }
 }
-
 
 @media (min-width: 992px) {
   .caption {

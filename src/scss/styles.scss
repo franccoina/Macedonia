@@ -10,18 +10,18 @@
 /*------------------------------ document settings ------------------------------*/
 
 :root {
-    --page-bg: #ffffff;
-    --navbar-bg: #ffffffe6;
-    
-    --grad-black: #000000b3;
+  --page-bg: #ffffff;
+  --navbar-bg: #ffffffe6;
+
+  --grad-black: #000000b3;
   --grad-beige: #a57758b3;
 
   --grad-grey: #1c1c1ccc;
   --grad-brown: #553518cc;
   --grad-orange: #d86820cc;
   --grad-gray: #cacaca;
-  
-    --orange: #d86820;
+
+  --orange: #d86820;
   --brown: #865d28;
   --black: #000000;
   --white: #ffffff;
@@ -32,114 +32,114 @@
   --whitepacity-light: #ffffff80;
   --blackpacity: #0000008e;
   --shadows: #00000033;
-  }
+}
 
-  * {
+* {
   box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-    font-family: "Wix Madefor Display", sans-serif;
+  padding: 0;
+  margin: 0;
+  font-family: "Wix Madefor Display", sans-serif;
   font-style: normal;
-  }
-  
-  /*------------------------------ tags and general sttings ------------------------------*/
-  
+}
+
+/*------------------------------ tags and general sttings ------------------------------*/
+
 main,
 header,
 footer {
-    background-color: var(--page-bg);
-  }
-  
+  background-color: var(--page-bg);
+}
+
 h2 {
-    font-size: 7vw;
-  }
-  
+  font-size: 7vw;
+}
+
 h5 {
-    color: var(--whitepacity-light);
+  color: var(--whitepacity-light);
   font-weight: normal;
-    font-size: 30px;
-  }
-  
+  font-size: 30px;
+}
+
 li {
-    list-style: none;
-  }
-  
-  button {
-    border: 0;
-    padding: 0;
-    background: transparent;
-    cursor: pointer;
-  }
+  list-style: none;
+}
+
+button {
+  border: 0;
+  padding: 0;
+  background: transparent;
+  cursor: pointer;
+}
 
 a {
   text-decoration: none;
 }
-  
-  /*------------------------------ navbar ------------------------------*/
-  
-  #navbar {
-    display: flex;
-    justify-content: center;
-  }
-  
-  .menu-home {
-    animation-delay: 0.1s;
+
+/*------------------------------ navbar ------------------------------*/
+
+#navbar {
+  display: flex;
+  justify-content: center;
+}
+
+.menu-home {
+  animation-delay: 0.1s;
 
   & p {
     color: var(--orange);
   }
-  }
-  
-  .menu-explora {
-    animation-delay: 0.3s;
+}
+
+.menu-explora {
+  animation-delay: 0.3s;
 
   & p {
     color: var(--orange);
   }
-  }
-  
-  .menu-administra {
-    animation-delay: 0.5s;
+}
+
+.menu-administra {
+  animation-delay: 0.5s;
 
   & p {
     color: var(--orange);
   }
-  }
-  
-  .menu-contacta {
-    animation-delay: 0.7s;
+}
+
+.menu-contacta {
+  animation-delay: 0.7s;
 
   & p {
     color: var(--orange);
   }
-  }
-  
-  .navbar-burger {
-    z-index: 6;
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 80px;
-    height: 80px;
-    transition: 0.3s;
-  }
-  
-  body.open .navbar-burger {
-    position: fixed;
-    transition: 0.3s;
-  }
-  
-  .navbar-burger-fade {
-    z-index: 5;
-    position: fixed;
+}
+
+.navbar-burger {
+  z-index: 6;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  height: 80px;
+  transition: 0.3s;
+}
+
+body.open .navbar-burger {
+  position: fixed;
+  transition: 0.3s;
+}
+
+.navbar-burger-fade {
+  z-index: 5;
+  position: fixed;
   background-image: linear-gradient(0deg,
       var(--grad-orange) 20%,
       var(--grad-brown) 80%,
       var(--grad-black) 100%);
-    border-radius: 100px;
-    visibility: hidden;
-  }
+  border-radius: 100px;
+  visibility: hidden;
+}
 
 #navbar section {
   display: none;
@@ -148,389 +148,389 @@ a {
 body.open #navbar section {
   display: block;
 }
-  
-  .menu {
-    z-index: 4;
-    top: 0;
-    left: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 30px;
-    width: 100%;
-    height: 100%;
-    background: var(--navbar-bg);
-    opacity: 0;
-    transition: 1s;
-  }
-  
-  body.open .menu {
-    transition: 1s;
-    opacity: 1;
-    position: fixed;
-    display: flex;
-  }
-  
-  .menu a {
-    font-size: 4vw;
-  }
-  
-  body.open .menu a {
+
+.menu {
+  z-index: 4;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  width: 100%;
+  height: 100%;
+  background: var(--navbar-bg);
+  opacity: 0;
+  transition: 1s;
+}
+
+body.open .menu {
+  transition: 1s;
+  opacity: 1;
+  position: fixed;
+  display: flex;
+}
+
+.menu a {
+  font-size: 4vw;
+}
+
+body.open .menu a {
   animation: appear 0.5s ease-in-out;
+}
+
+body.open main {
+  filter: blur(10px);
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+    translate: 0 50px;
   }
-  
-  body.open main {
-    filter: blur(10px);
+
+  100% {
+    opacity: 1;
   }
-  
-  @keyframes appear {
-    0% {
-      opacity: 0;
-      translate: 0 50px;
-    }
-  
-    100% {
-      opacity: 1;
-    }
-  }
-  
-  /*------------------------------ banner carousel ------------------------------*/
-  
-  #carousel {
-    width: 100%;
-  }
-  
-  .banner {
-    z-index: -1;
-    width: 100%;
-  }
-  
+}
+
+/*------------------------------ banner carousel ------------------------------*/
+
+#carousel {
+  width: 100%;
+}
+
+.banner {
+  z-index: -1;
+  width: 100%;
+}
+
 .carousel-item {
-    position: relative;
+  position: relative;
   transition: transform 2s ease-in-out, opacity 2s ease-in-out;
 }
 
 .no-horizontal-scroll {
   overflow-x: hidden;
 }
-  
+
 .img-carousel {
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 8vw
-  }
-  
-  /*------------------------------ food images gallery ------------------------------*/
-  
-  .title-1 {
-    display: flex;
-    justify-content: flex-start;
-    color: var(--orange);
-  }
-  
-  .title-2 {
-    display: flex;
-    justify-content: center;
-    color: var(--orange);
-  }
-  
-  .title-3 {
-    display: flex;
-    justify-content: flex-end;
-    color: var(--orange);
-  }
-  
-  .title-4 {
-    color: var(--black);
-    display: flex;
-    justify-content: center;
-  }
-  
-  .title-5 {
-    display: flex;
-    justify-content: center;
-    color: var(--white);
-  }
-  
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 8vw
+}
+
+/*------------------------------ food images gallery ------------------------------*/
+
+.title-1 {
+  display: flex;
+  justify-content: flex-start;
+  color: var(--orange);
+}
+
+.title-2 {
+  display: flex;
+  justify-content: center;
+  color: var(--orange);
+}
+
+.title-3 {
+  display: flex;
+  justify-content: flex-end;
+  color: var(--orange);
+}
+
+.title-4 {
+  color: var(--black);
+  display: flex;
+  justify-content: center;
+}
+
+.title-5 {
+  display: flex;
+  justify-content: center;
+  color: var(--white);
+}
+
 .img-gallery,
 .top-gallery {
-    padding-bottom: 50px;
-    width: 100%;
-    height: auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 50px;
-    max-width: 1880px;
-    margin: 0 auto;
-  }
-  
-  .img-gallery div {
-    height: 12rem;
-    transition: 0.8s;
-    border-radius: 10px;
-  }
-  
-  .img-gallery div:hover {
-    transform: scale(1.1);
-    transition: 0.8s;
-  }
-  
-  .img-gallery-pic1 {
-    background-image: url("https://images.pexels.com/photos/958545/pexels-photo-958545.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
-    background-size: cover;
-    width: 300px;
-  }
-  
-  .img-gallery-pic2 {
-    background-image: url("https://images.pexels.com/photos/941869/pexels-photo-941869.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
-    background-size: cover;
-    width: 200px;
-  }
-  
-  .img-gallery-pic3 {
-    background-image: url("https://images.pexels.com/photos/958547/pexels-photo-958547.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
-    background-size: cover;
-    width: 250px;
-  }
-  
-  .img-gallery-pic4 {
-    background-image: url("https://images.pexels.com/photos/8112966/pexels-photo-8112966.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
-    background-size: cover;
-    width: 300px;
-  }
-  
-  .img-gallery-pic5 {
-    background-image: url("https://images.pexels.com/photos/9544258/pexels-photo-9544258.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
-    background-size: cover;
-    width: 250px;
-  }
-  
-  .img-gallery-pic6 {
-    background-image: url("https://images.pexels.com/photos/1907227/pexels-photo-1907227.jpeg");
-    background-size: cover;
-    width: 250px;
-  }
-  
-  .img-gallery-pic7 {
-    background-image: url("https://images.pexels.com/photos/3009323/pexels-photo-3009323.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
-    background-size: cover;
-    width: 200px;
-  }
-  
-  .img-gallery-pic8 {
-    background-image: url("https://images.pexels.com/photos/12706240/pexels-photo-12706240.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
-    background-size: cover;
-    width: 300px;
-  }
-  
-  .img-gallery-pic9 {
-    background-image: url("https://images.pexels.com/photos/1907228/pexels-photo-1907228.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
-    background-size: cover;
-    width: 300px;
-  }
-  
-  .img-gallery-pic10 {
-    background-image: url("https://images.pexels.com/photos/5993865/pexels-photo-5993865.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
-    background-size: cover;
-    width: 250px;
-  }
-  
-  .img-gallery-pic11 {
-    background-image: url("https://images.pexels.com/photos/20844826/pexels-photo-20844826/free-photo-of-comida-restaurante-pez-pescado.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
-    background-size: cover;
-    width: 200px;
-  }
-  
-  .img-gallery-pic12 {
-    background-image: url("https://images.pexels.com/photos/1639563/pexels-photo-1639563.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
-    background-size: cover;
-    width: 300px;
-  }
-  
+  padding-bottom: 50px;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 50px;
+  max-width: 1880px;
+  margin: 0 auto;
+}
+
+.img-gallery div {
+  height: 12rem;
+  transition: 0.8s;
+  border-radius: 10px;
+}
+
+.img-gallery div:hover {
+  transform: scale(1.1);
+  transition: 0.8s;
+}
+
+.img-gallery-pic1 {
+  background-image: url("https://images.pexels.com/photos/958545/pexels-photo-958545.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+  background-size: cover;
+  width: 300px;
+}
+
+.img-gallery-pic2 {
+  background-image: url("https://images.pexels.com/photos/941869/pexels-photo-941869.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+  background-size: cover;
+  width: 200px;
+}
+
+.img-gallery-pic3 {
+  background-image: url("https://images.pexels.com/photos/958547/pexels-photo-958547.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+  background-size: cover;
+  width: 250px;
+}
+
+.img-gallery-pic4 {
+  background-image: url("https://images.pexels.com/photos/8112966/pexels-photo-8112966.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+  background-size: cover;
+  width: 300px;
+}
+
+.img-gallery-pic5 {
+  background-image: url("https://images.pexels.com/photos/9544258/pexels-photo-9544258.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+  background-size: cover;
+  width: 250px;
+}
+
+.img-gallery-pic6 {
+  background-image: url("https://images.pexels.com/photos/1907227/pexels-photo-1907227.jpeg");
+  background-size: cover;
+  width: 250px;
+}
+
+.img-gallery-pic7 {
+  background-image: url("https://images.pexels.com/photos/3009323/pexels-photo-3009323.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+  background-size: cover;
+  width: 200px;
+}
+
+.img-gallery-pic8 {
+  background-image: url("https://images.pexels.com/photos/12706240/pexels-photo-12706240.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+  background-size: cover;
+  width: 300px;
+}
+
+.img-gallery-pic9 {
+  background-image: url("https://images.pexels.com/photos/1907228/pexels-photo-1907228.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+  background-size: cover;
+  width: 300px;
+}
+
+.img-gallery-pic10 {
+  background-image: url("https://images.pexels.com/photos/5993865/pexels-photo-5993865.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+  background-size: cover;
+  width: 250px;
+}
+
+.img-gallery-pic11 {
+  background-image: url("https://images.pexels.com/photos/20844826/pexels-photo-20844826/free-photo-of-comida-restaurante-pez-pescado.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+  background-size: cover;
+  width: 200px;
+}
+
+.img-gallery-pic12 {
+  background-image: url("https://images.pexels.com/photos/1639563/pexels-photo-1639563.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+  background-size: cover;
+  width: 300px;
+}
+
 /*------------------------------ about us, info and functions ------------------------------*/
 
 .about-section2 {
   padding: 50px 100px 100px 100px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .about-section1 {
   padding-top: 100px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   background-image: linear-gradient(180deg,
       var(--grad-grey) 2%,
       var(--grad-gray) 63%,
       var(--white) 100%);
-  }
-  
+}
+
 .about-title2 {
-    font-size: 6vw;
-    font-weight: 600;
-    color: var(--black);
-  }
-  
+  font-size: 6vw;
+  font-weight: 600;
+  color: var(--black);
+}
+
 .about-title1 {
-    font-size: 6vw;
-    font-weight: 600;
-    color: var(--white);
-  }
-  
+  font-size: 6vw;
+  font-weight: 600;
+  color: var(--white);
+}
+
 .about-subtitle1 {
-    color: var(--white);
-  }
-  
+  color: var(--white);
+}
+
 .about-subtitle2 {
-    color: var(--black);
-  }
-  
+  color: var(--black);
+}
+
 .about-text2 {
   color: var(--blackpacity);
-    font-style: oblique;
-  }
-  
+  font-style: oblique;
+}
+
 .about-text1 {
   color: var(--whitepacity);
-    font-style: oblique;
-  }
-  
+  font-style: oblique;
+}
+
 .explora-pic {
-    margin-top: 100px;
-    align-self: start;
-  }
-  
+  margin-top: 100px;
+  align-self: start;
+}
+
 .explora-pic2 {
   margin-top: 90px;
-    align-self: end;
-  }
-  
-  /*------------------------------ gallery of top restaurants ------------------------------*/
-  
-  .top-gallery div {
-    height: 12rem;
-    transition: 0.8s;
-    border-radius: 10px;
-  }
-  
-  .top-gallery div:hover {
-    transform: scale(1.1);
-    transition: 0.8s;
-  }
-  
-  .top-gallery div {
-    box-shadow: 2px 2px 8px 1px var(--shadows);
-    height: 12rem;
-    transition: 0.8s;
-    border-radius: 10px;
-  }
-  
-  .top-gallery div:hover {
-    transform: scale(1.1);
-    transition: 0.8s;
-  }
-  
-  .top-gallery-pic1 {
-    background-image: url("https://st4.depositphotos.com/2160693/40759/v/450/depositphotos_407590112-stock-illustration-food-and-drink-logo-plate.jpg");
-    background-size: cover;
-    background-position: center;
-    width: 300px;
-  }
-  
-  .top-gallery-pic2 {
-    background-image: url("https://bcassetcdn.com/public/blog/wp-content/uploads/2019/07/18094837/golden-diner.png");
-    background-size: cover;
-    background-position: center;
-    width: 200px;
-  }
-  
-  .top-gallery-pic3 {
-    background-image: url("https://logowik.com/content/uploads/images/414_restaurant.jpg");
-    background-size: cover;
-    background-position: center;
-    width: 250px;
-  }
-  
-  .top-gallery-pic4 {
-    background-image: url("https://www.creativefabrica.com/wp-content/uploads/2021/05/15/restaurant-logo-Graphics-12037753-1-1-580x435.jpg");
-    background-size: cover;
-    background-position: center;
-    width: 300px;
-  }
-  
-  .top-gallery-pic5 {
-    background-image: url("https://dcassetcdn.com/design_img/1356995/517402/517402_6933101_1356995_08cf7715_thumbnail.png");
-    background-size: cover;
-    background-position: center;
-    width: 250px;
-  }
-  
-  .top-gallery-pic6 {
-    background-image: url("https://cdn.dribbble.com/users/9583346/screenshots/16951633/media/93abd3069654c952a5abfa24aad3ad4b.jpg?resize=400x0");
-    background-size: cover;
-    background-position: center;
-    width: 250px;
-  }
-  
-  /*------------------------------ footer or contact section ------------------------------*/
-  
+  align-self: end;
+}
+
+/*------------------------------ gallery of top restaurants ------------------------------*/
+
+.top-gallery div {
+  height: 12rem;
+  transition: 0.8s;
+  border-radius: 10px;
+}
+
+.top-gallery div:hover {
+  transform: scale(1.1);
+  transition: 0.8s;
+}
+
+.top-gallery div {
+  box-shadow: 2px 2px 8px 1px var(--shadows);
+  height: 12rem;
+  transition: 0.8s;
+  border-radius: 10px;
+}
+
+.top-gallery div:hover {
+  transform: scale(1.1);
+  transition: 0.8s;
+}
+
+.top-gallery-pic1 {
+  background-image: url("https://st4.depositphotos.com/2160693/40759/v/450/depositphotos_407590112-stock-illustration-food-and-drink-logo-plate.jpg");
+  background-size: cover;
+  background-position: center;
+  width: 300px;
+}
+
+.top-gallery-pic2 {
+  background-image: url("https://bcassetcdn.com/public/blog/wp-content/uploads/2019/07/18094837/golden-diner.png");
+  background-size: cover;
+  background-position: center;
+  width: 200px;
+}
+
+.top-gallery-pic3 {
+  background-image: url("https://logowik.com/content/uploads/images/414_restaurant.jpg");
+  background-size: cover;
+  background-position: center;
+  width: 250px;
+}
+
+.top-gallery-pic4 {
+  background-image: url("https://www.creativefabrica.com/wp-content/uploads/2021/05/15/restaurant-logo-Graphics-12037753-1-1-580x435.jpg");
+  background-size: cover;
+  background-position: center;
+  width: 300px;
+}
+
+.top-gallery-pic5 {
+  background-image: url("https://dcassetcdn.com/design_img/1356995/517402/517402_6933101_1356995_08cf7715_thumbnail.png");
+  background-size: cover;
+  background-position: center;
+  width: 250px;
+}
+
+.top-gallery-pic6 {
+  background-image: url("https://cdn.dribbble.com/users/9583346/screenshots/16951633/media/93abd3069654c952a5abfa24aad3ad4b.jpg?resize=400x0");
+  background-size: cover;
+  background-position: center;
+  width: 250px;
+}
+
+/*------------------------------ footer or contact section ------------------------------*/
+
 #contacta {
-    padding-top: 250px;
-    padding-bottom: 25px;
+  padding-top: 250px;
+  padding-bottom: 25px;
   background-image: linear-gradient(0deg,
       var(--grad-grey) 30%,
       var(--grad-gray) 85%,
       var(--white) 100%);
-  }
-  
+}
+
 .contacta-content {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
 
   & div {
-      display: flex;
-      align-items: center;
-      gap: 20px;
-    }
+    display: flex;
+    align-items: center;
+    gap: 20px;
   }
-  
+}
+
 .footer-links {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
   & div {
     gap: 20px;
-      justify-self: flex-start;
-    }
+    justify-self: flex-start;
   }
-  
+}
+
 .footer-form {
-    display: flex;
-    justify-content: center;
-  }
-  
+  display: flex;
+  justify-content: center;
+}
+
 .footer-icons {
-    align-self: center;
-    text-indent: 10px;
-  }
-  
-  /*------------------------------ media querys ------------------------------*/
-  
-  /*mobile*/
-  @media (min-width: 320px) and (max-width: 769px) {
+  align-self: center;
+  text-indent: 10px;
+}
+
+/*------------------------------ media querys ------------------------------*/
+
+/*mobile*/
+@media (min-width: 320px) and (max-width: 769px) {
 
   .img-gallery,
   .top-gallery {
-      max-width: 320px;
-    }
+    max-width: 320px;
+  }
 
   .img-gallery-pic3,
   .img-gallery-pic5,
@@ -538,15 +538,15 @@ body.open #navbar section {
   .img-gallery-pic9,
   .img-gallery-pic1,
   .img-gallery-pic12 {
-      display: none;
-    }
+    display: none;
+  }
 
   .explora-pic,
   .explora-pic2,
   .experiencia-pic,
   .reserva-pic {
-      width: 50vw;
-    }
+    width: 50vw;
+  }
 
   .menu,
   .menu-home,
@@ -554,187 +554,185 @@ body.open #navbar section {
   .menu-contacta,
   .menu-explora {
     transition: none;
-    }
+  }
 
   body.open .menu {
-      transition: none;
-    }
+    transition: none;
+  }
 
   body.open .menu a {
     animation: appear 0.3s ease-in-out;
-    }
+  }
 
-    body.open .navbar-burger {
-      position: fixed;
-    }
+  body.open .navbar-burger {
+    position: fixed;
+  }
 
   .navbar-burger img {
-      padding-top: 5px;
+    padding-top: 5px;
     width: 40px;
-    }
-    
+  }
+
   body.open .navbar-burger-fade {
-      width: 65px;
-      height: 65px;
-      translate: 0 10px;
-      visibility: visible;
-    }
+    width: 65px;
+    height: 65px;
+    translate: 0 10px;
+    visibility: visible;
+  }
 
   .footer-form {
-      text-align: center;
-    }
+    text-align: center;
+  }
 
   p {
-      font-weight: normal;
+    font-weight: normal;
     font-size: 18px;
-    }
-
-    /* … */
   }
 
-   /* tablet */
-  @media (min-width: 770px) and (max-width: 1023px) {
+  /* … */
+}
+
+/* tablet */
+@media (min-width: 770px) and (max-width: 1023px) {
 
   .img-gallery,
   .top-gallery {
-      max-width: 770px;
-    }
+    max-width: 770px;
+  }
 
   .explora-pic,
   .explora-pic2,
   .experiencia-pic,
   .reserva-pic {
-      width: 45vw;
-    }
+    width: 45vw;
+  }
 
   .contacta {
-      padding-top: 50px;
-    }
-    
-    body.open .navbar-burger {
-      position: fixed;
-      translate: 0 15px;
-      transition: 1s;
-    }
+    padding-top: 50px;
+  }
+
+  body.open .navbar-burger {
+    position: fixed;
+    translate: 0 15px;
+    transition: 1s;
+  }
 
   .navbar-burger img {
     width: 40px;
-      transition: 1s;
-    }
-
-  body.open .navbar-burger img {
-      transition: 1s;
-    }
-    
-  body.open .navbar-burger-fade {
-      width: 70px;
-      height: 70px;
-      translate: 0 20px;
-      visibility: visible;
-    animation: appear 0.5s ease-in-out;
-    ;
-    }
-
-  .footer-form {
-      text-align: center;
-    }
-
-  p {
-      font-weight: normal;
-    font-size: 23px;
-    }
-    
-    /* … */
+    transition: 1s;
   }
 
-   /* portatil */
-  @media (min-width: 1024px) and (max-width: 1879px) {
+  body.open .navbar-burger img {
+    transition: 1s;
+  }
+
+  body.open .navbar-burger-fade {
+    width: 70px;
+    height: 70px;
+    translate: 0 20px;
+    visibility: visible;
+    animation: appear 0.5s ease-in-out;
+    ;
+  }
+
+  .footer-form {
+    text-align: center;
+  }
+
+  p {
+    font-weight: normal;
+    font-size: 23px;
+  }
+
+  /* … */
+}
+
+/* portatil */
+@media (min-width: 1024px) and (max-width: 1879px) {
 
   .img-gallery,
   .top-gallery {
-      max-width: 1024px;
-    }
+    max-width: 1024px;
+  }
 
   .explora-pic,
   .explora-pic2,
   .experiencia-pic,
   .reserva-pic {
-      width: 45vw;
-    }
+    width: 45vw;
+  }
 
   .contacta {
-      padding-top: 100px;
-    }
+    padding-top: 100px;
+  }
 
-    body.open .navbar-burger {
-      position: fixed;
-      translate: 0 10px;
-      transition: 1s;
-    }
+  body.open .navbar-burger {
+    position: fixed;
+    translate: 0 10px;
+    transition: 1s;
+  }
 
   .navbar-burger img {
-      padding-top: 50px;
+    padding-top: 50px;
     width: 45px;
-      transition: 1s;
-    }
+    transition: 1s;
+  }
 
   body.open .navbar-burger img {
-      transition: 1s;
-    }
-    
+    transition: 1s;
+  }
+
   body.open .navbar-burger-fade {
-      width: 70px;
-      height: 70px;
-      translate: 0 40px;
-      visibility: visible;
+    width: 70px;
+    height: 70px;
+    translate: 0 40px;
+    visibility: visible;
     animation: appear 0.5s ease-in-out;
     ;
-    }
+  }
 
   p {
-      font-weight: normal;
-      font-size: 25px;
-    }
-
-    /* … */
+    font-weight: normal;
+    font-size: 25px;
   }
-  
-   /* PC */
-  @media (min-width: 1880px) {
-  .contacta {
-      padding-top: 150px;
-    }
 
-    body.open .navbar-burger {
-      position: fixed;
-      translate: 0 100px;
-      transition: 1s;
-    }
+  /* … */
+}
+
+/* PC */
+@media (min-width: 1880px) {
+  .contacta {
+    padding-top: 150px;
+  }
+
+  body.open .navbar-burger {
+    position: fixed;
+    translate: 0 100px;
+    transition: 1s;
+  }
 
   .navbar-burger img {
-      padding-top: 40px;
+    padding-top: 40px;
     width: 55px;
-      transition: 1s;
-    }
+    transition: 1s;
+  }
 
   body.open .navbar-burger img {
-      padding-top: 20px;
-      transition: 1s;
-    }
-    
+    padding-top: 20px;
+    transition: 1s;
+  }
+
   body.open .navbar-burger-fade {
-      width: 100px;
-      height: 100px;
-      translate: 0 100px;
-      visibility: visible;
+    width: 100px;
+    height: 100px;
+    translate: 0 100px;
+    visibility: visible;
     animation: appear 0.5s ease-in-out;
     ;
-    }
+  }
 
   p {
-      font-weight: normal;
-      font-size: 35px;
-    }
-
-    /* … */
+    font-weight: normal;
+    font-size: 35px;
   }
+}
