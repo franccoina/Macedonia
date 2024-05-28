@@ -1,32 +1,196 @@
 {
-    "users": [
-      {
-        "id": "001",
-        "name": "John",
-        "lastName": "Doe",
-        "username": "johndoe",
-        "password": "password"
-      },
-      {
-        "id": "002",
-        "name": "Jane",
-        "lastName": "Doe",
-        "username": "janedoe",
-        "password": "password"
-      },
-      {
-        "id": "003",
-        "name": "Jules",
-        "lastName": "Doe",
-        "username": "julesdoe",
-        "password": "password"
-      },
-      {
-        "id": "004",
-        "name": "Julie",
-        "lastName": "Doe",
-        "username": "juliedoe",
-        "password": "password"
-      }
-    ]
-  }
+  "users": [
+    {
+      "id": "001",
+      "name": "John",
+      "lastName": "Doe",
+      "username": "johndoe",
+      "password": "password",
+      "restaurantes": [
+        {
+          "nombre": "La Pradera",
+          "reservas": [
+            {
+              "cliente": "Sebastian Ortiz",
+              "fecha": "2024-12-03"
+            },
+            {
+              "cliente": "Mariana Martinez",
+              "fecha": "2024-10-05"
+            }
+          ]
+        },
+        {
+          "nombre": "Ganadino",
+          "reservas": [
+            {
+              "cliente": "Sebastian Ortiz",
+              "fecha": "2024-12-03"
+            },
+            {
+              "cliente": "Mariana Martinez",
+              "fecha": "2024-10-05"
+            }
+          ]
+        },
+        {
+          "nombre": "Safaera",
+          "reservas": [
+            {
+              "cliente": "Sebastian Ortiz",
+              "fecha": "2024-12-03"
+            },
+            {
+              "cliente": "Mariana Martinez",
+              "fecha": "2024-10-05"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "002",
+      "name": "Jane",
+      "lastName": "Doe",
+      "username": "janedoe",
+      "password": "password",
+      "restaurantes": [
+        {
+          "nombre": "Casona",
+          "reservas": [
+            {
+              "cliente": "Sebastian Ortiz",
+              "fecha": "2024-12-03"
+            },
+            {
+              "cliente": "Mariana Martinez",
+              "fecha": "2024-10-05"
+            }
+          ]
+        },
+        {
+          "nombre": "POMM",
+          "reservas": [
+            {
+              "cliente": "Sebastian Ortiz",
+              "fecha": "2024-12-03"
+            },
+            {
+              "cliente": "Mariana Martinez",
+              "fecha": "2024-10-05"
+            }
+          ]
+        },
+        {
+          "nombre": "Amoré",
+          "reservas": [
+            {
+              "cliente": "Sebastian Ortiz",
+              "fecha": "2024-12-03"
+            },
+            {
+              "cliente": "Mariana Martinez",
+              "fecha": "2024-10-05"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "003",
+      "name": "Jules",
+      "lastName": "Doe",
+      "username": "julesdoe",
+      "password": "password",
+      "restaurantes": [
+        {
+          "nombre": "Archipiélago",
+          "reservas": [
+            {
+              "cliente": "Sebastian Ortiz",
+              "fecha": "2024-12-03"
+            },
+            {
+              "cliente": "Mariana Martinez",
+              "fecha": "2024-10-05"
+            }
+          ]
+        },
+        {
+          "nombre": "Shore Eats",
+          "reservas": [
+            {
+              "cliente": "Sebastian Ortiz",
+              "fecha": "2024-12-03"
+            },
+            {
+              "cliente": "Mariana Martinez",
+              "fecha": "2024-10-05"
+            }
+          ]
+        },
+        {
+          "nombre": "Saint-Jean",
+          "reservas": [
+            {
+              "cliente": "Sebastian Ortiz",
+              "fecha": "2024-12-03"
+            },
+            {
+              "cliente": "Mariana Martinez",
+              "fecha": "2024-10-05"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "004",
+      "name": "Jack",
+      "lastName": "Doe",
+      "username": "jackdoe",
+      "password": "password",
+      "restaurantes": [
+        {
+          "nombre": "D'LUCCA",
+          "reservas": [
+            {
+              "cliente": "Sebastian Ortiz",
+              "fecha": "2024-12-03"
+            },
+            {
+              "cliente": "Mariana Martinez",
+              "fecha": "2024-10-05"
+            }
+          ]
+        },
+        {
+          "nombre": "Andres Grillhouse",
+          "reservas": [
+            {
+              "cliente": "Sebastian Ortiz",
+              "fecha": "2024-12-03"
+            },
+            {
+              "cliente": "Mariana Martinez",
+              "fecha": "2024-10-05"
+            }
+          ]
+        },
+        {
+          "nombre": "Olivera Café",
+          "reservas": [
+            {
+              "cliente": "Sebastian Ortiz",
+              "fecha": "2024-12-03"
+            },
+            {
+              "cliente": "Mariana Martinez",
+              "fecha": "2024-10-05"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
