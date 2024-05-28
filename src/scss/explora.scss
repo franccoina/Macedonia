@@ -608,13 +608,19 @@ body.open main {
     /* … */
 }
 
+// ---------------------------------------------MODAL-----------------------------------------------
 
+.modal-dialog{
+    width: 1800px;
+    max-width: 1900px;
+}
 
-
-
-
-
-
+.grid-modal{
+    display: grid;
+    grid-template-columns: repeat(10, 20px);
+    grid-template-rows: repeat(16, 20px);
+    gap: 20px;
+}
 
 #reserva {
     background-color: var(--grad-gray);
