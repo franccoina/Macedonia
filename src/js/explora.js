@@ -20,6 +20,7 @@ let url = "http://localhost:3000/users";
 const search = document.querySelector('#search');
 console.log(search.value);
 const restaurantList = document.querySelector('#restaurantList');
+const code = document.querySelector('code');
 
 // Evento de cambio en el input de búsqueda
 search.addEventListener('input', async function () {
@@ -37,11 +38,13 @@ async function research(searchWord) {
   const data = await response.json()
 
   data.forEach(user => {
-    user.restaurants.forEach((element,index) => {
+    code.innerHTML += `
+        <span data-idUser=${user.id}></span>`
+    user.restaurants.forEach((element, index) => {
       // Verificar si alguna palabra clave coincide con el término de búsqueda
       if (element.keyWords.includes(searchWord.toLowerCase())) {
         // Crear un nuevo elemento de lista y agregarlo a la lista
-        restaurantList.innerHTML +=  `
+        restaurantList.innerHTML += `
         <div class="img-restaurant" data-bs-toggle="modal" data-bs-target="#myModal-${index}">
           <section>
             <h3><strong>${element.name}</strong></h3>
@@ -94,4 +97,3 @@ async function research(searchWord) {
     });
   });
 }
-

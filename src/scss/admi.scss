@@ -11,7 +11,7 @@
 
 :root {
     --page-bg: #ffffff;
-    --navbar-bg: #ffffffe6;
+    --navbar-bg: #000000e6;
 
     --grad-black: #000000b3;
     --grad-beige: #a57758b3;
@@ -67,7 +67,7 @@ footer {
 
 h1 {
     font-size: 5vw;
-    color: #fff;
+    color: var(--white);
     text-align: center;
 }
 

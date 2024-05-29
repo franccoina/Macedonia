@@ -27,12 +27,16 @@
             {
               "restaurant": "Memento",
               "cliente": "Sebastian Ortiz",
-              "fecha": "2024-12-03"
+              "fecha": "2024-12-03",
+              "comentarios":"Fiesta de Despedida",
+              "hora":"2:00:00 UTC"
             },
             {
               "restaurant": "Memento",
               "cliente": "Mariana Martinez",
-              "fecha": "2024-10-05"
+              "fecha": "2024-10-05",
+              "comentarios":"Fiesta de Despedida",
+              "hora":"2:00:00 UTC"
             }
           ]
         },
@@ -56,12 +60,16 @@
             {
               "restaurant": "Montaña",
               "cliente": "Sebastian Ortiz",
-              "fecha": "2024-12-03"
+              "fecha": "2024-12-03",
+              "comentarios":"Fiesta de Despedida",
+              "hora":"2:00:00 UTC"
             },
             {
               "restaurant": "Montaña",
               "cliente": "Mariana Martinez",
-              "fecha": "2024-10-05"
+              "fecha": "2024-10-05",
+              "comentarios":"Fiesta de Despedida",
+              "hora":"2:00:00 UTC"
             }
           ]
         }
@@ -94,12 +102,16 @@
             {
               "restaurant": "Safaera",
               "cliente": "Sebastian Ortiz",
-              "fecha": "2024-12-03"
+              "fecha": "2024-12-03",
+              "comentarios":"Fiesta de Despedida",
+              "hora":"2:00:00 UTC"
             },
             {
               "restaurant": "Safaera",
               "cliente": "Mariana Martinez",
-              "fecha": "2024-10-05"
+              "fecha": "2024-10-05",
+              "comentarios":"Fiesta de Despedida",
+              "hora":"2:00:00 UTC"
             }
           ]
         },
@@ -123,12 +135,16 @@
             {
               "restaurant": "La Pradera",
               "cliente": "Sebastian Ortiz",
-              "fecha": "2024-12-03"
+              "fecha": "2024-12-03",
+              "comentarios":"Fiesta de Despedida",
+              "hora":"2:00:00 UTC"
             },
             {
               "restaurant": "La Pradera",
               "cliente": "Mariana Martinez",
-              "fecha": "2024-10-05"
+              "fecha": "2024-10-05",
+              "comentarios":"Fiesta de Despedida",
+              "hora":"2:00:00 UTC"
             }
           ]
         }
