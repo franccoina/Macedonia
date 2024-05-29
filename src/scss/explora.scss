@@ -611,28 +611,27 @@ body.open main {
 // ---------------------------------------------MODAL-----------------------------------------------
 
 .modal-dialog{
-    width: 1800px;
+    width: 900px;
     max-width: 1900px;
 }
 
-.grid-modal{
-    display: grid;
-    grid-template-columns: repeat(10, 20px);
-    grid-template-rows: repeat(16, 20px);
-    gap: 20px;
+.modal-text{
+    font-size: 20px;
 }
+
+.modal-content{
+    background-color: var(--grad-gray);
+}
+.modal-social-media{
+    text-decoration: none;
+    color: var(--black);
+    padding: 10px;
+}   
 
 #reserva {
     background-color: var(--grad-gray);
 }
 
-.form-booking {
-    padding-top: 50px;
-    display: grid;
-    grid-template-columns: repeat(10, 1fr);
-    grid-template-rows: repeat(16, 20px);
-    gap: 20px;
-}
 
 input,
 textarea {
