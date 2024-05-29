@@ -38,16 +38,13 @@
 
 /*------------------------------ tags and general sttings ------------------------------*/
 
-section {
+body {
   z-index: 1;
-  background-image: linear-gradient(0deg,
-      #000000b3 0%,
-      #000000 10%);
+  background-color: #5c1d1d;
   padding: 20px;
 }
 
 footer {
-  background-color: #000000b3;
   padding-bottom: 25px;
 }
 
@@ -55,20 +52,6 @@ h1 {
   font-size: 40px;
   font-weight: lighter;
   color: var(--whitepacity);
-}
-
-/*------------------------------ background ------------------------------*/
-
-/* Background image settings */
-.bg-img {
-  z-index: -1;
-  position: fixed;
-  display: flex;
-  height: 100vh;
-  width: 100vw;
-  background: url("../../public/img/food-login-bg.webp") no-repeat;
-  background-position: center;
-  background-size: cover;
 }
 
 /*------------------------------ options for the administer: register, edit, resevations ------------------------------*/

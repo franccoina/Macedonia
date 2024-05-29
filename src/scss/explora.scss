@@ -216,7 +216,7 @@ body.open main {
 }
 
 .title2 {
-    translate: 0 70px;
+    translate: 0 80px;
     display: flex;
     justify-content: flex-end;
     color: var(--orangepacity);
@@ -324,30 +324,25 @@ body.open main {
 }
 
 .img-restaurant video:hover {
-    transform: scale(1.1);
     transition: 0.8s;
 }
 
 .img-restaurant-pic1 {
-    background-image: url("https://images.pexels.com/photos/12706240/pexels-photo-12706240.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
     background-size: cover;
     width: 250px;
 }
 
 .img-restaurant-pic2 {
-    background-image: url("https://images.pexels.com/photos/20844826/pexels-photo-20844826/free-photo-of-comida-restaurante-pez-pescado.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
     background-size: cover;
     width: 200px;
 }
 
 .img-restaurant-pic3 {
-    background-image: url("https://images.pexels.com/photos/1907227/pexels-photo-1907227.jpeg");
     background-size: cover;
     width: 250px;
 }
 
 .img-restaurant-pic4 {
-    background-image: url("https://images.pexels.com/photos/8112966/pexels-photo-8112966.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
     background-size: cover;
     width: 300px;
 }
@@ -389,6 +384,74 @@ body.open main {
 .footer-icons {
     align-self: center;
     text-indent: 10px;
+}
+
+// --------------------------------------------- Modal -----------------------------------------------
+
+.modal-dialog{
+    width: 900px;
+    max-width: 1900px;
+}
+
+.modal-text{
+    font-size: 20px;
+}
+
+.modal-content{
+    padding: 50px;
+    background-color: var(--grad-gray);
+}
+.modal-social-media{
+    text-decoration: none;
+    color: var(--black);
+    padding: 10px;
+}   
+
+#reserva {
+    background-color: var(--grad-gray);
+}
+
+
+input,
+textarea {
+    border: white 1px solid;
+    border-radius: 10px;
+    background-color: #ffffffb3;
+    padding: 10px;
+    width: 100%;
+}
+
+.form-name {
+    grid-column: 1 / 6;
+}
+
+.form-email {
+    grid-column: 6 / 11;
+}
+
+.form-phone-number {
+    grid-column: 2 / 4;
+    grid-row: 3 / 4;
+}
+
+.form-date {
+    grid-column: 4 / 8;
+    grid-row: 3 / 4;
+}
+
+.form-hour {
+    grid-column: 8 / 10;
+    grid-row: 3 / 4;
+}
+
+.form-people {
+    grid-column: 4 / 6;
+    grid-row: 5 / 6;
+}
+
+.submit {
+    grid-column: 6 / 8;
+    grid-row: 7 / 9;
 }
 
 /*------------------------------ media querys ------------------------------*/
@@ -608,71 +671,3 @@ body.open main {
     /* … */
 }
 
-// ---------------------------------------------MODAL-----------------------------------------------
-
-.modal-dialog{
-    width: 900px;
-    max-width: 1900px;
-}
-
-.modal-text{
-    font-size: 20px;
-}
-
-.modal-content{
-    background-color: var(--grad-gray);
-}
-.modal-social-media{
-    text-decoration: none;
-    color: var(--black);
-    padding: 10px;
-}   
-
-#reserva {
-    background-color: var(--grad-gray);
-}
-
-
-input,
-textarea {
-    border: white 1px solid;
-    border-radius: 10px;
-    background-color: #ffffffb3;
-    padding: 10px;
-    width: 100%;
-}
-
-.form-name {
-    grid-column: 1 / 6;
-}
-
-.form-email {
-    grid-column: 6 / 11;
-}
-
-.form-phone-number {
-    grid-column: 2 / 4;
-    grid-row: 3 / 4;
-}
-
-.form-date {
-    grid-column: 4 / 8;
-    grid-row: 3 / 4;
-}
-
-.form-hour {
-    grid-column: 8 / 10;
-    grid-row: 3 / 4;
-}
-
-.form-people {
-    grid-column: 4 / 6;
-    grid-row: 5 / 6;
-}
-
-.submit {
-    grid-column: 6 / 8;
-    grid-row: 7 / 9;
-    border-radius: 10px;
-    background-color: #ffffffb3;
-}
