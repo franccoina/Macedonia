@@ -39,5 +39,6 @@ Nuestra documentación la encontrarás en nuestro Trello, no obstante te dejamos
 
 ## GitHUb
 
-https://github.com/franccoina/Macedonia
+Y finalmente, aqui encontrarás nuestro repositorio de GitHUb:
+   https://github.com/franccoina/Macedonia
 
