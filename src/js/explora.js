@@ -77,8 +77,8 @@ async function research(searchWord) {
                     <textarea class="form-comment" id="comentario" name="comentario" rows="4" cols="50"
                       placeholder="Comentario"></textarea>
                     <div class="text-center pt-4">
-                      <a class="modal-social-media" href=${element.socialMedia1}><i class="bi bi-facebook text-light"></i></a>
-                      <a class="modal-social-media" href=${element.socialMedia2}><i class="bi bi-instagram text-light"></i></a>
+                      <a class="modal-social-media" href=${element.socialMedia1}><i class="bi bi-instagram text-light"></i></a>
+                      <a class="modal-social-media" href=${element.socialMedia2}><i class="bi bi-facebook text-light"></i></a>
                       <a class="modal-social-media" href=${element.socialMedia3}><i class="bi bi-whatsapp text-light"></i></a>
                       <a class="modal-social-media" href=${element.menu}><i class="bi bi-menu-button-wide text-danger"></i></a>
                     </div>

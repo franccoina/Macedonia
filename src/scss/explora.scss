@@ -34,7 +34,6 @@
     --shadows: #00000033;
 }
 
-
 * {
     box-sizing: border-box;
     padding: 0;
@@ -388,11 +387,6 @@ body.open main {
 
 // --------------------------------------------- Modal -----------------------------------------------
 
-.modal-dialog{
-    width: 900px;
-    max-width: 1900px;
-}
-
 .modal-text{
     font-size: 20px;
 }
@@ -523,6 +517,11 @@ textarea {
         padding-left: 45px;
     }
 
+    .modal-dialog{
+        width: 300px;
+        max-width: 769px;
+    }
+
     /* … */
 }
 
@@ -578,6 +577,11 @@ textarea {
         padding-left: 80px;
     }
 
+    .modal-dialog{
+        width: 700px;
+        max-width: 1023px;
+    }
+
     /* … */
 }
 
@@ -625,6 +629,11 @@ textarea {
         padding-left: 85px;
     }
 
+    .modal-dialog{
+        width: 900px;
+        max-width: 1879px;
+    }
+
     /* … */
 }
 
@@ -666,6 +675,11 @@ textarea {
     .title2 {
         padding-right: 105px;
         padding-left: 105px;
+    }
+
+    .modal-dialog{
+        width: 1000px;
+        max-width: 1880px;
     }
 
     /* … */

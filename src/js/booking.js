@@ -93,9 +93,6 @@ async function index() {
                 <td>
                     ${element.reservations.length}
                 </td>
-                <td>
-                    <button type="button" data-id=${element.id} class="btn btn-danger">Ver reservas</button>
-                </td>
             `
             })
         }
@@ -103,12 +100,6 @@ async function index() {
 }
 
 await index()
-
-tbodyRestaurants.addEventListener("click", async function(event){
-    if (event.target.classList.contains("btn-danger")) {
-        await indexReservations()
-    }
-})
 
 async function indexReservations() {
     const response = await fetch(url)
@@ -132,4 +123,6 @@ async function indexReservations() {
         }
     })
 }
+
+await indexReservations()
 
