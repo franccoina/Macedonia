@@ -1,0 +1,324 @@
+// Import all of Bootstrap's CSS
+@import "bootstrap/scss/bootstrap";
+
+//Import Bootstrap's icons
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+
+//Import normalize
+@import url(./normalize.scss);
+
+/*------------------------------ document settings ------------------------------*/
+
+:root {
+  --page-bg: #ffffff;
+  --navbar-bg: #ffffffe6;
+
+  --grad-black: #000000b3;
+  --grad-beige: #a57758b3;
+
+  --grad-grey: #1c1c1ccc;
+  --grad-brown: #553518cc;
+  --grad-orange: #d86820cc;
+  --grad-gray: #cacaca;
+
+  --orange: #d86820;
+  --brown: #865d28;
+  --black: #000000;
+  --white: #ffffff;
+
+  --brownpacity: #875e2966;
+  --orangepacity: #d9672066;
+  --whitepacity: #ffffffc4;
+  --whitepacity-light: #ffffff80;
+  --blackpacity: #0000008e;
+  --shadows: #00000033;
+}
+
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Wix Madefor Display", sans-serif;
+  font-style: normal;
+}
+
+/*------------------------------ tags and general sttings ------------------------------*/
+
+section {
+  z-index: 1;
+  background-image: linear-gradient(0deg,
+      var(--grad-black) 0%,
+      var(--black) 10%);
+  padding: 20px; 
+}
+
+footer {
+  background-color: var(--grad-black);
+  padding-bottom: 25px;
+}
+
+h1 {
+  font-size: 40px;
+  font-style: oblique;
+  font-weight: lighter;
+  color: var(
+    --whitepacity
+  );
+}
+
+/*------------------------------ background ------------------------------*/
+
+/* Background image settings */
+.bg-img {
+  z-index: -1;
+  position: fixed;
+  display: flex;
+  height: 100vh; 
+  width: 100vw; 
+  background: url("../../public/img/food-login-bg.webp") no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+/*------------------------------ options for the administer: register, edit, resevations ------------------------------*/
+.btn-logout{
+  height: 40px;
+}
+
+.crud-options h2 {
+  font-style: oblique;
+  font-weight: lighter;
+}
+
+/* Button container styling */
+.button-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; 
+}
+
+/* DB button styling */
+.db-button {
+  background-color: white;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px; 
+}
+
+/* CRUD container styling */
+.crud-container {
+  padding: 20px; 
+}
+
+/* CRUD options styling */
+.div-crud {
+  display: flex;
+  justify-content: space-around;
+  border-bottom: 2px solid var(--white);
+  padding: 20px;
+  flex-wrap: wrap; 
+}
+
+.crud-options {
+  text-decoration: none;
+  color: var(--white);
+  margin: 10px; 
+}
+
+/*------------------------------ form for CRUD ------------------------------*/
+
+/* Form styling */
+.form {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; 
+}
+
+.form-edit-create {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr); 
+  grid-template-rows: repeat(21, 60px); 
+  gap: 20px;
+}
+
+/* Input and textarea styling */
+input,
+textarea {
+  border: white 1px solid;
+  border-radius: 10px;
+  background-color: #ffffffb3;
+  padding: 10px;
+  width: 100%; 
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: black;
+}
+
+/* Individual input fields styling */
+.form-name {
+  grid-column: 1 / 7;
+  grid-row: 3 / 4;
+}
+
+.form-vid {
+  grid-column: 7 / 11;
+  grid-row: 3 / 6;
+}
+
+.form-textarea {
+  grid-column: 1 / 7;
+  grid-row: 4 / 6;
+}
+
+.form-city {
+  grid-column: 1 / 4;
+  grid-row: 6 / 7;
+}
+
+.form-address {
+  grid-column: 4 / 11;
+  grid-row: 6 / 7;
+}
+
+/* Image input fields styling */
+.form-image1 {
+  grid-column: 1 / 6;
+  grid-row: 9 / 11;
+}
+
+.form-image2 {
+  grid-column: 6 / 11;
+  grid-row: 9 / 11;
+}
+
+.form-image3 {
+  grid-column: 1 / 6;
+  grid-row: 11 / 13;
+}
+
+.form-image4 {
+  grid-column: 6 / 11;
+  grid-row: 11 / 13;
+}
+
+.form-menu{
+  grid-column: 1 / 11;
+  grid-row: 18 / 19;
+}
+
+/* Social media link fields styling */
+.form-social-media1 {
+  grid-column: 1 / 4;
+  grid-row: 19 / 20;
+}
+
+.form-social-media2 {
+  grid-column: 4 / 8;
+  grid-row: 19 / 20;
+}
+
+.form-social-media3 {
+  grid-column: 8 / 11;
+  grid-row: 19 / 20;
+}
+
+/* Keyword textarea styling */
+.form-key-word {
+  grid-column: 1 / 11;
+  grid-row: 15 / 16;
+}
+
+// requirements styling
+
+.first-requirements {
+  grid-column: 1 / 11;
+  grid-row: 1 / 2;
+  translate: 0 20px;
+}
+
+.second-requirements {
+  grid-column: 1 / 11;
+  grid-row: 7 / 8;
+  translate: 0 20px;
+}
+
+.third-requirements {
+  grid-column: 1 / 11;
+  grid-row: 13 / 14;
+  translate: 0 20px;
+}
+
+.fourth-requirements {
+  grid-column: 1 / 11;
+  grid-row: 16 / 17;
+  translate: 0 20px;
+}
+
+button[type="submit"]{
+  grid-column: 1 / 11;
+  grid-row: 20 / 21; 
+  align-self: center;
+  justify-self: center;
+  margin-top: 20px;
+}
+
+.requirements {
+  color: white;
+}
+
+/* responsive caption */
+.caption {
+  font-size: 24px; 
+}
+
+/*------------------------------ footer and navigation links ------------------------------*/
+
+.footer-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  & div {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-icons {
+  align-self: center;
+  text-indent: 10px;
+}
+
+/*------------------------------ media querys ------------------------------*/
+
+@media (max-width: 767px) {
+  .caption {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .caption {
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 992px) {
+  .caption {
+    font-size: 24px;
+  }
+}
