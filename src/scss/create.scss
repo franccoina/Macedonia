@@ -10,23 +10,30 @@
 /*------------------------------ document settings ------------------------------*/
 
 :root {
-  --grad-orange: #ff812fb3;
-  --grad-brown: #8f6028b3;
-  --grad-black: #000000b3;
+  --page-bg: #ffffff;
+  --navbar-bg: #ffffffe6;
 
-  --grad-coffee: #622b09cc;
-  --grad-gray: #f7f7f7;
+  --grad-black: #000000b3;
+  --grad-beige: #a57758b3;
+
+  --grad-grey: #1c1c1ccc;
+  --grad-brown: #553518cc;
+  --grad-orange: #d86820cc;
+  --grad-gray: #cacaca;
 
   --orange: #d86820;
+  --brown: #865d28;
   --black: #000000;
   --white: #ffffff;
 
+  --brownpacity: #875e2966;
   --orangepacity: #d9672066;
-  --whitepacity: #ffffff66;
+  --whitepacity: #ffffffc4;
   --whitepacity-light: #ffffff80;
   --blackpacity: #0000008e;
   --shadows: #00000033;
 }
+
 
 * {
   box-sizing: border-box;
@@ -41,18 +48,19 @@
 section {
   z-index: 1;
   background-image: linear-gradient(0deg,
-      #000000b3 0%,
-      #000000 10%);
+      var(--grad-black) 0%,
+      var(--black) 10%);
   padding: 20px; 
 }
 
 footer {
-  background-color: #000000b3;
+  background-color: var(--grad-black);
   padding-bottom: 25px;
 }
 
 h1 {
   font-size: 40px;
+  font-style: oblique;
   font-weight: lighter;
   color: var(
     --whitepacity
@@ -111,14 +119,14 @@ h1 {
 .div-crud {
   display: flex;
   justify-content: space-around;
-  border-bottom: 2px solid rgb(255, 255, 255);
+  border-bottom: 2px solid var(--white);
   padding: 20px;
   flex-wrap: wrap; 
 }
 
 .crud-options {
   text-decoration: none;
-  color: white;
+  color: var(--white);
   margin: 10px; 
 }
 

@@ -10,19 +10,25 @@
 /*------------------------------ document settings ------------------------------*/
 
 :root {
-  --grad-orange: #ff812fb3;
-  --grad-brown: #8f6028b3;
-  --grad-black: #000000b3;
+  --page-bg: #ffffff;
+  --navbar-bg: #ffffffe6;
 
-  --grad-coffee: #622b09cc;
-  --grad-gray: #f7f7f7;
+  --grad-black: #000000b3;
+  --grad-beige: #a57758b3;
+
+  --grad-grey: #1c1c1ccc;
+  --grad-brown: #553518cc;
+  --grad-orange: #d86820cc;
+  --grad-gray: #cacaca;
 
   --orange: #d86820;
+  --brown: #865d28;
   --black: #000000;
   --white: #ffffff;
 
+  --brownpacity: #875e2966;
   --orangepacity: #d9672066;
-  --whitepacity: #ffffff66;
+  --whitepacity: #ffffffc4;
   --whitepacity-light: #ffffff80;
   --blackpacity: #0000008e;
   --shadows: #00000033;
@@ -41,22 +47,21 @@
 section {
   z-index: 1;
   background-image: linear-gradient(0deg,
-      #000000b3 0%,
-      #000000 10%);
-  padding: 20px; 
+      var(--grad-black) 0%,
+      var(--black) 10%);
+  padding: 20px;
 }
 
 footer {
-  background-color: #000000b3;
+  background-color: var(--grad-black);
   padding-bottom: 25px;
 }
 
 h1 {
   font-size: 40px;
+  font-style: oblique;
   font-weight: lighter;
-  color: var(
-    --whitepacity
-  );
+  color: var(--whitepacity);
 }
 
 /*------------------------------ background ------------------------------*/
@@ -66,15 +71,15 @@ h1 {
   z-index: -1;
   position: fixed;
   display: flex;
-  height: 100vh; 
-  width: 100vw; 
+  height: 100vh;
+  width: 100vw;
   background: url("../../public/img/food-login-bg.webp") no-repeat;
   background-position: center;
   background-size: cover;
 }
 
 /*------------------------------ options for the administer: register, edit, resevations ------------------------------*/
-.btn-logout{
+.btn-logout {
   height: 40px;
 }
 
@@ -87,39 +92,39 @@ h1 {
 .button-container {
   display: flex;
   justify-content: center;
-  flex-wrap: wrap; 
+  flex-wrap: wrap;
 }
 
 /* DB button styling */
 .db-button {
-  background-color: white;
+  background-color: var(--white);
   border-radius: 50%;
   width: 100px;
   height: 100px;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 10px; 
+  margin: 10px;
 }
 
 /* CRUD container styling */
 .crud-container {
-  padding: 20px; 
+  padding: 20px;
 }
 
 /* CRUD options styling */
 .div-crud {
   display: flex;
   justify-content: space-around;
-  border-bottom: 2px solid rgb(255, 255, 255);
+  border-bottom: 2px solid var(--white);
   padding: 20px;
-  flex-wrap: wrap; 
+  flex-wrap: wrap;
 }
 
 .crud-options {
   text-decoration: none;
-  color: white;
-  margin: 10px; 
+  color: var(--white);
+  margin: 10px;
 }
 
 /*------------------------------ form for CRUD ------------------------------*/
@@ -128,13 +133,13 @@ h1 {
 .form {
   display: flex;
   justify-content: center;
-  flex-wrap: wrap; 
+  flex-wrap: wrap;
 }
 
 .form-edit-create {
   display: grid;
-  grid-template-columns: repeat(10, 1fr); 
-  grid-template-rows: repeat(21, 60px); 
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: repeat(21, 60px);
   gap: 20px;
 }
 
@@ -145,7 +150,7 @@ textarea {
   border-radius: 10px;
   background-color: #ffffffb3;
   padding: 10px;
-  width: 100%; 
+  width: 100%;
 }
 
 input::placeholder,
@@ -200,7 +205,7 @@ textarea::placeholder {
   grid-row: 11 / 13;
 }
 
-.form-menu{
+.form-menu {
   grid-column: 1 / 11;
   grid-row: 18 / 19;
 }
@@ -253,9 +258,9 @@ textarea::placeholder {
   translate: 0 20px;
 }
 
-button[type="submit"]{
+button[type="submit"] {
   grid-column: 1 / 11;
-  grid-row: 20 / 21; 
+  grid-row: 20 / 21;
   align-self: center;
   justify-self: center;
   margin-top: 20px;
@@ -267,7 +272,7 @@ button[type="submit"]{
 
 /* responsive caption */
 .caption {
-  font-size: 24px; 
+  font-size: 24px;
 }
 
 /*------------------------------ footer and navigation links ------------------------------*/
