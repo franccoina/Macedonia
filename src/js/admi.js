@@ -12,7 +12,6 @@ nav.addEventListener("click", () => {
     document.body.classList.toggle("open");
 });
 
-
 //funcion para el login
 
 (function () {
@@ -36,8 +35,9 @@ form.addEventListener("submit", async function (event) {
     let user = await checkUsername(username);
     if (user === false) {
         alert("El usuario no existe");
+        console.log("El usuario no existe");
     } else if (user.password === password.value) {
-        alert("Bienvenido");
+        console.log("Bienvenido");
         localStorage.setItem("userOnline", JSON.stringify(user));
         window.location.href = "./create.html";
     } else {

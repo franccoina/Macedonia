@@ -1,46 +1,65 @@
 {
   "users": [
     {
-      "id": "001",
+      "id": "1",
       "name": "John",
       "lastName": "Doe",
       "username": "johndoe",
       "password": "password",
-      "restaurantes": [
+      "restaurants": [
         {
-          "nombre": "La Pradera",
-          "reservas": [
+          "id": "1",
+          "name": "Memento",
+          "description": "lorem ipsum dolor sit amet",
+          "vid": "../vid/video-cocina2.mp4",
+          "city": "Medellín, CO",
+          "address": "Cra. 20 #23-7",
+          "menu": "",
+          "image1": "https://images.pexels.com/photos/12706240/pexels-photo-12706240.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+          "image2": "https://images.pexels.com/photos/20844826/pexels-photo-20844826/free-photo-of-comida-restaurante-pez-pescado.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+          "image3": "https://images.pexels.com/photos/1907227/pexels-photo-1907227.jpeg",
+          "image4": "https://images.pexels.com/photos/8112966/pexels-photo-8112966.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+          "socialMedia1": "",
+          "socialMedia2": "",
+          "socialMedia3": "",
+          "keyWords": "burger, empanada",
+          "reservations": [
             {
+              "restaurant": "Memento",
               "cliente": "Sebastian Ortiz",
               "fecha": "2024-12-03"
             },
             {
+              "restaurant": "Memento",
               "cliente": "Mariana Martinez",
               "fecha": "2024-10-05"
             }
           ]
         },
         {
-          "nombre": "Ganadino",
-          "reservas": [
+          "id": "2",
+          "name": "Montaña",
+          "description": "lorem ipsum dolor sit amet",
+          "vid": "../vid/video-cocina2.mp4",
+          "city": "Bogotá, CO",
+          "address": "Cl. 4 #45-8",
+          "menu": "",
+          "image1": "https://images.pexels.com/photos/12706240/pexels-photo-12706240.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+          "image2": "https://images.pexels.com/photos/20844826/pexels-photo-20844826/free-photo-of-comida-restaurante-pez-pescado.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+          "image3": "https://images.pexels.com/photos/1907227/pexels-photo-1907227.jpeg",
+          "image4": "https://images.pexels.com/photos/8112966/pexels-photo-8112966.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+          "socialMedia1": "",
+          "socialMedia2": "",
+          "socialMedia3": "",
+          "keyWords": "burger, pizza",
+          "reservations": [
             {
+              "restaurant": "Montaña",
               "cliente": "Sebastian Ortiz",
               "fecha": "2024-12-03"
             },
             {
-              "cliente": "Mariana Martinez",
-              "fecha": "2024-10-05"
-            }
-          ]
-        },
-        {
-          "nombre": "Safaera",
-          "reservas": [
-            {
-              "cliente": "Sebastian Ortiz",
-              "fecha": "2024-12-03"
-            },
-            {
+              "restaurant": "Montaña",
               "cliente": "Mariana Martinez",
               "fecha": "2024-10-05"
             }
@@ -49,142 +68,65 @@
       ]
     },
     {
-      "id": "002",
+      "id": "2",
       "name": "Jane",
       "lastName": "Doe",
       "username": "janedoe",
       "password": "password",
-      "restaurantes": [
+      "restaurants": [
         {
-          "nombre": "Casona",
-          "reservas": [
+          "id": "1",
+          "name": "Safaera",
+          "description": "lorem ipsum dolor sit amet",
+          "vid": "video-cocina2.mp4",
+          "city": "Santa Marta, CO",
+          "address": "Cl. 3 #10 -23",
+          "menu": "",
+          "image1": "https://images.pexels.com/photos/12706240/pexels-photo-12706240.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+          "image2": "https://images.pexels.com/photos/20844826/pexels-photo-20844826/free-photo-of-comida-restaurante-pez-pescado.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+          "image3": "https://images.pexels.com/photos/1907227/pexels-photo-1907227.jpeg",
+          "image4": "https://images.pexels.com/photos/8112966/pexels-photo-8112966.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+          "socialMedia1": "",
+          "socialMedia2": "",
+          "socialMedia3": "",
+          "keyWords": "burger, pizza, cookies",
+          "reservations": [
             {
+              "restaurant": "Safaera",
               "cliente": "Sebastian Ortiz",
               "fecha": "2024-12-03"
             },
             {
+              "restaurant": "Safaera",
               "cliente": "Mariana Martinez",
               "fecha": "2024-10-05"
             }
           ]
         },
         {
-          "nombre": "POMM",
-          "reservas": [
+          "id": "2",
+          "name": "La Pradera",
+          "description": "Nuestros chefs galardonados crean menús degustación únicos, fusionando ingredientes selectos y técnicas innovadoras. Cada visita es un viaje culinario inigualable y misterioso. Reserva y descubre los secretos de la alta cocina.",
+          "vid": "../vid/video-cocina2.mp4",
+          "city": "Envigado, CO",
+          "address": "CL. 6 #20 A - 95",
+          "menu": "",
+          "image1": "https://images.pexels.com/photos/12706240/pexels-photo-12706240.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+          "image2": "https://images.pexels.com/photos/20844826/pexels-photo-20844826/free-photo-of-comida-restaurante-pez-pescado.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+          "image3": "https://images.pexels.com/photos/1907227/pexels-photo-1907227.jpeg",
+          "image4": "https://images.pexels.com/photos/8112966/pexels-photo-8112966.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+          "socialMedia1": "",
+          "socialMedia2": "",
+          "socialMedia3": "",
+          "keyWords": "burger, empanada, pasta",
+          "reservations": [
             {
+              "restaurant": "La Pradera",
               "cliente": "Sebastian Ortiz",
               "fecha": "2024-12-03"
             },
             {
-              "cliente": "Mariana Martinez",
-              "fecha": "2024-10-05"
-            }
-          ]
-        },
-        {
-          "nombre": "Amoré",
-          "reservas": [
-            {
-              "cliente": "Sebastian Ortiz",
-              "fecha": "2024-12-03"
-            },
-            {
-              "cliente": "Mariana Martinez",
-              "fecha": "2024-10-05"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "003",
-      "name": "Jules",
-      "lastName": "Doe",
-      "username": "julesdoe",
-      "password": "password",
-      "restaurantes": [
-        {
-          "nombre": "Archipiélago",
-          "reservas": [
-            {
-              "cliente": "Sebastian Ortiz",
-              "fecha": "2024-12-03"
-            },
-            {
-              "cliente": "Mariana Martinez",
-              "fecha": "2024-10-05"
-            }
-          ]
-        },
-        {
-          "nombre": "Shore Eats",
-          "reservas": [
-            {
-              "cliente": "Sebastian Ortiz",
-              "fecha": "2024-12-03"
-            },
-            {
-              "cliente": "Mariana Martinez",
-              "fecha": "2024-10-05"
-            }
-          ]
-        },
-        {
-          "nombre": "Saint-Jean",
-          "reservas": [
-            {
-              "cliente": "Sebastian Ortiz",
-              "fecha": "2024-12-03"
-            },
-            {
-              "cliente": "Mariana Martinez",
-              "fecha": "2024-10-05"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "004",
-      "name": "Jack",
-      "lastName": "Doe",
-      "username": "jackdoe",
-      "password": "password",
-      "restaurantes": [
-        {
-          "nombre": "D'LUCCA",
-          "reservas": [
-            {
-              "cliente": "Sebastian Ortiz",
-              "fecha": "2024-12-03"
-            },
-            {
-              "cliente": "Mariana Martinez",
-              "fecha": "2024-10-05"
-            }
-          ]
-        },
-        {
-          "nombre": "Andres Grillhouse",
-          "reservas": [
-            {
-              "cliente": "Sebastian Ortiz",
-              "fecha": "2024-12-03"
-            },
-            {
-              "cliente": "Mariana Martinez",
-              "fecha": "2024-10-05"
-            }
-          ]
-        },
-        {
-          "nombre": "Olivera Café",
-          "reservas": [
-            {
-              "cliente": "Sebastian Ortiz",
-              "fecha": "2024-12-03"
-            },
-            {
+              "restaurant": "La Pradera",
               "cliente": "Mariana Martinez",
               "fecha": "2024-10-05"
             }
