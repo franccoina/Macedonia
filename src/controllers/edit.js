@@ -84,7 +84,10 @@ async function renderProfile() {
     });
 }
 
-await renderProfile();
+document.addEventListener('DOMContentLoaded', async () => {
+    await renderProfile();
+});
+
 
 
 

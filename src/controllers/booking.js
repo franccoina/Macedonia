@@ -29,6 +29,7 @@ btnLogout.addEventListener("click", () => {
 const url = "http://localhost:3000/users";
 const tbodyRestaurants = document.querySelector(".restaurants-table");
 const tbodyReservations = document.querySelector(".reservations-table");
+
 const profileBtn = document.querySelector(".profileBtn");
 
 let cacheId = undefined;
@@ -132,8 +133,37 @@ tbodyRestaurants.addEventListener('click', async (event) => {
     }
 });
 
+//--------------------------- Función para ver mi profile avatar ---------------------------
+
+async function renderProfile() {
+    const response = await fetch(url);
+    const data = await response.json();
+    console.log(data);
+
+    profileBtn.innerHTML = "";
+
+    data.forEach((user) => {
+        profileBtn.innerHTML = `
+            <div class="profile-header">
+                <button class="avatar  btn btn-light">
+                ${user.name.charAt(0)}${user.lastName.charAt(0)}
+                </button>
+                <div>
+                    <h1 class="profile-name">${user.name} ${user.lastName}</h1>
+                    <p class="profile-username">@${user.username} · ${user.restaurants.length} places</p>
+                </div>
+            </div>
+            `;
+    });
+}
+
+
 //------------------- Llamar a las funciones principales al cargar la página -------------------
 
-await index();
-await indexReservations(cacheId);
+document.addEventListener('DOMContentLoaded', async () => {
+    await index();
+    await indexReservations(cacheId);
+    await renderProfile();
+});
+
 
