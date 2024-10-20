@@ -37,6 +37,7 @@ let cacheId = undefined;
 //------------------- Renderizar tabla con restaurantes -------------------
 
 async function index() {
+    console.log("Llamando a la función index()");
     const response = await fetch(url);
     const data = await response.json();
     
@@ -69,24 +70,30 @@ async function index() {
                         <video src="../../public/vid/${element.vid}"
                         autoplay="true"
                         loop="true"
-                        width="30px"
+                        width="50px"
                         muted alt="video-restaurant"
                         class="rounded"></video>
                     </td>
                     <td>${element.city}</td>
                     <td>${element.address}</td>
-                    <td class="d-flex flex-column gap-1 align-items-center">
-                        <img src=${element.image1} class="rounded" width="30px" alt="restaurant-img" />
-                        <img src=${element.image2} class="rounded" width="30px" alt="restaurant-img" />
-                        <img src=${element.image3} class="rounded" width="30px" alt="restaurant-img" />
-                        <img src=${element.image4} class="rounded" width="30px" alt="restaurant-img" />
-                    </td>
-                    <td>
-                        ${element.socialMedia1}<br>
-                        ${element.socialMedia2}<br>
-                        ${element.socialMedia3}
+                    <td class="h-100">
+                        <img src=${element.image1} class="rounded m-1" width="30px" alt="restaurant-img" /><br>
+                        <img src=${element.image2} class="rounded m-1" width="30px" alt="restaurant-img" /><br>
+                        <img src=${element.image3} class="rounded m-1" width="30px" alt="restaurant-img" /><br>
+                        <img src=${element.image4} class="rounded m-1" width="30px" alt="restaurant-img" />
                     </td>
                     <td>${element.keyWords}</td>
+                    <td>
+                        <a href="${element.socialMedia1}" class="d-flex gap-1 btn btn-outline-dark" target="_blank">
+                            1 <i class="bi bi-globe"></i>
+                        </a><br>
+                        <a href="${element.socialMedia1}" class="d-flex gap-1 btn btn-outline-dark" target="_blank">
+                            2 <i class="bi bi-globe"></i>
+                        </a><br>
+                        <a href="${element.socialMedia1}" class="d-flex gap-1 btn btn-outline-dark" target="_blank">
+                            3 <i class="bi bi-globe"></i>
+                        </a>
+                    </td>
                     <td>
                         <button type="button" data-id=${element.id} class="btn btn-dark">
                             ${element.reservations.length}
@@ -161,9 +168,13 @@ async function renderProfile() {
 //------------------- Llamar a las funciones principales al cargar la página -------------------
 
 document.addEventListener('DOMContentLoaded', async () => {
-    await index();
-    await indexReservations(cacheId);
-    await renderProfile();
+    try {
+        await index(); // Llama a la función index para cargar los restaurantes
+        await indexReservations(cacheId);
+        await renderProfile();
+    } catch (error) {
+        console.error("Error al cargar la página:", error);
+    }
 });
 
 

@@ -61,7 +61,7 @@ form.addEventListener('submit', async (event) => {
         //Capturamos los datos de los inputs y del userOnline en variables para la funcion create
         let newRestaurant = {
             id: "",
-            nombre: name.value,
+            name: name.value,
             description: description.value,
             vid: vid.value,
             city: city.value,
@@ -75,7 +75,7 @@ form.addEventListener('submit', async (event) => {
             socialMedia2: socialMedia2.value,
             socialMedia3: socialMedia3.value,
             keyWords: keyWords.value.toLowerCase(),
-            reservas: []
+            reservations: []
         };
 
         let userOnline = localStorage.getItem('userOnline')
@@ -99,7 +99,7 @@ async function create(userId, newRestaurant) {
         // Agregamos el nuevo restaurante a la lista de negocios del usuario
         user.restaurants.push(newRestaurant);
 
-        newRestaurant.id = user.restaurants.length + 1;
+        newRestaurant.id = Date.now().toString();
 
         // Enviamos una solicitud PUT para actualizar el usuario con su nueva info
         response = await fetch(`${url}/${userId}`, {
@@ -110,9 +110,13 @@ async function create(userId, newRestaurant) {
             body: JSON.stringify(user)
         });
 
-        if (!response.ok) throw new Error('Fallo en la actualización del usuario');
+        if (!response.ok) throw new Error('Fallo en la actualización del usuario. No se pudo agregar nuevo restaurante.');
 
         console.log('Restaurante agregado con éxito.');
+        alert('Restaurante agregado con éxito.');
+
+        // Redirigir a la página de reservas
+        window.location.href = "./booking.html";
     } catch (error) {
         console.error('Error:', error);
     }
