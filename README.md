@@ -54,7 +54,7 @@ You will find our documentation on Trello; however, here’s the specific link t
 ## Deployment
 
 Our project is deployed on Vercel. Feel free to interact with it whenever you like:
-   [Vercel Deploy](https://github.com/franccoina/Macedonia)
+   [Vercel Deploy](https://macedonias.vercel.app)
 
 ## GitHub
 
