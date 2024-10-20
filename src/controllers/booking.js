@@ -32,7 +32,7 @@ const tbodyReservations = document.querySelector(".reservations-table");
 
 const profileBtn = document.querySelector(".profileBtn");
 
-let cacheId = undefined;
+let cacheId;
 
 //------------------- Renderizar tabla con restaurantes -------------------
 

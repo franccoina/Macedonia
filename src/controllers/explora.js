@@ -126,7 +126,7 @@ function renderRestaurant(userId, restaurant) {
         <div class="modal-dialog">
           <div class="modal-content container d-flex flex-column align-items-center text-start">
             <div class="img-restaurant modal-rest">
-              <video src="../../public/vid/${restaurant.vid}" autoplay loop muted alt="video-restaurant"></video>
+              <video src="${restaurant.vid}" autoplay loop muted alt="video-restaurant"></video>
               <div class="img-restaurant-pic1" style="background-image: url('${restaurant.image1}');" alt="food-pic-1"></div>
               <div class="img-restaurant-pic2" style="background-image: url('${restaurant.image2}');" alt="food-pic-2"></div>
               <div class="img-restaurant-pic3" style="background-image: url('${restaurant.image3}');" alt="food-pic-3"></div>

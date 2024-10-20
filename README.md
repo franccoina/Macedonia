@@ -33,8 +33,8 @@ __Macedonia__ has been created to address the need for accessible information ab
 
 ## Collaborators 
 
-- Sebastian Ortiz (former member)
-- Mariana Martínez (former member)
+- Sebastián Ortiz (ex-member)
+- Mariana Martínez (ex-member)
 
 ## Mockup
 
