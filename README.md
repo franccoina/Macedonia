@@ -1,44 +1,89 @@
-# Proyecto: Sitio Web de Restaurantes Exclusivos
+<div align="center">
+  <img style="filter: brightness(0.8)" src="./public/img/logo-macedonia.webp" alt="Macedonia-Isotype" width="100%" />
+</div>
 
-¡Bienvenido a nuestro proyecto de Sitio Web de Restaurantes Exclusivos, MACEDONIA! Este sitio web permite a los propietarios de restaurantes exclusivos publicar información sobre sus establecimientos para atraer nuevos clientes. Los usuarios del sitio pueden explorar una lista de restaurantes exclusivos, ver detalles como el nombre, la descripción y la ubicación, o si son propietarios de un restaurante, pueden publicar información sobre su propio establecimiento.
+<br>
 
-## Características
+Welcome to our Exclusive Restaurant Website project, __Macedonia__. This website allows owners of exclusive restaurants to publish information about their establishments to attract new customers. Users of the site can explore a list of exclusive restaurants, view details such as the name, description, and location, and most importantly, make reservations at these places. On the other hand, if they are restaurant owners, they can publish and manage information about their establishments.
 
-1. *Exploración de Restaurantes*: 
-   - Los usuarios pueden navegar por una lista de restaurantes exclusivos.
-   - Cada restaurante listado incluye detalles como el nombre, una breve descripción y la ubicación.
+## Why Macedonia?
 
-2. *Publicación de Restaurantes*:
-   - Los propietarios de restaurantes pueden crear una cuenta y publicar su restaurante en el sitio.
-   - Pueden proporcionar detalles importantes como el nombre del restaurante, una descripción atractiva y su ubicación.
+__Macedonia__ has been created to address the need for accessible information about gastronomic tourism, simplifying the experience of discovering and reserving at new exclusive dining spots. We aim to bring back the excitement and mystery of trying new flavors, providing reliability, quality, and the certainty of connecting with the hottest venues.
 
-## Productores, desarrolladores y diseñadores
+## Features
+
+1. *Restaurant Exploration*: 
+   - Users can browse a list of exclusive restaurants.
+   - Each listed restaurant includes general information, such as the name, a brief description, and the location.
+   - Making a reservation is one of the main functions, and in the spirit of mystery and adventure, more details about the venue will only be revealed upon making a reservation.
+
+2. *Restaurant Publishing*:
+   - Restaurant owners can create an account and publish their restaurants on the site.
+   - They can provide and edit important details such as the restaurant name, an appealing description, and its location.
+   - Owners can view the list of reservations made at each establishment and relevant information about each one.
+
+## Tech stack
+
+- JavaScript, HTML, SCSS, Bootstrap 5, Vite, Json-server
+
+## Producers, Developers, and Designers
 
 - David Francisco Blandón Mena
 - Nicolas Martinez Cardona
 
-## Colaboradores 
+## Collaborators 
 
-- Sebastian Ortiz (ex-miembro)
-- Mariana Martínez (ex-miembro)
+- Sebastian Ortiz (former member)
+- Mariana Martínez (former member)
 
 ## Mockup
 
-Aqui, podras ver nuestro mockUp, subido en FIgma con los mayor dedicación posible: 
-    https://www.figma.com/design/kGQQ7ULIBHGz6ZwAqmHNuS/alphaTeam.js-Mockup?node-id=0-1&t=Rl0jGX1EOYvkrmQ2-1
+Here, you can view our mockup, uploaded to Figma with as much dedication as possible: 
+    [Figma Mockup](https://www.figma.com/design/kGQQ7ULIBHGz6ZwAqmHNuS/alphaTeam.js-Mockup?node-id=0-1&t=Rl0jGX1EOYvkrmQ2-1)
 
-## Administración de tareas
+## Task Management
 
-Aqui, podras ver la manera en como se distribuyo el trabajo y se gestionó este proyecto, de la mano del gestor Trello: 
-    https://trello.com/invite/b/uarObmdb/ATTIe73fe669a2a9871931da8c75d526b90eC19F5406/alphateamjs
+Here, you can see how the work was distributed and managed throughout this project, using the Trello manager: 
+    [Trello Board](https://trello.com/invite/b/uarObmdb/ATTIe73fe669a2a9871931da8c75d526b90eC19F5406/alphateamjs)
 
-## Documentación
+## Documentation
 
-Nuestra documentación la encontrarás en nuestro Trello, no obstante te dejamos el link específico de la tarjeta donde estan todos los aspectos técnicos:
-    https://trello.com/c/3OfUkREI
+You will find our documentation on Trello; however, here’s the specific link to the card containing all technical aspects:
+    [Technical Documentation](https://trello.com/c/3OfUkREI)
 
-## GitHUb
+## Deployment
 
-Y finalmente, aqui encontrarás nuestro repositorio de GitHUb:
-   https://github.com/franccoina/Macedonia
+Our project is deployed on Vercel. Feel free to interact with it whenever you like:
+   [Vercel Deploy](https://github.com/franccoina/Macedonia)
 
+## GitHub
+
+And finally, here you will find our GitHub repository:
+   [GitHub Repository](https://github.com/franccoina/Macedonia)
+
+
+--------------------------------------------------------------------------------------------------------
+
+<br>
+<div align="center">
+     <em>We thank you very much for visiting our loved project.</strong></em><br>
+        <em>Greetings from <strong>Macedonia Team.</strong></em>
+</div>
+<br>
+
+--------------------------------------------------------------------------------------------------------
+
+<br>
+
+<div align="center">
+  <img style="filter: brightness(0.8)" src="./public/img/isotipo-macedonia.webp" alt="Macedonia-Isotype" width="300" />
+</div>
+
+<br>
+
+<div align="center">
+    <em>
+      <strong>2024 Macedonia, Inc.</strong><br>
+      © All rights reserved.
+       </em>
+</div>

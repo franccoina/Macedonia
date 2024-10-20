@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+      content="Descubre los restaurantes más exclusivos con Macedonia. Te conectamos con experiencias culinarias que deleitarán tus sentidos ¡Explora y reserva tu próxima aventura con nuestro tour gastronómico!" />
+    <meta name="keywords"
+      content="Nicolas, Martinez, Cardona, David, Francisco, Blandon, Mena, macedonia, franccoina, frn, parrilla, bar, café, cafeteria, panaderia, resposteria, dulce, platos, comer, alimento, compartir, familia, aventura, explorar, descubrir, exclusivo, selecto, experiencia, misterio, cocina, oculta, mesa, reserva, comida, tour, gastronomia, restaurante, delicias, Colombia, riwi">
+    <meta name="sitedomain" content="https://example.com/" />
+    <meta name="organization" content="riwi, frn!" />
+    <meta name="author"
+      content="David Francisco Blandon Mena, Nicolas Martinez" />
+    <meta name="designer"
+      content="David Francisco Blandon Mena, Sebastian Ortiz, Nicolas Martinez Cardona, Mariana Martinez" />
+    <meta name="copyright"
+      content="© 2024 Macedonia. Todos los derechos reservados">
+    <meta name="robots" content="index,follow" />
+    <meta name="googlebot" content="index,follow" />
+    <meta name="revisit-after" content="15days" />
+    <link rel="stylesheet" href="../scss/edit.scss">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Wix+Madefor+Display:wght@400..800&display=swap"
+      rel="stylesheet" />
+    <link rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+    <link rel="shortcut icon" href="../../public/favicon.ico"
+      type="image/x-icon">
+    <title>Macedonia</title>
+  </head>
+
+  <body>
+    <header>
+      <!-- Background image -->
+      <div class="bg-img"></div>
+      <section class="navbar-section">
+        <!-- Profile logo container -->
+        <article class="button-container">
+          <a href="./create.html" class="profileBtn">
+            <div class="profile-header">
+            </div>
+          </a>
+        </article>
+        <!-- CRUD options -->
+        <article class="crud-container container">
+          <div class="div-crud">
+            <a class="crud-options" href="./create.html">
+              <h4>Create</h4>
+            </a>
+            <a class="crud-options" href="./edit.html">
+              <h4>Edit</h4>
+            </a>
+            <a class="crud-options" href="./booking.html">
+              <h4>Booking</h4>
+            </a>
+          </div>
+        </article>
+      </section>
+    </header>
+    <main>
+      <section>
+        <!-- Form for creating -->
+        <article class="form container">
+          <div
+            class="form-container d-flex flex-column justify-content-center align-items-center">
+            <form class="form-edit-create" action>
+              <!-- Captions input files -->
+              <div class="first-requirements requirements">
+                <h2>Main Information</h2>
+                <p>Add the most relevant info about your
+                  restaurant and a short video.</p>
+              </div>
+              <div class="second-requirements requirements">
+                <h2>Restaurant Pics</h2>
+                <p>Attach photos of your business. Two for food and two for
+                  service.</p>
+              </div>
+              <div class="third-requirements requirements">
+                <h2>Keywords</h2>
+                <p>Let us know all the keywords that identify your
+                  restaurant.</p>
+              </div>
+              <div class="fourth-requirements requirements">
+                <h2>External Links</h2>
+                <p>Enter the URL to your menu and three more for your social
+                  media.</p>
+              </div>
+              <!-- Name input -->
+              <input class="form-name" type="name" placeholder="Name" />
+              <!-- Description textarea -->
+              <textarea class="form-textarea" cols="20" rows="10"
+                placeholder="Description..."></textarea>
+              <!-- Video upload file input -->
+              <input class="form-vid" type="file" />
+              <!-- City input -->
+              <input class="form-city" type="text" placeholder="City" />
+              <!-- Address input -->
+              <input class="form-address" type="text" placeholder="Address" />
+              <!-- PDF Menu URL input -->
+              <input class="form-menu" type="url"
+                placeholder="PDF link : https://menu" />
+              <!-- Additional image uploads inputs -->
+              <input class="form-image1" type="file" />
+              <input class="form-image2" type="file" />
+              <input class="form-image3" type="file" />
+              <input class="form-image4" type="file" />
+              <!-- Social media links inputs -->
+              <input class="form-social-media1" type="url"
+                placeholder="Socials link" />
+              <input class="form-social-media2" type="url"
+                placeholder="Socials link" />
+              <input class="form-social-media3" type="url"
+                placeholder="Socials link" />
+              <!-- Keywords textarea -->
+              <textarea class="form-key-word" cols="30" rows="10"
+                placeholder="Keywords..."></textarea>
+              <!-- Submit button -->
+              <button type="submit" class="w-50 btn btn-outline-light"
+                class="btn-submit" id="btnSubmit">Save</button>
+              <button type="button" class="btn btn-outline-light btn-logout"
+                id="btnLogout">Logout</button>
+            </form>
+          </div>
+        </article>
+      </section>
+    </main>
+    <!-- Footer -->
+    <footer>
+      <article id="footer">
+        <article class="container">
+          <div class="py-3">
+            <div class="footer-content row">
+              <ul class="container col-6 col-md-2 mb-3 footer-links">
+                <img class="pb-3" src="../../public/img/logo-macedonia.webp"
+                  width="350vw"
+                  alt />
+              </ul>
+            </div>
+            <div
+              class="d-flex flex-column flex-sm-row justify-content-between align-items-center pt-4 mt-4 border-top footer-end">
+              <p class="copyright text-center full-text text-light">
+                &copy; 2024 Macedonia, Inc. All rights reserved.
+              </p>
+              <ul class="footer-icons list-unstyled d-flex">
+                <a rel="noopener noreferrer"
+                  href="https://wa.me/573504691236/?text=Macedonia, Inc"
+                  target="_blank"><i
+                    class="bi bi-whatsapp text-light"></i></a>
+                <a rel="noopener noreferrer"
+                  href="https://www.facebook.com/franccoico"
+                  target="_blank"><i
+                    class="bi bi-facebook text-light"></i></a>
+                <a rel="noopener noreferrer" rel="noopener noreferrer"
+                  href="https://github.com/franccoina/Macedonia"
+                  target="_blank"><i
+                    class="bi bi-github text-light"></i></a>
+                <a rel="noopener noreferrer"
+                  href="https://www.instagram.com/franccoina"
+                  target="_blank"><i
+                    class="bi bi-instagram text-light"></i></a>
+                <a rel="noopener noreferrer"
+                  href="https://twitter.com/franccoina"
+                  target="_blank"><i
+                    class="bi bi-twitter-x text-light"></i></a>
+              </ul>
+            </div>
+          </div>
+        </article>
+      </article>
+    </footer>
+    <!-- Bootstrap & JavaScript -->
+    <script type="module" src="../controllers/edit.js"></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"></script>
+  </body>
+
+</html>
