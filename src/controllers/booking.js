@@ -9,7 +9,7 @@ import * as bootstrap from "bootstrap";
 (function () {
     let userOnline = localStorage.getItem("userOnline");
     if (userOnline == null) {
-        window.location.href = "./admi.html";
+        window.location.href = "/admi";
     } else {
         console.log(JSON.parse(userOnline));
     }
@@ -21,7 +21,7 @@ let btnLogout = document.getElementById("btnLogout");
 
 btnLogout.addEventListener("click", () => {
     localStorage.removeItem("userOnline");
-    window.location.href = "./admi.html";
+    window.location.href = "/admi";
 });
 
 //------------------- Variables y elementos DOM -------------------

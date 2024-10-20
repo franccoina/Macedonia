@@ -26,7 +26,7 @@ navbarLinks.forEach(navbarLink => {
 (function () {
     let userOnline = localStorage.getItem("userOnline");
     if (userOnline != null) {
-        window.location.href = "./create.html";
+        window.location.href = "/create";
     }
 })();
 
@@ -46,7 +46,7 @@ form.addEventListener("submit", async function (event) {
     if (user.password === password.value) {
         console.log("Bienvenido, Usuario.");
         localStorage.setItem("userOnline", JSON.stringify(user));
-        window.location.href = "./create.html";
+        window.location.href = "/create";
     } else {
         alert("No fue posible iniciar sesión. Usuario o contraseña incorrectos.");
     }
