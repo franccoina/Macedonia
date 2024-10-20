@@ -10,7 +10,7 @@ import * as bootstrap from 'bootstrap'
 (function () {
     let userOnline = localStorage.getItem('userOnline')
     if (userOnline == null) {
-        window.location.href = "./admi.html"
+        window.location.href = "/admi"
     }
 })()
 
@@ -20,7 +20,7 @@ let btnLogout = document.getElementById("btnLogout")
 
 btnLogout.addEventListener("click", () => {
     localStorage.removeItem("userOnline")
-    window.location.href = "./admi.html"
+    window.location.href = "/admi"
 })
 
 //--------------------------- FUNCIONES DE CRUD ---------------------------
