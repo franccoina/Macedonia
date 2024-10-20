@@ -49,7 +49,7 @@
 body {
     overflow-x: hidden;
     width: 100%;
-    background-color: var(--black);
+    background-color: var(--white);
     background-position: center;
 }
 
@@ -135,12 +135,12 @@ a {
     height: 80px;
     transition: 0.3s;
     font-size: 35px !important;
-    color: var(--whitepacity);
 }
 
 body.open .navbar-burger {
     position: fixed;
     transition: 0.3s;
+    color: var(--whitepacity);
 }
 
 #navbar section {
@@ -206,7 +206,10 @@ body.open main {
 
 .form-box {
     position: relative;
-    background-color: var(--whitepacity-transparent);
+    filter: saturate(0.5);
+    background-size: cover;
+    background-position: top left;
+    background-image: url("https://images.pexels.com/photos/12706240/pexels-photo-12706240.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
     display: flex;
     border-radius: 20px;
     justify-content: center;
@@ -341,7 +344,6 @@ input[type="password"]:active {
 }
 
 .img-gallery div {
-    opacity: 0.6;
     height: 110px;
     margin-top: 20px;
     transition: transform 0.6s;
@@ -436,7 +438,7 @@ input[type="password"]:active {
     align-items: center;
 
     & img{
-        opacity: 0.5;
+        opacity: 0.7;
     }
 
     & div {
@@ -445,11 +447,11 @@ input[type="password"]:active {
 
         & a {
             transition: 0.6s;
-            color: var(--whitepacity) !important;
+            color: var(--blackpacity) !important;
 
             :hover {
                 transition: 0.6s;
-                color: var(--white);
+                color: var(--black);
             }
 
             & p {

@@ -67,7 +67,7 @@ async function index() {
                     <td>${element.id}</td>
                     <td>${element.name}</td>
                     <td>
-                        <video src="../../public/vid/${element.vid}"
+                        <video src="${element.vid}"
                         autoplay="true"
                         loop="true"
                         width="50px"
