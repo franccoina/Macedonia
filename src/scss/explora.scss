@@ -11,7 +11,8 @@
 
 :root {
     --page-bg: #ffffff;
-    --navbar-bg: #ffffffe6;
+    --nav-bg: #000000b3;
+    --modal-bg: #d1d1d1;
 
     --grad-black: #000000b3;
     --grad-beige: #a57758b3;
@@ -19,18 +20,19 @@
     --grad-grey: #1c1c1ccc;
     --grad-brown: #553518cc;
     --grad-orange: #d86820cc;
-    --grad-gray: #cacaca;
+    --grad-gray: #818181;
 
-    --orange: #d86820;
-    --brown: #865d28;
     --black: #000000;
     --white: #ffffff;
+    --grey: #f5f5f5;
+    --blue: #6881a4;
+    --salmon: #cf5f14;
 
-    --brownpacity: #875e2966;
-    --orangepacity: #d9672066;
     --whitepacity: #ffffffc4;
     --whitepacity-light: #ffffff80;
+    --whitepacity-transparent: #ffffff33;
     --blackpacity: #0000008e;
+    --blackpacity-light: #00000015;
     --shadows: #00000033;
 }
 
@@ -51,7 +53,6 @@ footer {
     justify-content: center;
     flex-direction: column;
     width: 100%;
-    background-color: var(--page-bg);
 }
 
 body {
@@ -63,11 +64,13 @@ body {
 }
 
 h2 {
-    font-size: 7vw;
+    font-size: 5vw;
 }
 
 h1 {
-    font-size: 10vw;
+    padding: 15px;
+    font-size: 5vw;
+    border-radius: 10px;
 }
 
 h5 {
@@ -88,10 +91,16 @@ button {
 }
 
 a {
-    text-decoration: none;
+    text-decoration: none !important;
 }
 
-/*------------------------------ navbar ------------------------------*/
+hr {
+    width: 80%;
+    border: 0;
+    border-bottom: 2px solid var(--blackpacity);
+}
+
+/*------------------------------ Navbar ------------------------------*/
 
 #navbar {
     display: flex;
@@ -102,7 +111,8 @@ a {
     animation-delay: 0.1s;
 
     & p {
-        color: var(--orange);
+        font-weight: bold;
+        color: var(--whitepacity);
     }
 }
 
@@ -110,7 +120,8 @@ a {
     animation-delay: 0.3s;
 
     & p {
-        color: var(--orange);
+        font-weight: bold;
+        color: var(--whitepacity);
     }
 }
 
@@ -118,7 +129,8 @@ a {
     animation-delay: 0.5s;
 
     & p {
-        color: var(--orange);
+        font-weight: bold;
+        color: var(--whitepacity);
     }
 }
 
@@ -126,7 +138,8 @@ a {
     animation-delay: 0.7s;
 
     & p {
-        color: var(--orange);
+        font-weight: bold;
+        color: var(--whitepacity);
     }
 }
 
@@ -139,11 +152,13 @@ a {
     width: 80px;
     height: 80px;
     transition: 0.3s;
+    font-size: 35px;
 }
 
 body.open .navbar-burger {
     position: fixed;
     transition: 0.3s;
+    color: var(--whitepacity);
 }
 
 #navbar section {
@@ -165,7 +180,7 @@ body.open #navbar section {
     gap: 30px;
     width: 100%;
     height: 100%;
-    background: var(--navbar-bg);
+    background: var(--nav-bg);
     opacity: 0;
     transition: 1s;
 }
@@ -175,10 +190,6 @@ body.open .menu {
     opacity: 1;
     position: fixed;
     display: flex;
-}
-
-.menu a {
-    font-size: 4vw;
 }
 
 body.open .menu a {
@@ -200,53 +211,37 @@ body.open main {
     }
 }
 
-/*------------------------------ titles ------------------------------*/
+/*------------------------------ Titles ------------------------------*/
 
 .title1 {
-    translate: 0 120px;
+    padding-top: 100px;
     display: flex;
-    justify-content: flex-start;
-    color: var(--orange);
+    justify-content: center;
+    color: var(--white);
 
     & h1 {
-        font-size: 7vw;
-        font-style: oblique;
+        filter: saturate(0.5);
+        background-image: url("https://images.pexels.com/photos/11840607/pexels-photo-11840607.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
+        background-position: center;
+        background-size: cover;
     }
 }
 
-.title2 {
-    translate: 0 80px;
-    display: flex;
-    justify-content: flex-end;
-    color: var(--orangepacity);
-
-    & h1 {
-        font-size: 14vw;
-    }
-}
-
-/*------------------------------ searching bar ------------------------------*/
+/*------------------------------ Searching bar ------------------------------*/
 
 #research {
     width: 100%;
-    height: inherit;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
-.bi-search {
-    font-size: 20px;
-    color: var(--blackpacity);
-}
-
 .buscador {
     box-shadow: 2px 2px 8px 1px var(--shadows);
-    margin-top: 40px;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
     width: 100%;
-    height: 20%;
+    padding: 0;
     gap: 15px;
     display: flex;
     justify-content: center;
@@ -254,20 +249,20 @@ body.open main {
 }
 
 .bar-buscador {
-    width: 60%;
+    width: 50%;
     padding: 15px;
+    margin: 0 !important;
     border-radius: 5px;
-    border: none;
+    background-color: transparent;
+    outline: none;
+    box-shadow: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .bar-buscador::placeholder {
     text-align: center;
-}
-
-.bar-buscador {
-    background-color: transparent;
-    outline: none;
-    box-shadow: none;
 }
 
 .bar-buscador:focus,
@@ -277,11 +272,7 @@ body.open main {
     box-shadow: none;
 }
 
-/*------------------------------ food images gallery ------------------------------*/
-
-#gallery {
-    padding-top: 80px;
-}
+/*------------------------------ Food images Gallery ------------------------------*/
 
 .img-restaurant {
     width: 100%;
@@ -299,7 +290,7 @@ body.open main {
     justify-self: end;
     display: flex;
     flex-direction: column;
-    align-items: end;
+    align-items: start;
     justify-content: center;
     width: 100%;
     transition: 0.8s;
@@ -309,26 +300,35 @@ body.open main {
     height: 12rem;
     transition: 0.8s;
     border-radius: 10px;
+    cursor: pointer;
+    background-position: center;
 }
 
-.img-restaurant div:hover {
-    transform: scale(1.1);
+.img-restaurant div:hover,
+.img-restaurant video:hover {
+    transform: scale(1.05);
     transition: 0.8s;
+    color: var(--white);
 }
 
 .img-restaurant video {
+    cursor: pointer;
     transition: 0.8s;
     border-radius: 10px;
     height: 12rem;
-}
-
-.img-restaurant video:hover {
-    transition: 0.8s;
+    width: 300px !important;
+    object-fit: cover;
 }
 
 .img-restaurant-pic1 {
     background-size: cover;
     width: 250px;
+    color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2vw;
+    font-weight: bold;
 }
 
 .img-restaurant-pic2 {
@@ -346,15 +346,19 @@ body.open main {
     width: 300px;
 }
 
-/*------------------------------ footer or contact section ------------------------------*/
+/*------------------------------ Footer or Contact section ------------------------------*/
 
 #footer {
+    border-radius: 20px;
+    margin: 6.5vw;
+    margin-top: 0;
+    padding: 3vw;
+    margin-bottom: 20px;
     padding-top: 85px;
-    padding-bottom: 25px;
-    background-image: linear-gradient(0deg,
-            var(--grad-grey) 30%,
-            var(--grad-gray) 85%,
-            var(--white) 100%);
+    filter: saturate(1.1);
+    background-image: url("https://images.pexels.com/photos/21319355/pexels-photo-21319355/free-photo-of-un-chef-preparando-comida-en-una-cazuela-de-barro.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
+    background-position: bottom;
+    background-size: cover;
 }
 
 .footer-content {
@@ -377,6 +381,20 @@ body.open main {
     & div {
         gap: 30px;
         justify-self: flex-start;
+
+        & a {
+            transition: 0.6s;
+            color: var(--whitepacity) !important;
+
+            :hover {
+                transition: 0.6s;
+                color: var(--white);
+            }
+
+            & p {
+                font-size: 13px;
+            }
+        }
     }
 }
 
@@ -385,34 +403,120 @@ body.open main {
     text-indent: 10px;
 }
 
+.copyright {
+    font-size: 13px;
+}
+
 // --------------------------------------------- Modal -----------------------------------------------
 
-.modal-text{
-    font-size: 20px;
+.modal-rest {
+    margin: 0 !important;
+    padding: 2vw 0 !important;
+    position: relative;
+    top: 50%;
+    width: initial !important;
 }
 
-.modal-content{
-    padding: 50px;
-    background-color: var(--grad-gray);
+.modal-title {
+    margin: 20px 0 !important;
+    padding: 15px;
+    background-color: var(--blackpacity) !important;
+    color: var(--white) !important;
+    width: min-content;
+    white-space: nowrap;
+    transition: 0.6s ease-in-out !important;
+    border-radius: 10px;
+
+    & h2 {
+        font-size: 3vw;
+    }
 }
-.modal-social-media{
+
+.modal-title:hover {
+    transition: 0.6s ease-in-out !important;
+    padding-left: 50px;
+    color: var(--blackpacity) !important;
+    background-color: var(--blackpacity-light) !important;
+}
+
+.modal-text {
+    border-radius: 10px;
+    background-color: var(--blackpacity-light) !important;
+    transition: 1s ease !important;
+    padding: 20px;
+    color: var(--blackpacity) !important;
+}
+
+.modal-content {
+    border-radius: 0% !important;
+    border: var(--black) 1px solid !important;
+    padding: 50px !important;
+    background-color: var(--page-bg) !important;
+}
+
+.modal-restaurant-media {
+    background-color: var(--blackpacity-light) !important;
     text-decoration: none;
-    color: var(--black);
+    border-radius: 100%;
+    width: 40px;
+    height: 40px;
+    transition: 0.5s ease !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 10px;
-}   
+
+    & i {
+        transition: 0.5s ease;
+        color: var(--grad-gray);
+    }
+}
+
+.modal-restaurant-menu {
+    background-color: var(--blackpacity-light) !important;
+    text-decoration: none;
+    display: flex;
+    transition: 0.5s ease !important;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+
+    & i {
+        transition: 0.5s ease;
+        color: var(--grad-gray);
+    }
+}
+
+.modal-restaurant-menu:hover,
+.modal-restaurant-media:hover {
+    transition: 0.5s ease !important;
+    background-color: var(--grad-gray) !important;
+    border-radius: 10px;
+
+    & i {
+        transition: 0.5s ease;
+        color: var(--white);
+    }
+
+}
 
 #reserva {
-    background-color: var(--grad-gray);
+    background-color: var(--grad-gray) !important;
 }
-
 
 input,
 textarea {
-    border: white 1px solid;
+    border: none !important;
+    background-color: var(--blackpacity-light);
     border-radius: 10px;
-    background-color: #ffffffb3;
     padding: 10px;
+    margin-top: 20px !important;
     width: 100%;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: var(--black) !important;
 }
 
 .form-name {
@@ -448,24 +552,69 @@ textarea {
     grid-row: 7 / 9;
 }
 
+.modal-dialog {
+    margin: auto !important;
+    padding: 30px 0 !important;
+    width: 100% !important;
+    --bs-modal-width: inherit !important;
+}
+
+.modal {
+    width: 100% !important;
+    margin: auto;
+    padding: 50px 0 !important;
+    --bs-modal-width: inherit !important;
+}
+
 /*------------------------------ media querys ------------------------------*/
 
 /*mobile*/
-@media (min-width: 320px) and (max-width: 769px) {
+@media (min-width: 320px) and (max-width: 770px) {
+
+    #footer{
+        margin: 3vw;
+    }
+
+    .footer-end {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        flex-wrap: wrap;
+
+        > * {
+            display: flex;
+            width: 100%;
+            justify-content: center;
+        }
+    }
+
+    .footer-links {
+        width: 100%;
+
+        & img {
+            width: 250px;
+        }
+
+        & div {
+            gap: 20px;
+        }
+    }
 
     .img-restaurant {
         max-width: 320px;
+        gap: 15px
     }
 
     .img-restaurant-pic1 {
-        width: 140px;
+        width: 132px;
         position: relative;
-        top: 70px;
+        top: 20px;
         right: 10px;
     }
 
     .img-restaurant-pic2 {
-        width: 140px;
+        width: 132px;
         position: relative;
         top: 20px;
         left: 10px;
@@ -476,8 +625,18 @@ textarea {
         display: none;
     }
 
+    .modal-rest {
+        width: initial !important;
+        position: relative;
+        display: none;
+    }
+
     .img-restaurant div {
         height: 8rem;
+    }
+
+    .img-restaurant section {
+        padding-left: 10px;
     }
 
     .menu,
@@ -505,28 +664,38 @@ textarea {
         width: 40px;
     }
 
-    .buscador,
     p {
         font-weight: normal;
-        font-size: 18px;
+        font-size: 16px;
     }
 
-    .title1,
-    .title2 {
+    .menu a {
+        font-size: 4vw;
+
+        & p {
+            font-size: 18px
+        }
+    }
+
+    .title1 {
         padding-right: 45px;
         padding-left: 45px;
     }
 
-    .modal-dialog{
-        width: 300px;
-        max-width: 769px;
+    .modal-dialog {
+        width: 300px !important;
+        max-width: 770px !important;
+    }
+
+    .modal {
+        --bs-modal-width: initial !important;
     }
 
     /* … */
 }
 
 /* tablet */
-@media (min-width: 770px) and (max-width: 1023px) {
+@media (min-width: 770px) and (max-width: 1024px) {
 
     .img-restaurant {
         max-width: 770px;
@@ -543,11 +712,27 @@ textarea {
     .img-restaurant-pic3,
     .img-restaurant-pic4 {
         position: relative;
-        left: 40px
+        left: 25px
+    }
+
+    .modal-rest {
+        width: 100vw !important;
+        position: relative;
+
+        & .img-restaurant-pic3,
+        .img-restaurant-pic4 {
+            display: none;
+        }
+
+        & .img-restaurant-pic2,
+        .img-restaurant-pic1 {
+            display: block;
+            width: 170px;
+        }
     }
 
     .img-restaurant section {
-        padding-right: 45px;
+        padding-left: 65px;
     }
 
     body.open .navbar-burger {
@@ -565,28 +750,34 @@ textarea {
         transition: 1s;
     }
 
-    .buscador,
     p {
         font-weight: normal;
-        font-size: 23px;
+        font-size: 17px;
     }
 
-    .title1,
-    .title2 {
+    .menu a {
+        font-size: 4vw;
+
+        & p {
+            font-size: 23px
+        }
+    }
+
+    .title1 {
         padding-right: 80px;
         padding-left: 80px;
     }
 
-    .modal-dialog{
-        width: 700px;
-        max-width: 1023px;
+    .modal-dialog {
+        width: 700px !important;
+        max-width: 1024px;
     }
 
     /* … */
 }
 
 /* portatil */
-@media (min-width: 1024px) and (max-width: 1879px) {
+@media (min-width: 1024px) and (max-width: 1880px) {
 
     .img-restaurant {
         max-width: 1024px;
@@ -599,6 +790,15 @@ textarea {
 
     .img-restaurant-pic4 {
         display: none;
+    }
+
+    .img-restaurant section {
+        padding-left: 20px;
+    }
+
+    .modal-rest {
+        width: 100vw !important;
+        position: relative;
     }
 
     body.open .navbar-burger {
@@ -617,21 +817,27 @@ textarea {
         transition: 1s;
     }
 
-    .buscador,
     p {
         font-weight: normal;
-        font-size: 25px;
+        font-size: 18px;
     }
 
-    .title1,
-    .title2 {
+    .menu a {
+        font-size: 4vw;
+
+        & p {
+            font-size: 25px
+        }
+    }
+
+    .title1 {
         padding-right: 85px;
         padding-left: 85px;
     }
 
-    .modal-dialog{
-        width: 900px;
-        max-width: 1879px;
+    .modal-dialog {
+        width: 900px !important;
+        max-width: 1880px;
     }
 
     /* … */
@@ -640,18 +846,33 @@ textarea {
 /* PC */
 @media (min-width: 1880px) {
 
-    body.open .navbar-burger {
-        position: fixed;
-        translate: 0 100px;
-        transition: 1s;
-    }
-
     .img-restaurant div {
         width: 300px;
     }
 
+    .modal-rest {
+        position: relative;
+        width: 100vw !important;
+
+        & .img-restaurant-pic2,
+        .img-restaurant-pic4 {
+            width: 250px;
+        }
+
+        & .img-restaurant-pic1,
+        .img-restaurant-pic3 {
+            width: 320px;
+        }
+    }
+
     .img-restaurant section {
-        padding-right: 85px;
+        padding-left: 110px;
+    }
+
+    body.open .navbar-burger {
+        position: fixed;
+        translate: 0 100px;
+        transition: 1s;
     }
 
     .navbar-burger img {
@@ -665,23 +886,28 @@ textarea {
         transition: 1s;
     }
 
-    .buscador,
     p {
         font-weight: normal;
-        font-size: 35px;
+        font-size: 18px;
     }
 
-    .title1,
-    .title2 {
+    .menu a {
+        font-size: 4vw;
+
+        & p {
+            font-size: 35px
+        }
+    }
+
+    .title1 {
         padding-right: 105px;
         padding-left: 105px;
     }
 
-    .modal-dialog{
-        width: 1000px;
+    .modal-dialog {
+        width: 1000px !important;
         max-width: 1880px;
     }
 
     /* … */
 }
-

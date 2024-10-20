@@ -10,66 +10,66 @@
         {
           "id": "1",
           "name": "Memento",
-          "description": "lorem ipsum dolor sit amet",
-          "vid": "video-cocina2.mp4",
+          "description": "Nuestros chefs galardonados diseñan menús degustación únicos, fusionando cortes selectos de carne y exquisitos cocteles. Cada visita es un viaje culinario elegante y sofisticado. Reserva y descubre los secretos de la alta cocina de las carnes que te encantan.",
+          "vid": "video-cocina1.mp4",
           "city": "Medellín, CO",
           "address": "Cra. 20 #23-7",
-          "menu": "",
+          "menu": "https://www.menu.pdf",
           "image1": "https://images.pexels.com/photos/12706240/pexels-photo-12706240.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
           "image2": "https://images.pexels.com/photos/20844826/pexels-photo-20844826/free-photo-of-comida-restaurante-pez-pescado.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-          "image3": "https://images.pexels.com/photos/1907227/pexels-photo-1907227.jpeg",
+          "image3": "https://images.pexels.com/photos/16699042/pexels-photo-16699042/free-photo-of-coctel-beber-bebida-vaso.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
           "image4": "https://images.pexels.com/photos/8112966/pexels-photo-8112966.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-          "socialMedia1": "",
-          "socialMedia2": "",
-          "socialMedia3": "",
-          "keyWords": "burger, empanada",
+          "socialMedia1": "https://instagram.com",
+          "socialMedia2": "https://facebook.com",
+          "socialMedia3": "https://wa.me/571234567890/?user",
+          "keyWords": "sushi, spicy, fruit, soda, salmon, pasta, grill, grillhouse, steakhouse, rice, pork, steak, gourmet, alcohol, drinks, coctel, chicken",
           "reservations": [
             {
               "restaurant": "Memento",
-              "cliente": "Sebastian Ortiz",
+              "cliente": "Paola Lopera",
               "fecha": "2024-12-03",
-              "comentarios":"Fiesta de Despedida",
-              "hora":"2:00:00 UTC"
+              "comentarios": "Fiesta de Ascenso",
+              "hora": "2:00:00 UTC"
             },
             {
               "restaurant": "Memento",
-              "cliente": "Mariana Martinez",
+              "cliente": "Dayana Campuzano",
               "fecha": "2024-10-05",
-              "comentarios":"Fiesta de Despedida",
-              "hora":"2:00:00 UTC"
+              "comentarios": "Reunión de Egresados",
+              "hora": "2:00:00 UTC"
             }
           ]
         },
         {
           "id": "2",
           "name": "Montaña",
-          "description": "lorem ipsum dolor sit amet",
+          "description": "Sumérgete en la alta cocina vegana, donde nuestros chefs galardonados crean menús degustación únicos, fusionando ingredientes frescos y técnicas innovadoras. Cada visita es un viaje culinario lleno de sabor y bienestar. Reserva y descubre los secretos de nuestra propuesta saludable y deliciosa.",
           "vid": "video-cocina2.mp4",
           "city": "Bogotá, CO",
           "address": "Cl. 4 #45-8",
-          "menu": "",
-          "image1": "https://images.pexels.com/photos/12706240/pexels-photo-12706240.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-          "image2": "https://images.pexels.com/photos/20844826/pexels-photo-20844826/free-photo-of-comida-restaurante-pez-pescado.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-          "image3": "https://images.pexels.com/photos/1907227/pexels-photo-1907227.jpeg",
-          "image4": "https://images.pexels.com/photos/8112966/pexels-photo-8112966.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-          "socialMedia1": "",
-          "socialMedia2": "",
-          "socialMedia3": "",
-          "keyWords": "burger, pizza",
+          "menu": "https://www.menu.pdf",
+          "image1": "https://images.pexels.com/photos/1439328/pexels-photo-1439328.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+          "image2": "https://images.pexels.com/photos/20690330/pexels-photo-20690330/free-photo-of-plato-pasta-carne-fotografia-de-comida.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+          "image3": "https://images.pexels.com/photos/8980451/pexels-photo-8980451.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+          "image4": "https://images.pexels.com/photos/28177414/pexels-photo-28177414.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+          "socialMedia1": "https://instagram.com",
+          "socialMedia2": "https://facebook.com",
+          "socialMedia3": "https://wa.me/571234567890/?user",
+          "keyWords": "soup, gourmet, low-carbs, low-fat, healthy, frijoles, avocado, traditional, vegan, vegetarian, vegetables, veggie, cazuela, poke, mac n' cheese, pasta, noodles, beans, tofu, rice, miso, fruit, pho",
           "reservations": [
             {
               "restaurant": "Montaña",
-              "cliente": "Sebastian Ortiz",
+              "cliente": "Karina Montoya",
               "fecha": "2024-12-03",
-              "comentarios":"Fiesta de Despedida",
-              "hora":"2:00:00 UTC"
+              "comentarios": "Cuatro Personas. Alergia al Gluten",
+              "hora": "2:00:00 UTC"
             },
             {
               "restaurant": "Montaña",
-              "cliente": "Mariana Martinez",
+              "cliente": "Camilo Trujillo",
               "fecha": "2024-10-05",
-              "comentarios":"Fiesta de Despedida",
-              "hora":"2:00:00 UTC"
+              "comentarios": "Mesa para uno",
+              "hora": "2:00:00 UTC"
             }
           ]
         }
@@ -85,66 +85,66 @@
         {
           "id": "1",
           "name": "Safaera",
-          "description": "lorem ipsum dolor sit amet",
-          "vid": "video-cocina2.mp4",
+          "description": "Deléitate en nuestro restaurante con el más auténtico sabor costero, donde nuestros chefs galardonados preparan menús degustación únicos, combinando pescados frescos y clásicos del mar. Cada visita es un viaje culinario lleno de sabor y tradición. Reserva y descubre los secretos de nuestra cocina portuaria.",
+          "vid": "video-cocina3.mp4",
           "city": "Santa Marta, CO",
           "address": "Cl. 3 #10 -23",
-          "menu": "",
-          "image1": "https://images.pexels.com/photos/12706240/pexels-photo-12706240.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-          "image2": "https://images.pexels.com/photos/20844826/pexels-photo-20844826/free-photo-of-comida-restaurante-pez-pescado.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-          "image3": "https://images.pexels.com/photos/1907227/pexels-photo-1907227.jpeg",
-          "image4": "https://images.pexels.com/photos/8112966/pexels-photo-8112966.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-          "socialMedia1": "",
-          "socialMedia2": "",
-          "socialMedia3": "",
-          "keyWords": "burger, pizza, cookies",
+          "menu": "https://www.menu.pdf",
+          "image1": "https://images.pexels.com/photos/24018578/pexels-photo-24018578/free-photo-of-comida-monitor-mostrar-exhibicion.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+          "image2": "https://images.pexels.com/photos/11137109/pexels-photo-11137109.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+          "image3": "https://images.pexels.com/photos/25949510/pexels-photo-25949510/free-photo-of-comida-ciudad-calle-tarde.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+          "image4": "https://images.pexels.com/photos/2960569/pexels-photo-2960569.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+          "socialMedia1": "https://instagram.com",
+          "socialMedia2": "https://facebook.com",
+          "socialMedia3": "https://wa.me/571234567890/?user",
+          "keyWords": "sea food, tasty, fries, onion rings, chips, brochettes, skewers, fish, rice, fried chicken, fish sticks",
           "reservations": [
             {
               "restaurant": "Safaera",
-              "cliente": "Sebastian Ortiz",
+              "cliente": "David Medina",
               "fecha": "2024-12-03",
-              "comentarios":"Fiesta de Despedida",
-              "hora":"2:00:00 UTC"
+              "comentarios": "Celebración de Victoria Campeonato. Cinco Personas",
+              "hora": "2:00:00 UTC"
             },
             {
               "restaurant": "Safaera",
-              "cliente": "Mariana Martinez",
+              "cliente": "Alexa Alzate",
               "fecha": "2024-10-05",
-              "comentarios":"Fiesta de Despedida",
-              "hora":"2:00:00 UTC"
+              "comentarios": "Cumpleaños Nro. 21. Cinco Personas",
+              "hora": "2:00:00 UTC"
             }
           ]
         },
         {
           "id": "2",
           "name": "La Pradera",
-          "description": "Nuestros chefs galardonados crean menús degustación únicos, fusionando ingredientes selectos y técnicas innovadoras. Cada visita es un viaje culinario inigualable y misterioso. Reserva y descubre los secretos de la alta cocina.",
-          "vid": "../vid/video-cocina2.mp4",
+          "description": "En nuestro innovador restaurante de comidas rápidas, los mejores chefs diseñan menús degustación únicos, elevando la calidad de ingredientes y técnicas. Cada visita es un viaje culinario emocionante y sabroso. Reserva y adéntrate en los secretos de nuestra variada oferta.",
+          "vid": "../vid/video-cocina5.mp4",
           "city": "Envigado, CO",
           "address": "CL. 6 #20 A - 95",
-          "menu": "",
-          "image1": "https://images.pexels.com/photos/12706240/pexels-photo-12706240.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-          "image2": "https://images.pexels.com/photos/20844826/pexels-photo-20844826/free-photo-of-comida-restaurante-pez-pescado.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-          "image3": "https://images.pexels.com/photos/1907227/pexels-photo-1907227.jpeg",
-          "image4": "https://images.pexels.com/photos/8112966/pexels-photo-8112966.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-          "socialMedia1": "",
-          "socialMedia2": "",
-          "socialMedia3": "",
-          "keyWords": "burger, empanada, pasta",
+          "menu": "https://www.menu.pdf",
+          "image1": "https://images.pexels.com/photos/115740/pexels-photo-115740.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+          "image2": "https://images.pexels.com/photos/8946523/pexels-photo-8946523.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+          "image3": "https://images.pexels.com/photos/20003236/pexels-photo-20003236/free-photo-of-man-eating-fast-food.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+          "image4": "https://images.pexels.com/photos/16962424/pexels-photo-16962424/free-photo-of-street-food-menu-on-tray.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+          "socialMedia1": "https://instagram.com",
+          "socialMedia2": "https://facebook.com",
+          "socialMedia3": "https://wa.me/571234567890/?user",
+          "keyWords": "burger, meat, pork, chicken, nuggets, french fries, onion rings, chips, pizza, steak, hot dog, sausage, fast food",
           "reservations": [
             {
               "restaurant": "La Pradera",
               "cliente": "Sebastian Ortiz",
               "fecha": "2024-12-03",
-              "comentarios":"Fiesta de Despedida",
-              "hora":"2:00:00 UTC"
+              "comentarios": "Fiesta de Despedida",
+              "hora": "2:00:00 UTC"
             },
             {
               "restaurant": "La Pradera",
               "cliente": "Mariana Martinez",
               "fecha": "2024-10-05",
-              "comentarios":"Fiesta de Despedida",
-              "hora":"2:00:00 UTC"
+              "comentarios": "Fiesta de Despedida",
+              "hora": "2:00:00 UTC"
             }
           ]
         }

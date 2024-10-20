@@ -4,20 +4,17 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description"
-            content="Descubre los restaurantes más exclusivos con Macedonia. Te conectamos con experiencias culinarias que deleitarán tus sentidos ¡Explora y reserva tu próxima aventura con nuestro tour gastronómico!" />
+            content="Discover the most exclusive restaurants with Macedonia. We connect you with culinary experiences that will delight your senses. Explore and book your next adventure with our gastronomic tour!" />
         <meta name="keywords"
-            content="Nicolas, Martinez, Cardona, David, Francisco, Blandon, Mena, macedonia, franccoina, frn, parrilla, bar, café, cafeteria, panaderia, resposteria, dulce, platos, comer, alimento, compartir, familia, aventura, explorar, descubrir, exclusivo, selecto, experiencia, misterio, cocina, oculta, mesa, reserva, comida, tour, gastronomia, restaurante, delicias, Colombia, riwi">
+            content="Nicolas, Martinez, Cardona, David, Francisco, Blandon, Mena, macedonia, franccoina, frn, grill, bar, café, cafeteria, bakery, pastry, sweet, dishes, eat, food, share, family, adventure, explore, discover, exclusive, select, experience, mystery, cuisine, hidden, table, reservation, food, tour, gastronomy, restaurant, delights, Colombia, riwi">
         <meta name="sitedomain" content="https://example.com/" />
         <meta name="organization" content="riwi, frn!" />
         <meta name="author"
             content="David Francisco Blandon Mena, Nicolas Martinez" />
         <meta name="designer"
             content="David Francisco Blandon Mena, Sebastian Ortiz, Nicolas Martinez Cardona, Mariana Martinez" />
-        <meta name="copyright"
-            content="© 2024 Macedonia. Todos los derechos reservados">
+        <meta name="copyright" content="© 2024 Macedonia. All rights reserved">
         <meta name="robots" content="index,follow" />
         <meta name="googlebot" content="index,follow" />
         <meta name="revisit-after" content="15days" />
@@ -32,265 +29,216 @@
         <link
             href="https://fonts.googleapis.com/css2?family=Wix+Madefor+Display:wght@400..800&display=swap"
             rel="stylesheet" />
-        <link
-            rel="stylesheet"
+        <link rel="stylesheet"
             href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
-        <link rel="shortcut icon" href="./public/icons/favicon.ico"
+        <link rel="shortcut icon" href="./public/favicon.ico"
             type="image/x-icon">
         <title>Macedonia</title>
     </head>
 
     <body>
+        <!-- Navbar Section -->
         <header>
             <nav id="navbar">
                 <button class="navbar-burger" id="navbarBtn">
-                    <img
-                        src="./public/img/navbar-burger-white.webp"
-                        alt="navbar-burger-logo" />
+                    <i class="bi bi-list"></i>
                 </button>
                 <section>
                     <article class="menu">
-                        <a class="menu-home" href="./index.html#carousel">
-                            <p>HOME</p> </a>
-                        <a class="menu-explora" href="./src/pages/explora.html">
-                            <p>EXPLORA</p> </a>
-                        <a class="menu-administra" href="./src/pages/admi.html">
-                            <p>ADMINISTRA</p> </a>
-                        <a class="menu-contacta" href="./index.html#contacta">
-                            <p>CONTACTA</p> </a>
+                        <a class="navbarLink menu-home"
+                            href="./index.html#navbar">
+                            <p>HOME</p>
+                        </a>
+                        <a class="navbarLink menu-explora"
+                            href="./src/views/explora.html">
+                            <p>EXPLORE</p>
+                        </a>
+                        <a class="navbarLink menu-administra"
+                            href="./src/views/admi.html">
+                            <p>ADMI</p>
+                        </a>
+                        <a class="navbarLink menu-contacta"
+                            href="./src/views/contacta.html">
+                            <p>CONTACT</p>
+                        </a>
                     </article>
                 </section>
-                <div class="navbar-burger-fade"></div>
             </nav>
         </header>
         <main>
-            <section id="carousel">
-                <article
-                    id="carouselExample"
-                    class="carousel slide no-horizontal-scroll"
-                    data-ride="carousel"
-                    data-pause="false"
-                    data-interval="5000">
-                    <video
-                        class="banner w-100"
-                        src="./public/vid/video-cocina1.mp4"
-                        autoplay="true"
-                        loop="true"
-                        muted
-                        alt="video-cocina-1"></video>
-                    <div class="carousel-item active">
+            <!-- Banner and Hero image -->
+            <section id="banner">
+                <article id="hero"
+                    class="hero">
+                    <div class="banner-container px-3 mb-1 w-100 text-start">
+                        <video class="banner w-75"
+                            src="./public/vid/video-cocina4.mp4" autoplay="true"
+                            loop="true" muted
+                            alt="video-cooking-1">
+                        </video>
                         <img
+                            class="banner-logo px-3"
                             src="./public/img/logo-macedonia.webp"
-                            class="container img-carousel img-fluid"
                             alt />
                     </div>
-                    <div class="carousel-item">
-                        <img
-                            src
-                            class="container img-carousel img-fluid"
-                            alt />
-                    </div>
+                    <div class="banner-container w-100 text-end mb-1 px-3">
+                        <video
+                            class="banner w-75"
+                            src="./public/vid/video-cocina6.mp4" autoplay="true"
+                            loop="true" muted
+                            alt="video-cooking-1">
+                        </video></div>
                 </article>
             </section>
-            <section id="gallery">
-                <article class="container mt-5 px-5">
-                    <div class="title-1">
-                        <h2>parrila</h2>
-                    </div>
-                    <div class="title-2">
-                        <h2>restaurante &</h2>
-                    </div>
-                    <div class="title-3">
-                        <h2>café</h2>
-                    </div>
-                </article>
-                <article class="mt-5">
-                    <div class="img-gallery">
-                        <div class="img-gallery-pic1" alt="food-pic-1"></div>
-                        <div class="img-gallery-pic2" alt="food-pic-2"></div>
-                        <div class="img-gallery-pic3" alt="food-pic-3"></div>
-                        <div class="img-gallery-pic4" alt="food-pic-4"></div>
-                        <div class="img-gallery-pic5" alt="food-pic-5"></div>
-                        <div class="img-gallery-pic6" alt="food-pic-6"></div>
-                        <div class="img-gallery-pic7" alt="food-pic-7"></div>
-                        <div class="img-gallery-pic8" alt="food-pic-8"></div>
-                        <div class="img-gallery-pic9" alt="food-pic-9"></div>
-                        <div class="img-gallery-pic10" alt="food-pic-10"></div>
-                        <div class="img-gallery-pic11" alt="food-pic-11"></div>
-                        <div class="img-gallery-pic12" alt="food-pic-12"></div>
-                    </div>
-                </article>
-            </section>
+            <!-- About the page Section -->
             <section class="about">
-                <br />
-                <article class="about-section2 text-center">
-                    <h3 class="about-title2">¡Vive una Experiencia!</h3>
-                    <p class="about-subtitle2">
-                        Atrévete a emprender un tour gastronómico con nosotros.
-                        Conectamos
-                        amantes de la comida con sabores auténticos de los
-                        negocios más
-                        exclusivos.
-                    </p>
-                    <p class="about-text2">
-                        Confianza, exclusividad y aventura.
-                    </p>
+                <article class="about-section1 text-center">
+                    <button class="btn btn-outline-dark" type="button">
+                        Go to Explore
+                    </button>
                     <br />
+                    <p class="about-text1">Venture into the best
+                        experiences.</p>
+                    <p class="about-subtitle1">
+                        Search and filter novel quality restaurants.
+                    </p>
+                </article>
+                <article class="title-1">
+                    <h2>
+                        <span>top</span><span>top</span><span>top</span><span>top</span><span>top</span><span>top</span>
+                    </h2>
+                    <!-- Duplicar contenido para el efecto continuo -->
+                    <h2>
+                        <span>top</span><span>top</span><span>top</span><span>top</span><span>top</span><span>top</span>
+                    </h2>
                 </article>
                 <article class="about-section1 text-center">
-                    <h4 class="about-title1">¿Tienes ganas de descubrir?</h4>
                     <p class="about-subtitle1">
-                        Busca y filtra novedosos restaurantes de calidad.
+                        If you own one, share the best of your business in our
+                        manager section.
                     </p>
-                    <p class="about-text1">Aventúrate a las mejores
-                        experiencias.</p>
-                    <br />
-                    <button class="btn btn-outline-light" type="button">
-                        Ir a Explora
-                    </button>
-                    <img
-                        class="explora-pic"
-                        src="./public/img/explora-pic.webp"
-                        width="900vw"
-                        alt />
-                    <br><br>
-                    <h3 class="about-title2">¿Tienes un negocio?</h3>
-                    <p class="about-subtitle2">
-                        Si eres dueño de uno, comparte lo mejor de tu negocio en
-                        nuestro
-                        administrador.
-                    </p>
-                    <p class="about-text2">
-                        Gestione su presentación al público y todo tipo de
-                        reservas.
+                    <p class="about-text1">
+                        Manage your public presentation and all types of
+                        reservations.
                     </p>
                     <br />
                     <button class="btn btn-outline-dark" type="button">
-                        Ir a Administra
+                        Go to Admi
                     </button>
-                    <img
-                        class="explora-pic2"
-                        src="./public/img/explora2-pic.webp"
-                        width="900vw"
-                        alt />
-                </article>
-                <article class="mt-5">
-                    <br /><br />
-                    <div class="title-4">
-                        <h2>top · top · top · top · top</h2>
-                    </div>
-                    <br /><br /><br />
-                    <div class="top-gallery">
-                        <div class="top-gallery-pic1" alt="food-pic-1"></div>
-                        <div class="top-gallery-pic2" alt="food-pic-2"></div>
-                        <div class="top-gallery-pic3" alt="food-pic-3"></div>
-                        <div class="top-gallery-pic4" alt="food-pic-4"></div>
-                        <div class="top-gallery-pic5" alt="food-pic-5"></div>
-                        <div class="top-gallery-pic6" alt="food-pic-6"></div>
-                    </div>
-                    <br />
-                    <div class="title-4">
-                        <h2>top · top · top · top · top</h2>
-                    </div>
                 </article>
             </section>
+            <!-- Top Section -->
+            <section class="top">
+                <section class="top-gallery">
+                    <article class="top-gallery-pic1"
+                        alt="food-pic-1">
+                        <div class="top-gallery-logo1"
+                            alt="food-logo-1"></div>
+                    </article>
+                    <article class="top-gallery-pic2"
+                        alt="food-pic-2">
+                        <div class="top-gallery-logo2"
+                            alt="food-logo-2"></div>
+                    </article>
+                    <article class="top-gallery-pic3"
+                        alt="food-pic-3">
+                        <div class="top-gallery-logo3"
+                            alt="food-logo-3"></div>
+                    </article>
+                    <article class="top-gallery-pic4"
+                        alt="food-pic-4">
+                        <div class="top-gallery-logo4"
+                            alt="food-logo-4"></div>
+                    </article>
+                    <article class="top-gallery-pic5"
+                        alt="food-pic-5">
+                        <div class="top-gallery-logo5"
+                            alt="food-logo-5"></div>
+                    </article>
+                    <article class="top-gallery-pic6"
+                        alt="food-pic-6">
+                        <div class="top-gallery-logo6"
+                            alt="food-logo-6"></div>
+                    </article>
+                </section>
+            </section>
         </main>
+        <!-- Footer -->
         <footer>
-            <section id="contacta">
-                <div class="title-5">
-                    <h2>contacta</h2>
-                </div>
-                <article class="container contacta">
-                    <div class="py-5">
-                        <div class="contacta-content row">
+            <section id="footer">
+                <article class="container">
+                    <div class="py-3">
+                        <div class="footer-content row">
                             <ul
                                 class="container col-6 col-md-2 mb-3 footer-links">
-                                <img
-                                    src="./public/img/logo-macedonia.webp"
+                                <img class="pb-3"
+                                    src="../../public/img/logo-macedonia.webp"
                                     width="350vw"
                                     alt />
                                 <div>
                                     <li>
                                         <a href="./index.html#carousel"
-                                            class="nav-link p-0 text-light"><p>Home</p></a>
-                                    </li>
-                                    <li>
-                                        <a href="./src/pages/explora.html"
-                                            class="nav-link p-0 text-light">
-                                            <p>Explora</p>
+                                            class="nav-link p-0 text-dark">
+                                            <p>Home</p>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="./src/pages/admi.html"
-                                            class="nav-link p-0 text-light">
+                                        <a href="./src/views/explora.html"
+                                            class="nav-link p-0 text-dark">
+                                            <p>Explore</p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="./src/views/admi.html"
+                                            class="nav-link p-0 text-dark">
                                             <p>Admi</p>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="./index.html#contacta"
-                                            class="nav-link p-0 text-light">
-                                            <p>Contacta</p>
+                                        <a href="./src/views/contacta.html"
+                                            class="nav-link p-0 text-dark">
+                                            <p>Contact</p>
                                         </a>
                                     </li>
                                 </div>
                             </ul>
-                            <div class="col-md-5 offset-md-1 mb-3 footer-form">
-                                <form>
-                                    <h5>Trabaja con nosotros</h5>
-                                    <p class="text-light">
-                                        Si quieres hacer parte de nuestro
-                                        equipo, dejanos tu email y
-                                        te contactaremos.
-                                    </p>
-                                    <div
-                                        class="d-flex flex-column flex-sm-row w-100 gap-2">
-                                        <label for="email"
-                                            class="visually-hidden">Correo
-                                            electrónico</label>
-                                        <input
-                                            id="email"
-                                            type="email"
-                                            class="form-control border-0"
-                                            placeholder="Correo electrónico" />
-                                        <button class="btn btn-light"
-                                            type="button">
-                                            Suscribirse
-                                        </button>
-                                    </div>
-                                </form>
-                            </div>
                         </div>
                         <div
-                            class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
-                            <p class="text-center text-light">
-                                &copy; 2024 Macedonia, Inc. Todos los derechos
-                                reservados.
+                            class="d-flex flex-column flex-sm-row justify-content-between align-items-center pt-4 mt-4 border-black border-top footer-end">
+                            <p
+                                class="copyright text-center full-text text-dark">
+                                &copy; 2024 Macedonia, Inc. All rights reserved.
                             </p>
                             <ul class="footer-icons list-unstyled d-flex">
-                                <a
+                                <a rel="noopener noreferrer"
                                     href="https://wa.me/573504691236/?text=Macedonia, Inc"
                                     target="_blank"><i
-                                        class="bi bi-whatsapp text-light"></i></a>
-                                <a href="https://www.facebook.com/?locale=es_LA"
+                                        class="bi bi-whatsapp text-dark"></i></a>
+                                <a rel="noopener noreferrer"
+                                    href="https://www.facebook.com/franccoico"
                                     target="_blank"><i
-                                        class="bi bi-facebook text-light"></i></a>
-                                <a href="https://www.reddit.com/?rdt=43305"
+                                        class="bi bi-facebook text-dark"></i></a>
+                                <a rel="noopener noreferrer"
+                                    rel="noopener noreferrer"
+                                    href="https://github.com/franccoina/Macedonia"
                                     target="_blank"><i
-                                        class="bi bi-reddit text-light"></i></a>
-                                <a href="https://www.instagram.com/"
+                                        class="bi bi-github text-dark"></i></a>
+                                <a rel="noopener noreferrer"
+                                    href="https://www.instagram.com/franccoina"
                                     target="_blank"><i
-                                        class="bi bi-instagram text-light"></i></a>
-                                <a href="https://twitter.com/?lang=es"
+                                        class="bi bi-instagram text-dark"></i></a>
+                                <a rel="noopener noreferrer"
+                                    href="https://twitter.com/franccoina"
                                     target="_blank"><i
-                                        class="bi bi-twitter-x text-light"></i></a>
+                                        class="bi bi-twitter-x text-dark"></i></a>
                             </ul>
                         </div>
                     </div>
                 </article>
             </section>
         </footer>
-        <script type="module" src="./src/js/translator.js"></script>
-        <script type="module" src="./src/js/main.js"></script>
+        <!-- Bootstrap & JavaScript -->
+        <script type="module" src="./src/controllers/main.js"></script>
 
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
         <script

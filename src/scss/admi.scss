@@ -11,7 +11,8 @@
 
 :root {
     --page-bg: #ffffff;
-    --navbar-bg: #000000e6;
+    --nav-bg: #000000b3;
+    --modal-bg: #d1d1d1;
 
     --grad-black: #000000b3;
     --grad-beige: #a57758b3;
@@ -19,18 +20,19 @@
     --grad-grey: #1c1c1ccc;
     --grad-brown: #553518cc;
     --grad-orange: #d86820cc;
-    --grad-gray: #cacaca;
+    --grad-gray: #818181;
 
-    --orange: #d86820;
-    --brown: #865d28;
     --black: #000000;
     --white: #ffffff;
+    --grey: #f5f5f5;
+    --blue: #6881a4;
+    --salmon: #cf5f14;
 
-    --brownpacity: #875e2966;
-    --orangepacity: #d9672066;
     --whitepacity: #ffffffc4;
     --whitepacity-light: #ffffff80;
+    --whitepacity-transparent: #ffffff33;
     --blackpacity: #0000008e;
+    --blackpacity-light: #00000015;
     --shadows: #00000033;
 }
 
@@ -45,29 +47,23 @@
 /*------------------------------ tags and general sttings ------------------------------*/
 
 body {
+    overflow-x: hidden;
     width: 100%;
-    background-image: url("../../public/img/food-login-bg.webp");
-    background-size: cover;
+    background-color: var(--black);
     background-position: center;
 }
 
 main {
+    overflow-x: hidden;
     display: flex;
+    position: relative;
     justify-content: center;
     width: 100%;
-    background-color: var(--black);
-}
-
-footer {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    background-image: linear-gradient(0deg, #000000b3 0%, #000000 50%);
 }
 
 h1 {
-    font-size: 5vw;
-    color: var(--white);
+    font-size: 50px;
+    color: var(--whitepacity-light);
     text-align: center;
 }
 
@@ -86,7 +82,7 @@ a {
     text-decoration: none;
 }
 
-/*------------------------------ navbar ------------------------------*/
+/*------------------------------ Navbar ------------------------------*/
 
 #navbar {
     display: flex;
@@ -97,7 +93,8 @@ a {
     animation-delay: 0.1s;
 
     & p {
-        color: var(--white);
+        font-weight: bold;
+        color: var(--whitepacity);
     }
 }
 
@@ -105,7 +102,8 @@ a {
     animation-delay: 0.3s;
 
     & p {
-        color: var(--white);
+        font-weight: bold;
+        color: var(--whitepacity);
     }
 }
 
@@ -113,7 +111,8 @@ a {
     animation-delay: 0.5s;
 
     & p {
-        color: var(--white);
+        font-weight: bold;
+        color: var(--whitepacity);
     }
 }
 
@@ -121,7 +120,8 @@ a {
     animation-delay: 0.7s;
 
     & p {
-        color: var(--white);
+        font-weight: bold;
+        color: var(--whitepacity);
     }
 }
 
@@ -134,6 +134,8 @@ a {
     width: 80px;
     height: 80px;
     transition: 0.3s;
+    font-size: 35px !important;
+    color: var(--whitepacity);
 }
 
 body.open .navbar-burger {
@@ -160,7 +162,7 @@ body.open #navbar section {
     gap: 30px;
     width: 100%;
     height: 100%;
-    background: var(--navbar-bg);
+    background: var(--nav-bg);
     opacity: 0;
     transition: 1s;
 }
@@ -170,10 +172,6 @@ body.open .menu {
     opacity: 1;
     position: fixed;
     display: flex;
-}
-
-.menu a {
-    font-size: 4vw;
 }
 
 body.open .menu a {
@@ -200,19 +198,20 @@ body.open main {
 #login {
     display: flex;
     justify-content: center;
-    padding-top: 120px;
+    padding: 20px;
+    padding-top: 100px;
     width: 100%;
+    max-width: 1000px;
 }
 
 .form-box {
     position: relative;
-    background: var(--graypacity);
-    border: 2px solid var(--white);
-    border-radius: 20px;
-    backdrop-filter: blur(15px);
+    background-color: var(--whitepacity-transparent);
     display: flex;
+    border-radius: 20px;
     justify-content: center;
     align-items: center;
+    padding: 0 3rem;
 }
 
 form {
@@ -225,12 +224,12 @@ form {
 .inputbox {
     position: relative;
     margin: 30px 0;
-    border-bottom: 2px solid var(--white);
+    border-bottom: 1px solid var(--white);
 }
 
 .inputbox input {
     width: 100%;
-    height: 50px;
+    height: 40px;
     background: transparent;
     border: none;
     outline: none;
@@ -240,14 +239,14 @@ form {
 
 .inputbox i {
     position: absolute;
-    right: 8px;
+    right: 10px;
     color: var(--white);
-    top: 20px;
+    top: 10px;
 }
 
 input[type="text"]::placeholder,
 input[type="password"]::placeholder {
-    color: var(--white);
+    color: var(--whitepacity-light);
 }
 
 input[type="text"],
@@ -269,9 +268,11 @@ input[type="password"]:active {
 }
 
 .submit {
-    width: 60%;
-    height: 40px;
+    padding: 10px;
+    width: 150px;
+    margin-top: 20px;
     cursor: pointer;
+    font-size: 14px !important;
 }
 
 .contacta-link {
@@ -289,12 +290,132 @@ input[type="password"]:active {
     text-decoration: underline;
 }
 
+/*------------------------------ Titles ------------------------------*/
 
-/*------------------------------ footer or contact section ------------------------------*/
+.title1 {
+    padding-top: 10vw;
+    display: flex;
+    justify-content: center;
+    color: var(--white);
+
+    & h1 {
+        background-image: url("../../public/img/lights-bg.jpg");
+        background-size: cover;
+        font-size: 5vw;
+    }
+}
+
+/*------------------------------ food images gallery ------------------------------*/
+
+#gallery {
+    z-index: -1;
+    margin-top: 20px;
+    width: 100vw;
+    position: absolute;
+    overflow: hidden;
+    white-space: nowrap;
+    padding: 0;
+    transition: 1s;
+}
+
+@keyframes move {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.img-gallery {
+    padding-bottom: 50px;
+    width: calc(200%);
+    height: auto;
+    justify-content: center;
+    gap: 50px;
+    margin: 0 auto;
+    display: flex;
+    transition: 1s;
+    animation: move 20s linear infinite;
+}
+
+.img-gallery div {
+    opacity: 0.6;
+    height: 110px;
+    margin-top: 20px;
+    transition: transform 0.6s;
+    border-radius: 10px;
+    display: flex;
+    font-size: 50px;
+    min-width: 200px;
+    background-size: cover;
+    background-position: center;
+}
+
+.img-gallery div:hover {
+    transform: scale(1.05);
+    transition: transform 0.6s;
+}
+
+.img-gallery-pic1 {
+    background-image: url("https://images.pexels.com/photos/11283819/pexels-photo-11283819.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
+}
+
+.img-gallery-pic2 {
+    background-image: url("https://images.pexels.com/photos/16525900/pexels-photo-16525900/free-photo-of-penne-pasta-in-pink-sauce-sprinkled-with-chopped-parsley-and-toast.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
+}
+
+.img-gallery-pic3 {
+    background-image: url("https://images.pexels.com/photos/8112966/pexels-photo-8112966.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+}
+
+.img-gallery-pic4 {
+    background-image: url("https://images.pexels.com/photos/9544258/pexels-photo-9544258.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+}
+
+.img-gallery-pic5 {
+    background-image: url("https://images.pexels.com/photos/12116165/pexels-photo-12116165.png?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
+}
+
+.img-gallery-pic6 {
+    background-image: url("https://images.pexels.com/photos/3009323/pexels-photo-3009323.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+}
+
+.img-gallery-pic7 {
+    background-image: url("https://images.pexels.com/photos/12706240/pexels-photo-12706240.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+}
+
+.img-gallery-pic8 {
+    background-image: url("https://images.pexels.com/photos/8112976/pexels-photo-8112976.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
+}
+
+.img-gallery-pic9 {
+    background-image: url("https://images.pexels.com/photos/20844826/pexels-photo-20844826/free-photo-of-comida-restaurante-pez-pescado.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+}
+
+.img-gallery-pic10 {
+    background-image: url("https://images.pexels.com/photos/10692547/pexels-photo-10692547.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
+}
+
+.img-gallery-pic11 {
+    background-image: url("https://images.pexels.com/photos/5993865/pexels-photo-5993865.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+}
+
+.img-gallery-pic12 {
+    background-image: url("https://images.pexels.com/photos/20943985/pexels-photo-20943985/free-photo-of-close-up-of-a-gourmet-dish-with-meat.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
+}
+
+/*------------------------------ Footer or Contact section ------------------------------*/
 
 #footer {
+    margin: 6.5vw;
+    margin-top: 0;
+    padding: 3vw;
+    margin-bottom: 20px;
     padding-top: 85px;
-    padding-bottom: 25px;
+    background-position: bottom;
+    background-size: cover;
 }
 
 .footer-content {
@@ -314,9 +435,27 @@ input[type="password"]:active {
     flex-direction: column;
     align-items: center;
 
+    & img{
+        opacity: 0.5;
+    }
+
     & div {
         gap: 30px;
         justify-self: flex-start;
+
+        & a {
+            transition: 0.6s;
+            color: var(--whitepacity) !important;
+
+            :hover {
+                transition: 0.6s;
+                color: var(--white);
+            }
+
+            & p {
+                font-size: 13px;
+            }
+        }
     }
 }
 
@@ -325,13 +464,42 @@ input[type="password"]:active {
     text-indent: 10px;
 }
 
+.copyright {
+    font-size: 13px;
+}
+
 /*------------------------------ media querys ------------------------------*/
 
 /*mobile*/
 @media (min-width: 320px) and (max-width: 769px) {
-
     #login {
         max-width: 320px
+    }
+
+    .footer-end {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        flex-wrap: wrap;
+
+        > * {
+            display: flex;
+            width: 100%;
+            justify-content: center;
+        }
+    }
+
+    .footer-links {
+        width: 100%;
+
+        & img {
+            width: 148px;
+        }
+
+        & div {
+            gap: 20px;
+        }
     }
 
     .menu,
@@ -359,9 +527,26 @@ input[type="password"]:active {
         width: 40px;
     }
 
-    p {
+    p, label {
         font-weight: normal;
-        font-size: 18px;
+        font-size: 14px;
+    }
+
+    .menu a {
+        font-size: 4vw;
+
+        & p {
+            font-size: 18px
+        }
+    }
+
+    .form-box {
+        width: 100%;
+        padding: 0;
+    }
+
+    .img-gallery div {
+        height: 100px;
     }
 
     /* … */
@@ -384,9 +569,21 @@ input[type="password"]:active {
         transition: 1s;
     }
 
-    p {
+    p, label {
         font-weight: normal;
-        font-size: 23px;
+        font-size: 15px;
+    }
+
+    .menu a {
+        font-size: 4vw;
+
+        & p {
+            font-size: 23px
+        }
+    }
+
+    .form-box {
+        width: 60%;
     }
 
     /* … */
@@ -411,9 +608,21 @@ input[type="password"]:active {
         transition: 1s;
     }
 
-    p {
+    p, label {
         font-weight: normal;
-        font-size: 25px;
+        font-size: 16px;
+    }
+
+    .menu a {
+        font-size: 4vw;
+
+        & p {
+            font-size: 25px
+        }
+    }
+
+    .form-box {
+        width: 60%;
     }
 
     /* … */
@@ -439,9 +648,21 @@ input[type="password"]:active {
         transition: 1s;
     }
 
-    p {
+    p, label{
         font-weight: normal;
-        font-size: 35px;
+        font-size: 16px;
+    }
+
+    .menu a {
+        font-size: 4vw;
+
+        & p {
+            font-size: 35px
+        }
+    }
+
+    .form-box {
+        width: 50%;
     }
 
     /* … */
