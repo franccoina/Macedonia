@@ -11,7 +11,7 @@ import * as bootstrap from "bootstrap";
     if (userOnline == null) {
         window.location.href = "./admi.html";
     } else {
-        console.log(JSON.parse(userOnline));
+        console.log(userOnline);
     }
 })();
 
@@ -47,7 +47,7 @@ async function index() {
     tbodyRestaurants.innerHTML = "";
 
     data.forEach((user) => {
-        if (userOnline.id === user.id) {
+        if (userOnline === user.id) {
             //--------------------------- Lógica para ver mi profile avatar ---------------------------
             profileBtn.innerHTML = `
                 <div class="profile-header">
@@ -115,7 +115,7 @@ async function indexReservations(restaurantId) {
     tbodyReservations.innerHTML = "";
 
     data.forEach((user) => {
-        if (userOnline.id === user.id) {
+        if (userOnline === user.id) {
             user.restaurants.forEach((restaurant) => {
                 if (restaurantId == undefined || restaurantId === restaurant.id) {
                     restaurant.reservations.forEach((element) => {
@@ -147,21 +147,25 @@ async function renderProfile() {
     const data = await response.json();
     console.log(data);
 
+    let userOnline = JSON.parse(localStorage.getItem("userOnline"));
+
     profileBtn.innerHTML = "";
 
     data.forEach((user) => {
-        profileBtn.innerHTML = `
-            <div class="profile-header">
-                <button class="avatar  btn btn-light">
-                ${user.name.charAt(0)}${user.lastName.charAt(0)}
-                </button>
-                <div>
-                    <h1 class="profile-name">${user.name} ${user.lastName}</h1>
-                    <p class="profile-username">@${user.username} · ${user.restaurants.length} places</p>
+        if (userOnline === user.id) {
+            profileBtn.innerHTML = `
+                <div class="profile-header">
+                    <button class="avatar  btn btn-light">
+                    ${user.name.charAt(0)}${user.lastName.charAt(0)}
+                    </button>
+                    <div>
+                        <h1 class="profile-name">${user.name} ${user.lastName}</h1>
+                        <p class="profile-username">@${user.username} · ${user.restaurants.length} places</p>
+                    </div>
                 </div>
-            </div>
-            `;
-    });
+                `;
+            }
+        });
 }
 
 
@@ -169,7 +173,7 @@ async function renderProfile() {
 
 document.addEventListener('DOMContentLoaded', async () => {
     try {
-        await index(); // Llama a la función index para cargar los restaurantes
+        await index();
         await indexReservations(cacheId);
         await renderProfile();
     } catch (error) {

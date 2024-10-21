@@ -81,7 +81,7 @@ form.addEventListener('submit', async (event) => {
         let userOnline = localStorage.getItem('userOnline')
         userOnline = JSON.parse(userOnline)
 
-        await create(userOnline.id, newRestaurant)
+        await create(userOnline, newRestaurant)
         form.reset()
     }
 })
@@ -129,21 +129,25 @@ async function renderProfile() {
     const data = await response.json();
     console.log(data);
 
+    let userOnline = JSON.parse(localStorage.getItem("userOnline"));
+
     profileBtn.innerHTML = "";
 
     data.forEach((user) => {
-        profileBtn.innerHTML = `
-            <div class="profile-header">
-                <button class="avatar  btn btn-light">
-                ${user.name.charAt(0)}${user.lastName.charAt(0)}
-                </button>
-                <div>
-                    <h1 class="profile-name">${user.name} ${user.lastName}</h1>
-                    <p class="profile-username">@${user.username} · ${user.restaurants.length} places</p>
+        if (userOnline === user.id) {
+            profileBtn.innerHTML = `
+                <div class="profile-header">
+                    <button class="avatar  btn btn-light">
+                    ${user.name.charAt(0)}${user.lastName.charAt(0)}
+                    </button>
+                    <div>
+                        <h1 class="profile-name">${user.name} ${user.lastName}</h1>
+                        <p class="profile-username">@${user.username} · ${user.restaurants.length} places</p>
+                    </div>
                 </div>
-            </div>
-            `;
-    });
+                `;
+            }
+        });
 }
 
 document.addEventListener('DOMContentLoaded', async () => {

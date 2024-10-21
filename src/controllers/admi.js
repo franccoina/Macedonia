@@ -45,7 +45,7 @@ form.addEventListener("submit", async function (event) {
     // para no dar pistas a hackers o intrusos.
     if (user.password === password.value) {
         console.log("Bienvenido, Usuario.");
-        localStorage.setItem("userOnline", JSON.stringify(user));
+        localStorage.setItem("userOnline", JSON.stringify(user.id));
         window.location.href = "./create.html";
     } else {
         alert("No fue posible iniciar sesión. Usuario o contraseña incorrectos.");

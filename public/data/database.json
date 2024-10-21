@@ -105,7 +105,7 @@
               "hora": "2:00:00 UTC"
             }
           ]
-        }       
+        }
       ]
     },
     {
@@ -117,7 +117,7 @@
       "restaurants": [
         {
           "id": "1709952000022",
-          "name": "Serenial",
+          "name": "Zenway",
           "description": "Adéntrate en la experiencia de la cocina zen, donde nuestros chefs expertos preparan menús de degustación excepcionales, combinando ingredientes orgánicos y métodos creativos. Cada visita se transforma en un recorrido sensorial lleno de sabor y equilibrio. Reserva y explora los misterios de nuestra propuesta exquisita.",
           "vid": "https://videos.pexels.com/video-files/8094292/8094292-hd_1920_1080_25fps.mp4",
           "city": "Medellín, CO",
@@ -133,14 +133,14 @@
           "keyWords": "soup, gourmet, corn, bread, tortilla, ravioli, ricota, milky, lettuce, tomato, cheese, tea, malta, matcha, coctel, soad, soda, sweet drinks, healthy, coffee, garbanzos, pho, coconut, traditional, vegetables, zen, nature, curry, salad, gazpacho, beans, tofu, rice, miso, fruit, satay",
           "reservations": [
             {
-              "restaurant": "Serenidad",
+              "restaurant": "Zenway",
               "cliente": "Carmina Tarragona",
               "fecha": "2024-07-05",
               "comentarios": "Fiesta de Aniversario. Traer pastel a las 2 horas.",
               "hora": "10:00:00 UTC"
             },
             {
-              "restaurant": "Serenidad",
+              "restaurant": "Zenway",
               "cliente": "Oliver Sánchez",
               "fecha": "2024-10-10",
               "comentarios": "Propuesta de Matrimonio. Sortija en copa de vino.",
