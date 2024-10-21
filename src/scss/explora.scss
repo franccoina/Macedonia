@@ -220,8 +220,7 @@ body.open main {
     color: var(--white);
 
     & h1 {
-        filter: saturate(0.5);
-        background-image: url("https://images.pexels.com/photos/11840607/pexels-photo-11840607.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
+        background-image: url("../../public/img/knife-pic.webp");
         background-position: center;
         background-size: cover;
     }
@@ -355,8 +354,7 @@ body.open main {
     padding: 3vw;
     margin-bottom: 20px;
     padding-top: 85px;
-    filter: saturate(1.1);
-    background-image: url("https://images.pexels.com/photos/21319355/pexels-photo-21319355/free-photo-of-un-chef-preparando-comida-en-una-cazuela-de-barro.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
+    background-image: url("https://images.pexels.com/photos/8430606/pexels-photo-8430606.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
     background-position: bottom;
     background-size: cover;
 }

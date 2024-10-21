@@ -206,11 +206,11 @@ body.open main {
 
 .form-box {
     position: relative;
-    filter: saturate(0.5);
-    background-size: cover;
-    background-position: top left;
-    background-image: url("https://images.pexels.com/photos/12706240/pexels-photo-12706240.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+    background-size: initial;
+    background-position: center left;
+    background-image: url("https://images.pexels.com/photos/8629032/pexels-photo-8629032.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
     display: flex;
+    filter: saturate(0.5);
     border-radius: 20px;
     justify-content: center;
     align-items: center;
