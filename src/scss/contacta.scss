@@ -78,7 +78,7 @@ a {
 }
 
 span {
-  padding: 0 4vw;
+  padding: 0 5.5vw;
 }
 
 /*------------------------------ navbar ------------------------------*/
@@ -134,6 +134,7 @@ span {
   height: 80px;
   transition: 0.3s;
   font-size: 35px;
+  color: var(--black);
 }
 
 body.open .navbar-burger {
@@ -223,7 +224,7 @@ body.open main {
   animation: move 20s linear infinite;
   justify-content: center;
   width: 100%;
-  padding: 20px;
+  padding: 20px 0;
   color: var(--whitepacity-light);
   display: flex;
   margin: 0;
