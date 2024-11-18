@@ -137,7 +137,7 @@ async function renderProfile() {
         if (userOnline === user.id) {
             profileBtn.innerHTML = `
                 <div class="profile-header">
-                    <button class="avatar btn btn-outline-light">
+                    <button class="avatar">
                     ${user.name.charAt(0)}${user.lastName.charAt(0)}
                     </button>
                     <div>
