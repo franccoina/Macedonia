@@ -128,6 +128,18 @@
               "comentarios": "Reunión de Egresados",
               "hora": "2:00:00 UTC"
             }
+          ],
+          "reviews": [
+            {
+              "title": "El renacimiento de la Alta Cocina",
+              "autor": "Semana",
+              "url": "https://www.semana.com/"
+            },
+            {
+              "title": "Los chefs más increíbles de la Gastronomía colombiana",
+              "autor": "El Espectador",
+              "url": "https://www.elespectador.com/"
+            }
           ]
         }
       ]
