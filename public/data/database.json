@@ -27,6 +27,7 @@
             {
               "restaurant": "La Pradera",
               "cliente": "Sebastian Ortiz",
+              "email": "sebasort@gmail.com",
               "fecha": "2024-12-03",
               "comentarios": "Fiesta de Despedida",
               "hora": "2:00:00 UTC"
@@ -34,6 +35,7 @@
             {
               "restaurant": "La Pradera",
               "cliente": "Mariana Martinez",
+              "email": "marianamart@gmail.com",
               "fecha": "2024-10-05",
               "comentarios": "Fiesta de Despedida",
               "hora": "2:00:00 UTC"
@@ -72,6 +74,7 @@
             {
               "restaurant": "Montaña",
               "cliente": "Karina Montoya",
+              "email": "karimonto@gmail.com",
               "fecha": "2024-12-03",
               "comentarios": "Cuatro Personas. Alergia al Gluten",
               "hora": "2:00:00 UTC"
@@ -79,6 +82,7 @@
             {
               "restaurant": "Montaña",
               "cliente": "Camilo Trujillo",
+              "email": "camilotrujillo@gmail.com",
               "fecha": "2024-10-05",
               "comentarios": "Mesa para uno",
               "hora": "2:00:00 UTC"
@@ -117,6 +121,7 @@
             {
               "restaurant": "Memento",
               "cliente": "Paola Lopera",
+              "email": "paolalopera@gmail.com",
               "fecha": "2024-12-03",
               "comentarios": "Fiesta de Ascenso",
               "hora": "2:00:00 UTC"
@@ -124,6 +129,7 @@
             {
               "restaurant": "Memento",
               "cliente": "Dayana Campuzano",
+              "email": "dayanacamp@gmail.com",
               "fecha": "2024-10-05",
               "comentarios": "Reunión de Egresados",
               "hora": "2:00:00 UTC"
@@ -171,6 +177,7 @@
             {
               "restaurant": "Zenway",
               "cliente": "Carmina Tarragona",
+              "email": "carminatarragona@gmail.com",
               "fecha": "2024-07-05",
               "comentarios": "Fiesta de Aniversario. Traer pastel a las 2 horas.",
               "hora": "10:00:00 UTC"
@@ -178,6 +185,7 @@
             {
               "restaurant": "Zenway",
               "cliente": "Oliver Sánchez",
+              "email": "oliversanchez@gmail.com",
               "fecha": "2024-10-10",
               "comentarios": "Propuesta de Matrimonio. Sortija en copa de vino.",
               "hora": "9:00:00 UTC"
@@ -216,6 +224,7 @@
             {
               "restaurant": "Safaera",
               "cliente": "David Medina",
+              "email": "davidmedina@gmail.com",
               "fecha": "2024-12-03",
               "comentarios": "Celebración de Victoria Campeonato. Cinco Personas",
               "hora": "2:00:00 UTC"
@@ -223,6 +232,7 @@
             {
               "restaurant": "Safaera",
               "cliente": "Alexa Alzate",
+              "email": "alexalzate@gmail.com",
               "fecha": "2024-10-05",
               "comentarios": "Cumpleaños Nro. 21. Cinco Personas",
               "hora": "2:00:00 UTC"

@@ -54,7 +54,7 @@ footer {
 }
 
 h2 {
-  font-size: 5vw;
+  font-size: 4vw;
 }
 
 h5 {
@@ -253,20 +253,24 @@ body.open main {
   margin: 0 !important;
   width: 100%;
   color: var(--white);
+  position: relative;
   display: flex;
   justify-content: center;
+  flex-direction: column;
   align-items: center;
   overflow: hidden;
   white-space: nowrap;
   background-image: url("https://images.pexels.com/photos/8629032/pexels-photo-8629032.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
   background-position: bottom;
   background-size: cover;
+  padding: 0;
 
-  & h2 {
-    animation: move 20s linear infinite;
+  & p {
+    animation: move 15s linear infinite;
     justify-content: center;
     width: 100%;
-    padding: 20px;
+    padding: 13px 0;
+    margin: 0;
     color: var(--whitepacity-light);
     display: flex;
   }

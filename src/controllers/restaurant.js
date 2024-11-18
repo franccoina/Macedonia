@@ -197,9 +197,10 @@ async function renderRestaurant(userId, restaurantId) {
                     <br>
                     <form class="d-flex flex-column align-items-center" onsubmit="handleReservationSubmit(event)">
                     <input class="form-name" type="text" id="fullName-${modalId}" name="fullName" placeholder="Full name" required>
+                    <input class="form-email" type="email" id="email-${modalId}" name="email" placeholder="Email" required>
                     <input class="form-date" type="date" id="date-${modalId}" name="date" placeholder="Date" required>
                     <input class="form-hour" type="time" id="hour-${modalId}" name="hour" placeholder="Hour" required>
-                    <textarea class="form-comment" id="comments-${modalId}" name="comments" rows="4" cols="50" placeholder="Comments"></textarea>
+                    <textarea class="form-comment" id="comments-${modalId}" name="comments" rows="4" cols="50" placeholder="Type any comment for your reservation..."></textarea>
                     <div class="text-end w-100">
                         <button class="form-button w-50 btn border border-secondary mt-5 mb-4" type="submit"><i class="bi bi-arrow-right"> SEND</i></button>
                     </div>

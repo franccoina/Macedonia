@@ -129,6 +129,7 @@ async function indexReservations(restaurantId) {
                         tbodyReservations.innerHTML += `
                             <td>${element.restaurant}</td>
                             <td>${element.cliente}</td>
+                            <td>${element.email}</td>
                             <td>${element.fecha}</td>
                         `;
                     });
