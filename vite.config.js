@@ -12,6 +12,7 @@ export default defineConfig({
                 create: resolve(__dirname, 'src/views/create.html'),
                 edit: resolve(__dirname, 'src/views/edit.html'),
                 explora: resolve(__dirname, 'src/views/explora.html'),
+                restaurant: resolve(__dirname, 'src/views/restaurant.html'),
             },
         },
     },

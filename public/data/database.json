@@ -38,6 +38,18 @@
               "comentarios": "Fiesta de Despedida",
               "hora": "2:00:00 UTC"
             }
+          ],
+          "reviews": [
+            {
+              "title": "El renacimiento de la Alta Cocina",
+              "autor": "Semana",
+              "url": "https://www.semana.com/"
+            },
+            {
+              "title": "Los chefs más increíbles de la Gastronomía colombiana",
+              "autor": "El Espectador",
+              "url": "https://www.elespectador.com/"
+            }
           ]
         },
         {
@@ -70,6 +82,18 @@
               "fecha": "2024-10-05",
               "comentarios": "Mesa para uno",
               "hora": "2:00:00 UTC"
+            }
+          ],
+          "reviews": [
+            {
+              "title": "El renacimiento de la Alta Cocina",
+              "autor": "Semana",
+              "url": "https://www.semana.com/"
+            },
+            {
+              "title": "Los chefs más increíbles de la Gastronomía colombiana",
+              "autor": "El Espectador",
+              "url": "https://www.elespectador.com/"
             }
           ]
         },
@@ -146,6 +170,18 @@
               "comentarios": "Propuesta de Matrimonio. Sortija en copa de vino.",
               "hora": "9:00:00 UTC"
             }
+          ],
+          "reviews": [
+            {
+              "title": "El renacimiento de la Alta Cocina",
+              "autor": "Semana",
+              "url": "https://www.semana.com/"
+            },
+            {
+              "title": "Los chefs más increíbles de la Gastronomía colombiana",
+              "autor": "El Espectador",
+              "url": "https://www.elespectador.com/"
+            }
           ]
         },
         {
@@ -178,6 +214,18 @@
               "fecha": "2024-10-05",
               "comentarios": "Cumpleaños Nro. 21. Cinco Personas",
               "hora": "2:00:00 UTC"
+            }
+          ],
+          "reviews": [
+            {
+              "title": "El renacimiento de la Alta Cocina",
+              "autor": "Semana",
+              "url": "https://www.semana.com/"
+            },
+            {
+              "title": "Los chefs más increíbles de la Gastronomía colombiana",
+              "autor": "El Espectador",
+              "url": "https://www.elespectador.com/"
             }
           ]
         }

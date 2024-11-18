@@ -48,8 +48,8 @@
 section {
   z-index: 1;
   background-image: linear-gradient(0deg,
-      var(--grad-black) 0%,
-      var(--black) 10%);
+      var(--whitepacity-transparent) 0%,
+      var(--whitepacity) 10%);
   padding: 0 20px;
   overflow-x: hidden !important;
 }
@@ -59,7 +59,7 @@ article {
 }
 
 footer {
-  background-color: var(--grad-black);
+  background-color: var(--whitepacity-transparent);
   padding-bottom: 25px;
   padding-top: 70px;
 }
@@ -69,7 +69,7 @@ main {
 }
 
 .navbar-section {
-  background-color: var(--black) !important;
+  background-color: var(--whitepacity) !important;
   padding-bottom: 0;
 }
 
@@ -79,16 +79,20 @@ h2 {
   font-size: 26px;
 }
 
+.table-responsive{
+  background-color: var(--blackpacity);
+  border-radius: 10px;
+  padding: 0 4vw;
+}
+
 .table-scrollable {
-  margin-right: calc(var(--bs-gutter-x)* 0.5);
-  margin-left: calc(var(--bs-gutter-x)* 0.5);
   width: 100%;
   overflow-x: auto !important;
   padding: 0 !important;
 }
 
 body {
-  background-color: var(--black);
+  background-color: var(--whitepacity);
 }
 
 ul {
@@ -100,16 +104,12 @@ ul {
 /*------------------------------ Background ------------------------------*/
 
 /* Background image settings */
-.bg-img {
+.bg-vid {
   z-index: -1;
   position: fixed;
   display: flex;
-  height: 100vh;
   width: 100vw;
-  background: url("https://images.pexels.com/photos/1907227/pexels-photo-1907227.jpeg") no-repeat;
-  background-position: center;
-  filter: blur(5px) opacity(0.7);
-  background-size: cover;
+  filter: blur(5px) opacity(0.7) grayscale(1);
 }
 
 /*------------------------------ Options for the administer: register, edit, resevations ------------------------------
@@ -138,14 +138,14 @@ ul {
 .profile-name{
   font-size: 1rem;
   font-weight: bold;
-  color: var(--white);
+  color: var(--black);
 }
 
 .profile-username{
   margin: 0;
   opacity: 0.7;
   font-size: 0.8rem;
-  color: var(--white);
+  color: var(--black);
 }
 
 .profileBtn{
@@ -154,7 +154,7 @@ ul {
 
 /* DB button styling */
 .avatar {
-  background-color: var(--white);
+  background-color: var(--blackpacity);
   border-radius: 50%;
   width: 3rem;
   height: 3rem;
@@ -164,7 +164,7 @@ ul {
   margin: 10px;
 
   & h3 {
-    color: var(--black);
+    color: var(--white);
   }
 }
 
@@ -185,13 +185,13 @@ ul {
     text-align: center;
     height: 100%;
     width: 33%;
-    border-bottom: 1px solid var(--white);
-    transition: 0.2s ease-in-out;
+    transition: 0.4s ease-in-out;
 
     & h4 {
       font-style: normal;
-      color: var(--white);
+      color: var(--blackpacity);
       font-size: 1rem;
+      transition: 0.4s ease-in-out;
     }
   }
 }
@@ -199,18 +199,18 @@ ul {
 .div-crud a:hover,
 .div-crud a:focus,
 .div-crud a:active {
-  border-bottom: 2px solid var(--grad-orange);
+  transition: 0.4s ease-in-out;
 
   & h4 {
-    font-style: oblique;
+    transition: 0.4s ease-in-out;
     font-weight: bold;
-    color: var(--grad-orange);
+    color: var(--black);
   }
 }
 
 .crud-options {
   text-decoration: none;
-  color: var(--white);
+  color: var(--black);
   padding-bottom: 15px;
 }
 
@@ -218,7 +218,13 @@ ul {
 
 table th,
 table td {
-  background-color: var(--whitepacity-light) !important;
+  background-color: transparent !important;
+  border-bottom: var(--whitepacity) 1px solid !important;
+  color: var(--white) !important;
+
+  & a{
+    text-decoration: none;
+  }
 }
 
 .text-body {
@@ -226,7 +232,7 @@ table td {
   margin-top: 60px;
 
   & p {
-    color: var(--white)
+    color: var(--white) !important;
   }
 }
 
@@ -257,17 +263,22 @@ table td {
   flex-direction: column;
   align-items: center;
 
+  & img{
+    filter: invert(1);
+    opacity: 0.5;
+  }
+
   & div {
       gap: 30px;
       justify-self: flex-start;
 
       & a {
           transition: 0.6s;
-          color: var(--whitepacity) !important;
+          color: var(--blackpacity) !important;
 
           :hover {
               transition: 0.6s;
-              color: var(--white);
+              color: var(--black) !important;
           }
 
           & p {

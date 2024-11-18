@@ -1,0 +1,845 @@
+// Import all of Bootstrap's CSS
+@import "bootstrap/scss/bootstrap";
+
+//Import Bootstrap's icons
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+
+//Import normalize
+@import url(./normalize.scss);
+
+/*------------------------------ document settings ------------------------------*/
+
+:root {
+  --page-bg: #f5f5f5;
+  --nav-bg: #000000b3;
+  --modal-bg: #d1d1d1;
+
+  --grad-black: #000000b3;
+  --grad-beige: #a57758b3;
+
+  --grad-grey: #1c1c1ccc;
+  --grad-brown: #553518cc;
+  --grad-orange: #d86820cc;
+  --grad-gray: #818181;
+
+  --black: #000000;
+  --white: #ffffff;
+  --grey: #f5f5f5;
+  --blue: #6881a4;
+  --salmon: #cf5f14;
+
+  --whitepacity: #ffffffc4;
+  --whitepacity-light: #ffffff80;
+  --whitepacity-transparent: #ffffff33;
+  --blackpacity: #0000008e;
+  --blackpacity-light: #00000015;
+  --shadows: #00000033;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Wix Madefor Display", sans-serif;
+  font-style: normal;
+}
+
+/*------------------------------ tags and general sttings ------------------------------*/
+
+main,
+header,
+footer {
+  overflow: hidden;
+  background-color: var(--page-bg);
+}
+
+h2 {
+  font-size: 5vw;
+}
+
+h5 {
+  color: var(--whitepacity-light);
+  font-size: 30px;
+}
+
+li {
+  list-style: none;
+}
+
+button {
+  border: 0;
+  padding: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+span {
+  padding: 0 4vw;
+}
+
+iframe{
+  height: 80px;
+  border: none;
+}
+
+/*------------------------------ navbar ------------------------------*/
+
+#page{
+  padding-top: 100px;
+}
+
+#navbar {
+  display: flex;
+  justify-content: center;
+}
+
+.menu-home {
+  animation-delay: 0.1s;
+
+  & p {
+    font-weight: bold;
+    color: var(--whitepacity);
+  }
+}
+
+.menu-explora {
+  animation-delay: 0.3s;
+
+  & p {
+    font-weight: bold;
+    color: var(--whitepacity);
+  }
+}
+
+.menu-administra {
+  animation-delay: 0.5s;
+
+  & p {
+    font-weight: bold;
+    color: var(--whitepacity);
+  }
+}
+
+.menu-contacta {
+  animation-delay: 0.7s;
+
+  & p {
+    font-weight: bold;
+    color: var(--whitepacity);
+  }
+}
+
+.navbar-burger {
+  z-index: 6;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  height: 80px;
+  transition: 0.3s;
+  font-size: 35px;
+  color: var(--black);
+}
+
+body.open .navbar-burger {
+  position: fixed;
+  transition: 0.3s;
+  color: var(--whitepacity);
+}
+
+#navbar section {
+  display: none;
+}
+
+body.open #navbar section {
+  display: block;
+}
+
+.menu {
+  z-index: 4;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  width: 100%;
+  height: 100%;
+  background: var(--nav-bg);
+  opacity: 0;
+  transition: 1s;
+}
+
+body.open .menu {
+  transition: 1s;
+  opacity: 1;
+  position: fixed;
+  display: flex;
+}
+
+body.open .menu a {
+  animation: appear 0.5s ease-in-out;
+}
+
+body.open main {
+  filter: blur(10px);
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+    translate: 0 50px;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+/*------------------------------ Titles ------------------------------*/
+
+.title1 {
+    display: flex;
+    justify-content: start;
+    color: var(--white);
+
+    & h1 {
+        display: flex;
+        gap: 10px;
+        justify-content: center;
+        align-items: center;
+        background-image: url("../../public/img/knife-pic.webp");
+        background-position: center;
+        background-size: cover;
+        padding: 10px 20px;
+        font-size: 16px;
+        transition: 0.6s ease-in-out;
+        border-radius: 5px;
+    }
+
+    :hover{
+      transition: 0.6s ease-in-out;
+      transform: scale(0.9);
+    }
+}
+
+/*------------------------------ banner ------------------------------*/
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    background-image: url("../../public/img/knife-pic.webp");
+    background-position: center;
+    background-size: cover;
+}
+
+.header h1 {
+    font-size: 2rem;
+    margin: 0;
+}
+
+.header p {
+    margin: 5px 0;
+}
+
+.header span {
+    display: block;
+    font-size: 1rem;
+    margin-top: 10px;
+}
+
+/*------------------------------ restaurant galleries and container ------------------------------*/
+
+.main-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.left-column, .right-column {
+    flex: 1;
+    min-width: 250px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+}
+
+.gallery{
+    width: 100%;
+    background-color: white;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.gallery img {
+    height: 150px;
+    width: 46.5%;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.gallery video {
+    width: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.reviews {
+    background-color: white;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.reviews .review {
+    margin-bottom: 10px;
+}
+
+.right-column .restaurant-info {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.restaurant-info h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+@media screen and (max-width: 768px) {
+    .main-container {
+        flex-direction: column-reverse;
+    }
+}
+
+/* Button container styling */
+.button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  
+  .review-header{
+    display: flex;
+    gap: 1rem;
+    justify-content: start;
+    align-items: center;
+  
+    & div{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+  }
+  
+  .review-name{
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--black);
+  }
+  
+  .review-username{
+    margin: 0;
+    opacity: 0.7;
+    font-size: 0.8rem;
+    color: var(--black);
+  }
+  
+  .reviewBtn{
+    text-decoration: none;
+  }
+  
+  /* DB button styling */
+  .avatar {
+    background-color: var(--black);
+    border-radius: 50%;
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+  
+    & h3 {
+      color: var(--white);
+    }
+  }
+
+// --------------------------------------------- Main info -----------------------------------------------
+  
+  .info-header{
+    display: flex;
+    justify-content: start;
+    align-items: start;
+  
+    & div{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+  }
+  
+  .info-name{
+    margin: 0;
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--black);
+  }
+  
+  .info-text{
+    margin: 0;
+    opacity: 0.7;
+    font-size: 0.8rem;
+    color: var(--black);
+  }
+
+  .tags{
+    display: flex;
+    gap: 0.5rem;
+    justify-content: start;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+
+  .tag-text{
+    border-radius: 5px;
+    padding: 5px;
+    margin: 0;
+    opacity: 0.7;
+    font-size: 0.8rem;
+    background-color: var(--blackpacity-light);
+  }
+  
+  .infoBtn{
+    text-decoration: none;
+  }
+
+  .restaurant-media {
+    background-color: var(--blackpacity-light) !important;
+    text-decoration: none;
+    border-radius: 100%;
+    width: 40px;
+    height: 40px;
+    transition: 0.5s ease !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+  
+    & i {
+        transition: 0.5s ease;
+        color: var(--grad-gray);
+    }
+  }
+  
+  .restaurant-media:hover {
+    transition: 0.5s ease !important;
+    background-color: var(--grad-gray) !important;
+    border-radius: 10px;
+  
+    & i {
+        transition: 0.5s ease;
+        color: var(--white);
+    }
+  }
+
+// --------------------------------------------- Modal -----------------------------------------------
+
+.modal-rest {
+  margin: 0 !important;
+  padding: 2vw 0 !important;
+  position: relative;
+  top: 50%;
+  width: initial !important;
+}
+
+.modal-title {
+  margin: 20px 0 !important;
+  padding: 15px;
+  background-color: var(--blackpacity) !important;
+  color: var(--white) !important;
+  width: min-content;
+  white-space: nowrap;
+  transition: 0.6s ease-in-out !important;
+  border-radius: 10px;
+}
+
+.modal-title:hover {
+  transition: 0.6s ease-in-out !important;
+  padding-left: 50px;
+  color: var(--blackpacity) !important;
+  background-color: var(--blackpacity-light) !important;
+}
+
+.modal-text {
+  border-radius: 10px;
+  background-color: var(--blackpacity-light) !important;
+  transition: 1s ease !important;
+  padding: 20px;
+  color: var(--blackpacity) !important;
+}
+
+.modal-content {
+  border-radius: 0% !important;
+  border: var(--black) 1px solid !important;
+  padding: 50px !important;
+  background-color: var(--page-bg) !important;
+}
+
+#reserva {
+  background-color: var(--grad-gray) !important;
+}
+
+input,
+textarea {
+  border: none !important;
+  background-color: var(--blackpacity-light);
+  border-radius: 10px;
+  padding: 10px;
+  margin-top: 20px !important;
+  width: 100%;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: var(--black) !important;
+}
+
+.form-name {
+  grid-column: 1 / 6;
+}
+
+.form-email {
+  grid-column: 6 / 11;
+}
+
+.form-phone-number {
+  grid-column: 2 / 4;
+  grid-row: 3 / 4;
+}
+
+.form-date {
+  grid-column: 4 / 8;
+  grid-row: 3 / 4;
+}
+
+.form-hour {
+  grid-column: 8 / 10;
+  grid-row: 3 / 4;
+}
+
+.form-people {
+  grid-column: 4 / 6;
+  grid-row: 5 / 6;
+}
+
+.submit {
+  grid-column: 6 / 8;
+  grid-row: 7 / 9;
+}
+
+.modal-dialog {
+  margin: auto !important;
+  padding: 15px 0 !important;
+  width: 75% !important;
+  --bs-modal-width: inherit !important;
+}
+
+.modal {
+  width: 100% !important;
+  margin: auto;
+  padding: 50px 0 !important;
+  --bs-modal-width: inherit !important;
+}
+
+
+/*------------------------------ footer or contact section ------------------------------*/
+
+#footer {
+  opacity: 0.75;
+  margin: 6.5vw;
+  margin-top: 0;
+  padding: 3vw;
+  margin-bottom: 20px;
+  padding-top: 85px;
+  filter: saturate(1.1);
+  background-position: bottom;
+  background-size: cover;
+}
+
+.footer-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  & div {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+  }
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  & img{
+    filter: invert(1);
+    opacity: 0.5;
+  }
+
+  & div {
+      gap: 30px;
+      justify-self: flex-start;
+
+      & a {
+          transition: 0.6s;
+          color: var(--black) !important;
+
+          :hover {
+              transition: 0.6s;
+              color: var(--blackpacity);
+          }
+
+          & p {
+              font-size: 13px;
+          }
+      }
+  }
+}
+
+.footer-icons {
+  align-self: center;
+  text-indent: 10px;
+}
+
+.copyright {
+  font-size: 13px;
+}
+
+/*------------------------------ Media querys ------------------------------*/
+
+/*mobile*/
+@media (min-width: 320px) and (max-width: 770px) {
+
+  .footer-end {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+
+    > * {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+.footer-links {
+    width: 100%;
+
+    & img {
+        width: 250px;
+    }
+
+    & div {
+        gap: 20px;
+    }
+}
+
+  h5{
+    font-size: 28px;
+  }
+
+  .menu,
+  .menu-home,
+  .menu-administra,
+  .menu-contacta,
+  .menu-explora {
+    transition: none;
+  }
+
+  body.open .menu {
+    transition: none;
+  }
+
+  body.open .menu a {
+    animation: appear 0.2s ease-in-out;
+  }
+
+  body.open .navbar-burger {
+    position: fixed;
+  }
+
+  .navbar-burger img {
+    padding-top: 5px;
+    width: 40px;
+  }
+
+  body.open .navbar-burger-fade {
+    width: 65px;
+    height: 65px;
+    translate: 0 10px;
+    visibility: visible;
+  }
+
+  p {
+    font-weight: normal;
+    font-size: 14px;
+  }
+
+  .menu a {
+    font-size: 4vw;
+
+    & p {
+      font-size: 18px
+    }
+  }
+
+  /* … */
+}
+
+/* tablet */
+@media (min-width: 771px) and (max-width: 1024px) {
+
+  body.open .navbar-burger {
+    position: fixed;
+    translate: 0 15px;
+    transition: 1s;
+  }
+
+  .navbar-burger img {
+    width: 40px;
+    transition: 1s;
+  }
+
+  body.open .navbar-burger img {
+    transition: 1s;
+  }
+
+  body.open .navbar-burger-fade {
+    width: 70px;
+    height: 70px;
+    translate: 0 20px;
+    visibility: visible;
+    animation: appear 0.5s ease-in-out;
+  }
+
+  p {
+    font-weight: normal;
+    font-size: 16px;
+  }
+
+  .menu a {
+    font-size: 4vw;
+
+    & p {
+      font-size: 23px
+    }
+  }
+
+  /* … */
+}
+
+/* portatil */
+@media (min-width: 1025px) and (max-width: 1880px) {
+
+  body.open .navbar-burger {
+    position: fixed;
+    translate: 0 10px;
+    transition: 1s;
+  }
+
+  .navbar-burger img {
+    padding-top: 50px;
+    width: 45px;
+    transition: 1s;
+  }
+
+  body.open .navbar-burger img {
+    transition: 1s;
+  }
+
+  body.open .navbar-burger-fade {
+    width: 70px;
+    height: 70px;
+    translate: 0 40px;
+    visibility: visible;
+    animation: appear 0.5s ease-in-out;
+  }
+
+  p {
+    font-weight: normal;
+    font-size: 17px;
+  }
+
+  .menu a {
+    font-size: 4vw;
+
+    & p {
+      font-size: 25px
+    }
+  }
+
+  /* … */
+}
+
+/* PC */
+@media (min-width: 1881px) {
+
+  body.open .navbar-burger {
+    position: fixed;
+    translate: 0 100px;
+    transition: 1s;
+  }
+
+  .navbar-burger img {
+    padding-top: 40px;
+    width: 55px;
+    transition: 1s;
+  }
+
+  body.open .navbar-burger img {
+    padding-top: 20px;
+    transition: 1s;
+  }
+
+  body.open .navbar-burger-fade {
+    width: 100px;
+    height: 100px;
+    translate: 0 100px;
+    visibility: visible;
+    animation: appear 0.5s ease-in-out;
+  }
+
+  p {
+    font-weight: normal;
+    font-size: 18px;
+  }
+
+  .menu a {
+    font-size: 4vw;
+
+    & p {
+      font-size: 35px
+    }
+  }
+}

@@ -100,6 +100,21 @@ hr {
     border-bottom: 2px solid var(--black);
 }
 
+input,
+textarea {
+  border: none !important;
+  background-color: var(--blackpacity-light);
+  border-radius: 10px;
+  padding: 10px;
+  margin-top: 20px !important;
+  width: 100%;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: var(--black) !important;
+}
+
 /*------------------------------ Navbar ------------------------------*/
 
 #navbar {
@@ -404,165 +419,6 @@ body.open main {
 
 .copyright {
     font-size: 13px;
-}
-
-// --------------------------------------------- Modal -----------------------------------------------
-
-.modal-rest {
-    margin: 0 !important;
-    padding: 2vw 0 !important;
-    position: relative;
-    top: 50%;
-    width: initial !important;
-}
-
-.modal-title {
-    margin: 20px 0 !important;
-    padding: 15px;
-    background-color: var(--blackpacity) !important;
-    color: var(--white) !important;
-    width: min-content;
-    white-space: nowrap;
-    transition: 0.6s ease-in-out !important;
-    border-radius: 10px;
-
-    & h2 {
-        font-size: 3vw;
-    }
-}
-
-.modal-title:hover {
-    transition: 0.6s ease-in-out !important;
-    padding-left: 50px;
-    color: var(--blackpacity) !important;
-    background-color: var(--blackpacity-light) !important;
-}
-
-.modal-text {
-    border-radius: 10px;
-    background-color: var(--blackpacity-light) !important;
-    transition: 1s ease !important;
-    padding: 20px;
-    color: var(--blackpacity) !important;
-}
-
-.modal-content {
-    border-radius: 0% !important;
-    border: var(--black) 1px solid !important;
-    padding: 50px !important;
-    background-color: var(--page-bg) !important;
-}
-
-.modal-restaurant-media {
-    background-color: var(--blackpacity-light) !important;
-    text-decoration: none;
-    border-radius: 100%;
-    width: 40px;
-    height: 40px;
-    transition: 0.5s ease !important;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 10px;
-
-    & i {
-        transition: 0.5s ease;
-        color: var(--grad-gray);
-    }
-}
-
-.modal-restaurant-menu {
-    background-color: var(--blackpacity-light) !important;
-    text-decoration: none;
-    display: flex;
-    transition: 0.5s ease !important;
-    justify-content: center;
-    align-items: center;
-    padding: 10px;
-
-    & i {
-        transition: 0.5s ease;
-        color: var(--grad-gray);
-    }
-}
-
-.modal-restaurant-menu:hover,
-.modal-restaurant-media:hover {
-    transition: 0.5s ease !important;
-    background-color: var(--grad-gray) !important;
-    border-radius: 10px;
-
-    & i {
-        transition: 0.5s ease;
-        color: var(--white);
-    }
-
-}
-
-#reserva {
-    background-color: var(--grad-gray) !important;
-}
-
-input,
-textarea {
-    border: none !important;
-    background-color: var(--blackpacity-light);
-    border-radius: 10px;
-    padding: 10px;
-    margin-top: 20px !important;
-    width: 100%;
-}
-
-input::placeholder,
-textarea::placeholder {
-    color: var(--black) !important;
-}
-
-.form-name {
-    grid-column: 1 / 6;
-}
-
-.form-email {
-    grid-column: 6 / 11;
-}
-
-.form-phone-number {
-    grid-column: 2 / 4;
-    grid-row: 3 / 4;
-}
-
-.form-date {
-    grid-column: 4 / 8;
-    grid-row: 3 / 4;
-}
-
-.form-hour {
-    grid-column: 8 / 10;
-    grid-row: 3 / 4;
-}
-
-.form-people {
-    grid-column: 4 / 6;
-    grid-row: 5 / 6;
-}
-
-.submit {
-    grid-column: 6 / 8;
-    grid-row: 7 / 9;
-}
-
-.modal-dialog {
-    margin: auto !important;
-    padding: 30px 0 !important;
-    width: 100% !important;
-    --bs-modal-width: inherit !important;
-}
-
-.modal {
-    width: 100% !important;
-    margin: auto;
-    padding: 50px 0 !important;
-    --bs-modal-width: inherit !important;
 }
 
 /*------------------------------ media querys ------------------------------*/

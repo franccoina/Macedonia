@@ -77,25 +77,32 @@ async function index() {
                     <td>${element.city}</td>
                     <td>${element.address}</td>
                     <td class="h-100">
+                    <div class="h-100 d-flex">
+                        <div>
                         <img src=${element.image1} class="rounded m-1" width="30px" alt="restaurant-img" /><br>
-                        <img src=${element.image2} class="rounded m-1" width="30px" alt="restaurant-img" /><br>
-                        <img src=${element.image3} class="rounded m-1" width="30px" alt="restaurant-img" /><br>
-                        <img src=${element.image4} class="rounded m-1" width="30px" alt="restaurant-img" />
+                            <img src=${element.image2} class="rounded m-1" width="30px" alt="restaurant-img" />
+                        </div>
+                            <br>
+                        <div>
+                            <img src=${element.image3} class="rounded m-1" width="30px" alt="restaurant-img" /><br>
+                            <img src=${element.image4} class="rounded m-1" width="30px" alt="restaurant-img" />
+                        </div>
+                    </div>
                     </td>
                     <td>${element.keyWords}</td>
-                    <td>
-                        <a href="${element.socialMedia1}" class="d-flex gap-1 btn btn-outline-dark" target="_blank">
+                    <td class="text-center">
+                        <a href="${element.socialMedia1}" class="text-center justify-content-center d-flex gap-1 text-light" target="_blank">
                             1 <i class="bi bi-globe"></i>
                         </a><br>
-                        <a href="${element.socialMedia1}" class="d-flex gap-1 btn btn-outline-dark" target="_blank">
+                        <a href="${element.socialMedia1}" class="text-center justify-content-center d-flex gap-1 text-light" target="_blank">
                             2 <i class="bi bi-globe"></i>
                         </a><br>
-                        <a href="${element.socialMedia1}" class="d-flex gap-1 btn btn-outline-dark" target="_blank">
+                        <a href="${element.socialMedia1}" class="text-center justify-content-center d-flex gap-1 text-light" target="_blank">
                             3 <i class="bi bi-globe"></i>
                         </a>
                     </td>
                     <td>
-                        <button type="button" data-id=${element.id} class="btn btn-dark">
+                        <button type="button" data-id=${element.id} class="btn btn-light">
                             ${element.reservations.length}
                         </button>
                     </td>
@@ -155,7 +162,7 @@ async function renderProfile() {
         if (userOnline === user.id) {
             profileBtn.innerHTML = `
                 <div class="profile-header">
-                    <button class="avatar  btn btn-light">
+                    <button class="avatar  btn btn-outline-light">
                     ${user.name.charAt(0)}${user.lastName.charAt(0)}
                     </button>
                     <div>

@@ -78,7 +78,7 @@ a {
 }
 
 span {
-  padding: 0 5.5vw;
+  padding: 0 5vw;
 }
 
 /*------------------------------ navbar ------------------------------*/
@@ -205,7 +205,7 @@ body.open main {
   height: 2px;
   background: var(--blackpacity);
   border: none;
-  opacity: 0.1;
+  opacity: 0.15;
   border-radius: 50%;
   margin: 40px 0;
 }
@@ -223,8 +223,9 @@ body.open main {
 .legal-title {
   animation: move 20s linear infinite;
   justify-content: center;
+  align-items: center;
   width: 100%;
-  padding: 20px 0;
+  padding: 12px 0;
   color: var(--whitepacity-light);
   display: flex;
   margin: 0;
