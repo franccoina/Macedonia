@@ -77,7 +77,7 @@ async function index() {
  * Filtra los restaurantes basados en la palabra de búsqueda.
  */
 async function research(searchWord) {
-  restaurantList.innerHTML = ""; // Limpia la lista de restaurantes
+  restaurantList.innerHTML = ""; 
   const data = await fetchUserData();
 
   let hasResults = false;
@@ -105,7 +105,7 @@ async function research(searchWord) {
  * Verifica si un restaurante coincide con la búsqueda.
  */
 function matchesSearch(restaurant, searchWord) {
-  const regex = new RegExp(searchWord, "i"); // Insensible a mayúsculas/minúsculas
+  const regex = new RegExp(searchWord, "i");
   return (
     regex.test(restaurant.keyWords) ||
     regex.test(restaurant.name) ||

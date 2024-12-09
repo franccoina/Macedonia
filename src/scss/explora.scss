@@ -68,9 +68,10 @@ h2 {
 }
 
 h1 {
-    padding: 15px;
-    font-size: 5vw;
+    padding: 12px 15px;
+    font-size: clamp(20px, 5vw, 45px);
     border-radius: 10px;
+    margin: 0;
 }
 
 h5 {
@@ -102,17 +103,17 @@ hr {
 
 input,
 textarea {
-  border: none !important;
-  background-color: var(--blackpacity-light);
-  border-radius: 10px;
-  padding: 10px;
-  margin-top: 20px !important;
-  width: 100%;
+    border: none !important;
+    background-color: var(--blackpacity-light);
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 20px !important;
+    width: 100%;
 }
 
 input::placeholder,
 textarea::placeholder {
-  color: var(--black) !important;
+    color: var(--black) !important;
 }
 
 /*------------------------------ Navbar ------------------------------*/
@@ -253,18 +254,19 @@ body.open main {
 }
 
 .buscador {
-    box-shadow: 2px 2px 8px 1px var(--shadows);
-    margin-bottom: 40px;
-    width: 100%;
+    margin-bottom: 20px;
+    width: 80%;
+    border-radius: 10px;
     padding: 0;
     gap: 15px;
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: #f5f5f5;
 }
 
 .bar-buscador {
-    width: 50%;
+    width: 100%;
     padding: 15px;
     margin: 0 !important;
     border-radius: 5px;
@@ -274,10 +276,15 @@ body.open main {
     display: flex;
     justify-content: center;
     align-items: center;
+    color: #6C757D !important;
+    font-weight: bold;
 }
 
 .bar-buscador::placeholder {
-    text-align: center;
+    text-align: start;
+    color: #6C757D !important;
+    font-weight: bold;
+    padding-left: 5px;
 }
 
 .bar-buscador:focus,
@@ -285,6 +292,45 @@ body.open main {
     background-color: transparent;
     outline: none;
     box-shadow: none;
+}
+
+.btn-search {
+    font-size: 12px;
+}
+
+.btn-container {
+    position: relative;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    white-space: nowrap;
+    width: 80%;
+    border: white 2px solid;
+    padding-bottom: 20px;
+}
+
+.btn-content {
+    position: relative;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    overflow-x: auto;
+    white-space: nowrap;
+    gap: 20px;
+    border: white 2px solid;
+    width: 100%;
+}
+
+.btn-container-wrapper {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    display: flex;
+    height: 100%;
+    border: white 2px solid;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0) 35%, rgba(255, 255, 255, 1) 100%);
+    pointer-events: none;
 }
 
 /*------------------------------ Food images Gallery ------------------------------*/
@@ -426,7 +472,7 @@ body.open main {
 /*mobile*/
 @media (min-width: 320px) and (max-width: 770px) {
 
-    #footer{
+    #footer {
         margin: 3vw;
     }
 
@@ -437,7 +483,7 @@ body.open main {
         align-items: center;
         flex-wrap: wrap;
 
-        > * {
+        >* {
             display: flex;
             width: 100%;
             justify-content: center;

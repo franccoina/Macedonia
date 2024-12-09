@@ -48,18 +48,51 @@ Here, you can see how the work was distributed and managed throughout this proje
 
 ## Documentation
 
-You will find our documentation on Trello; however, here’s the specific link to the card containing all technical aspects:
+Here, you will find our documentation on Trello. However, here’s the specific link to the card containing all technical aspects:
     [Technical Documentation](https://trello.com/c/3OfUkREI)
 
 ## Deployment
 
-Our project is deployed on Vercel. Feel free to interact with it whenever you like:
+Our project is deployed on __Vercel__. Feel free to interact with it whenever you like:
    [Vercel Deploy](https://macedonian.vercel.app)
 
 ## GitHub
 
-And finally, here you will find our GitHub repository:
+And of course, the GitHub repository for our project:
    [GitHub Repository](https://github.com/franccoina/Macedonia)
+
+--------------------------------------------------------------------------------------------------------
+
+## Installation
+
+In case you want to interact with this project as a developer, you can install it in your workspace by following the instructions below. This is recommended if you are unable to view the data from our 'prototype database' with JSON-Server.
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/franccoina/Macedonia
+```
+
+2. Install the dependencies by running the command in the terminal:
+
+```bash
+npm install
+```
+
+3. Start the JSON-Server by running the command in the terminal:
+
+```bash
+npx json-server public/data/database.json
+```
+
+4. Run the project in the terminal:
+
+```bash
+npm run dev
+```
+
+5. Open [http://localhost:3000](http://localhost:3000) in your browser and enjoy the project.
+
 
 
 --------------------------------------------------------------------------------------------------------
