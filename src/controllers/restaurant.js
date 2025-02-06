@@ -84,8 +84,8 @@ async function renderRestaurant(userId, restaurantId) {
                 class="w-100 d-flex align-items-center justify-content-between">
                 <p>${restaurant.city}</p>
                 <div class="d-flex text-light align-items-center gap-2">
-                    <i class="bi bi-heart"></i>
-                    <strong>${restaurant.reservations.length}</strong>
+                    <i class="bi bi-eye"></i>
+                    <small><strong>${restaurant.reservations.length}</strong></small>
                 </div>
             </div>
         </div>

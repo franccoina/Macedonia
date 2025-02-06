@@ -57,7 +57,8 @@ main {
     overflow-x: hidden;
     display: flex;
     position: relative;
-    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     width: 100%;
 }
 
@@ -167,7 +168,7 @@ body.open #navbar section {
     opacity: 0;
     transition: 1s;
 
-    @media (max-height: 430px) { 
+    @media (max-height: 430px) {
         padding-top: 65px;
         gap: 12px;
     }
@@ -288,15 +289,32 @@ input[type="password"]:active {
     color: var(--white);
     text-align: center;
     width: 80%;
+    transition: 1s;
+
+    & p a {
+        color: var(--white);
+        font-weight: 600;
+        transition: 1s;
+    }
 }
 
-.contacta-link p a {
-    color: var(--white);
-    font-weight: 600;
+.contacta-link-dark {
+    display: none;
+    color: var(--black);
+    text-align: center;
+    width: 80%;
+    transition: 1s;
+
+    & p a {
+        color: var(--black);
+        font-weight: 600;
+        transition: 1s;
+    }
 }
 
-.contacta-link p a:hover {
+.contacta-link p a:hover, .contacta-link-dark p a:hover {
     text-decoration: underline;
+    transition: 1s;
 }
 
 /*------------------------------ Titles ------------------------------*/
@@ -367,7 +385,7 @@ input[type="password"]:active {
 }
 
 .img-gallery-pic1 {
-    background-image: url("https://images.pexels.com/photos/11283819/pexels-photo-11283819.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
+    background-image: url("https://images.pexels.com/photos/12706240/pexels-photo-12706240.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
 }
 
 .img-gallery-pic2 {
@@ -391,7 +409,7 @@ input[type="password"]:active {
 }
 
 .img-gallery-pic7 {
-    background-image: url("https://images.pexels.com/photos/12706240/pexels-photo-12706240.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+    background-image: url("https://images.pexels.com/photos/11283819/pexels-photo-11283819.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
 }
 
 .img-gallery-pic8 {
@@ -427,42 +445,29 @@ input[type="password"]:active {
 }
 
 .footer-content {
+    margin-top: 125px;
     display: flex;
     align-items: center;
     justify-content: center;
-
-    & div {
-        display: flex;
-        align-items: center;
-        gap: 20px;
-    }
 }
 
 .footer-links {
     display: flex;
-    flex-direction: column;
     align-items: center;
+    justify-content: center;
+    gap: 30px;
 
-    & img{
-        opacity: 0.7;
-    }
+    & a {
+        transition: 0.6s;
+        color: var(--blackpacity) !important;
 
-    & div {
-        gap: 30px;
-        justify-self: flex-start;
-
-        & a {
+        :hover {
             transition: 0.6s;
-            color: var(--blackpacity) !important;
+            color: var(--black);
+        }
 
-            :hover {
-                transition: 0.6s;
-                color: var(--black);
-            }
-
-            & p {
-                font-size: 13px;
-            }
+        & p {
+            font-size: 13px;
         }
     }
 }
@@ -484,6 +489,19 @@ input[type="password"]:active {
         max-width: 320px
     }
 
+    .form-img-title{
+        width: 200px;
+        height: auto;
+    }
+
+    .contacta-link {
+        display: none;
+    }
+    
+    .contacta-link-dark {
+        display: block;
+    }
+
     .footer-end {
         display: flex;
         width: 100%;
@@ -491,7 +509,7 @@ input[type="password"]:active {
         align-items: center;
         flex-wrap: wrap;
 
-        > * {
+        >* {
             display: flex;
             width: 100%;
             justify-content: center;
@@ -500,10 +518,6 @@ input[type="password"]:active {
 
     .footer-links {
         width: 100%;
-
-        & img {
-            width: 148px;
-        }
 
         & div {
             gap: 20px;
@@ -535,7 +549,8 @@ input[type="password"]:active {
         width: 40px;
     }
 
-    p, label {
+    p,
+    label {
         font-weight: normal;
         font-size: 14px;
     }
@@ -551,6 +566,14 @@ input[type="password"]:active {
     .form-box {
         width: 100%;
         padding: 0;
+    }
+
+    .inputbox {
+        margin: 15px 0 30px;
+    }
+
+    .img-gallery {
+        animation: move 10s linear infinite !important;
     }
 
     .img-gallery div {
@@ -577,7 +600,8 @@ input[type="password"]:active {
         transition: 1s;
     }
 
-    p, label {
+    p,
+    label {
         font-weight: normal;
         font-size: 15px;
     }
@@ -616,7 +640,8 @@ input[type="password"]:active {
         transition: 1s;
     }
 
-    p, label {
+    p,
+    label {
         font-weight: normal;
         font-size: 16px;
     }
@@ -656,7 +681,8 @@ input[type="password"]:active {
         transition: 1s;
     }
 
-    p, label{
+    p,
+    label {
         font-weight: normal;
         font-size: 16px;
     }
