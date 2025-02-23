@@ -111,8 +111,8 @@ npm run dev
 </div>
 
 <div align="center">
-    <em>
+   <em>
       <strong>2024 Macedonia, Inc.</strong><br>
       © All rights reserved.
-       </em>
+      </em>
 </div>
