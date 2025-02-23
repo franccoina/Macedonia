@@ -106,13 +106,9 @@ npm run dev
 
 --------------------------------------------------------------------------------------------------------
 
-<br>
-
 <div align="center">
   <img style="filter: brightness(0.8)" src="./public/img/isotipo-macedonia.webp" alt="Macedonia-Isotype" width="300" />
 </div>
-
-<br>
 
 <div align="center">
     <em>
