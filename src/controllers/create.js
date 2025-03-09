@@ -4,6 +4,9 @@ import '../scss/create.scss'
 // Import all of Bootstrap's JS
 import * as bootstrap from 'bootstrap'
 
+// Endpoint's Domain
+import { url } from './routes';
+
 //--------------------------- validaciones del Login ---------------------------
 
 //validamos si el usuario existe, si no existe redirigir al login
@@ -47,8 +50,6 @@ const form = document.querySelector("form")
 const profileBtn = document.querySelector(".profileBtn");
 
 //variables necesarias para agregar a la base de datos
-
-let url = "http://localhost:3000/users";
 
 let idCache
 

@@ -3,8 +3,10 @@ import "../scss/restaurant.scss";
 // Import all of Bootstrap's JS
 import * as bootstrap from "bootstrap";
 
-// Variables globales
-const url = "http://localhost:3000/users";
+// Endpoint's Domain
+import { url } from './routes';
+
+//------------------- Variables y elementos DOM -----------------------
 const restaurantInfo = document.querySelector("#restaurant");
 
 // Obtén los IDs desde localStorage

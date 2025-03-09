@@ -4,6 +4,9 @@ import "../scss/booking.scss";
 // Import all of Bootstrap's JS
 import * as bootstrap from "bootstrap";
 
+// Endpoint's Domain
+import { url } from './routes';
+
 //------------------- Validar si el usuario existe, si no, redirigir al login -------------------
 
 (function () {
@@ -26,7 +29,6 @@ btnLogout.addEventListener("click", () => {
 
 //------------------- Variables y elementos DOM -------------------
 
-const url = "http://localhost:3000/users";
 const tbodyRestaurants = document.querySelector(".restaurants-table");
 const tbodyReservations = document.querySelector(".reservations-table");
 

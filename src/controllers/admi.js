@@ -4,6 +4,9 @@ import '../scss/admi.scss'
 // Import all of Bootstrap's JS
 import * as bootstrap from 'bootstrap'
 
+// Endpoint's Domain
+import { url } from './routes';
+
 //------------------------ Funciones del Navbar para open y click ------------------------
 
 let navbarBtn = document.getElementById("navbarBtn");
@@ -56,7 +59,7 @@ form.addEventListener("submit", async function (event) {
 async function checkUsername(username) {
     //traemos a todos los usuarios que tengan el username que se ingreso
     let response = await fetch(
-        `http://localhost:3000/users?username=${username.value}`
+        `${url}?username=${username.value}`
     );
     let datos = await response.json();
 
