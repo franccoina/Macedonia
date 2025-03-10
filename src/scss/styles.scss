@@ -305,7 +305,7 @@ body.open main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  max-width: 1880px;
+  max-width: 1879px;
   margin: 0 auto;
 }
 
@@ -326,7 +326,7 @@ body.open main {
   justify-content: center;
   align-items: center;
   gap: 25px;
-  max-width: 1880px;
+  max-width: 1879px;
   margin: 0 auto;
 }
 
@@ -504,7 +504,7 @@ body.open main {
 /*------------------------------ Media querys ------------------------------*/
 
 /*mobile*/
-@media (min-width: 320px) and (max-width: 770px) {
+@media (min-width: 320px) and (max-width: 769px) {
 
   .footer-end {
     display: flex;
@@ -635,7 +635,7 @@ body.open main {
 }
 
 /* tablet */
-@media (min-width: 771px) and (max-width: 1024px) {
+@media (min-width: 771px) and (max-width: 1023px) {
 
   .top-gallery {
     max-width: 600px;
@@ -681,7 +681,7 @@ body.open main {
 }
 
 /* portatil */
-@media (min-width: 1025px) and (max-width: 1880px) {
+@media (min-width: 1025px) and (max-width: 1879px) {
 
   .top-gallery {
     max-width: 900px;

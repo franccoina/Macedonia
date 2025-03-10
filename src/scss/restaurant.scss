@@ -649,7 +649,7 @@ textarea::placeholder {
 /*------------------------------ Media querys ------------------------------*/
 
 /*mobile*/
-@media (min-width: 320px) and (max-width: 770px) {
+@media (min-width: 320px) and (max-width: 769px) {
   .title1 span {
     display: none;
 }
@@ -733,7 +733,7 @@ textarea::placeholder {
 }
 
 /* tablet */
-@media (min-width: 771px) and (max-width: 1024px) {
+@media (min-width: 771px) and (max-width: 1023px) {
 
   body.open .navbar-burger {
     position: fixed;
@@ -775,7 +775,7 @@ textarea::placeholder {
 }
 
 /* portatil */
-@media (min-width: 1025px) and (max-width: 1880px) {
+@media (min-width: 1025px) and (max-width: 1879px) {
 
   body.open .navbar-burger {
     position: fixed;

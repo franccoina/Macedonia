@@ -505,7 +505,7 @@ body.open main {
 /*------------------------------ Media querys ------------------------------*/
 
 /*mobile*/
-@media (min-width: 320px) and (max-width: 770px) {
+@media (min-width: 320px) and (max-width: 769px) {
 
   .footer-end {
     display: flex;
@@ -617,7 +617,7 @@ body.open main {
 }
 
 /* tablet */
-@media (min-width: 771px) and (max-width: 1024px) {
+@media (min-width: 771px) and (max-width: 1023px) {
 
   .footer-form {
     width: 100%;
@@ -689,7 +689,7 @@ body.open main {
 }
 
 /* portatil */
-@media (min-width: 1025px) and (max-width: 1880px) {
+@media (min-width: 1025px) and (max-width: 1879px) {
 
   body.open .navbar-burger {
     position: fixed;

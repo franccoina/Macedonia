@@ -347,9 +347,9 @@ body.open main {
     flex-wrap: wrap;
     justify-content: center;
     gap: 40px;
-    max-width: 1880px;
+    max-width: 1879px;
     margin: 0 auto;
-    padding-bottom: 120px;
+    padding-bottom: 100px;
 }
 
 .img-restaurant section {
@@ -475,7 +475,7 @@ body.open main {
 /*------------------------------ media querys ------------------------------*/
 
 /*mobile*/
-@media (min-width: 320px) and (max-width: 770px) {
+@media (min-width: 320px) and (max-width: 769px) {
 
     #footer {
         margin: 3vw;
@@ -512,23 +512,14 @@ body.open main {
         gap: 15px
     }
 
-    .img-restaurant-pic1 {
-        width: 132px;
-        position: relative;
-        top: 20px;
-        right: 10px;
-    }
-
+    .img-restaurant-pic1, 
     .img-restaurant-pic2 {
-        width: 132px;
+        width: 4rem;
         position: relative;
-        top: 20px;
-        left: 10px;
     }
 
-    .img-restaurant-pic3,
-    .img-restaurant-pic4 {
-        display: none;
+    .img-restaurant-pic3{
+        width: 230px;
     }
 
     .modal-rest {
@@ -538,7 +529,7 @@ body.open main {
     }
 
     .img-restaurant div {
-        height: 8rem;
+        height: 4rem;
     }
 
     .img-restaurant section {
@@ -590,7 +581,7 @@ body.open main {
 
     .modal-dialog {
         width: 300px !important;
-        max-width: 770px !important;
+        max-width: 769px !important;
     }
 
     .modal {
@@ -601,10 +592,10 @@ body.open main {
 }
 
 /* tablet */
-@media (min-width: 770px) and (max-width: 1024px) {
+@media (min-width: 769px) and (max-width: 1023px) {
 
     .img-restaurant {
-        max-width: 770px;
+        max-width: 769px;
     }
 
     .img-restaurant-pic1 {
@@ -676,17 +667,17 @@ body.open main {
 
     .modal-dialog {
         width: 700px !important;
-        max-width: 1024px;
+        max-width: 1023px;
     }
 
     /* … */
 }
 
 /* portatil */
-@media (min-width: 1024px) and (max-width: 1880px) {
+@media (min-width: 1023px) and (max-width: 1879px) {
 
     .img-restaurant {
-        max-width: 1024px;
+        max-width: 1023px;
     }
 
     .img-restaurant-pic1,
@@ -743,14 +734,14 @@ body.open main {
 
     .modal-dialog {
         width: 900px !important;
-        max-width: 1880px;
+        max-width: 1879px;
     }
 
     /* … */
 }
 
 /* PC */
-@media (min-width: 1880px) {
+@media (min-width: 1879px) {
 
     .img-restaurant div {
         width: 300px;
@@ -812,7 +803,7 @@ body.open main {
 
     .modal-dialog {
         width: 1000px !important;
-        max-width: 1880px;
+        max-width: 1879px;
     }
 
     /* … */

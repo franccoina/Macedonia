@@ -317,21 +317,6 @@ input[type="password"]:active {
     transition: 1s;
 }
 
-/*------------------------------ Titles ------------------------------*/
-
-.title1 {
-    padding-top: 10vw;
-    display: flex;
-    justify-content: center;
-    color: var(--white);
-
-    & h1 {
-        background-image: url("../../public/img/lights-bg.jpg");
-        background-size: cover;
-        font-size: 5vw;
-    }
-}
-
 /*------------------------------ food images gallery ------------------------------*/
 
 #gallery {
@@ -584,7 +569,7 @@ input[type="password"]:active {
 }
 
 /* tablet */
-@media (min-width: 770px) and (max-width: 1023px) {
+@media (min-width: 769px) and (max-width: 1023px) {
     body.open .navbar-burger {
         position: fixed;
         translate: 0 15px;
@@ -622,7 +607,7 @@ input[type="password"]:active {
 }
 
 /* portatil */
-@media (min-width: 1024px) and (max-width: 1879px) {
+@media (min-width: 1023px) and (max-width: 1879px) {
 
     body.open .navbar-burger {
         position: fixed;
@@ -662,7 +647,7 @@ input[type="password"]:active {
 }
 
 /* PC */
-@media (min-width: 1880px) {
+@media (min-width: 1879px) {
 
     body.open .navbar-burger {
         position: fixed;
