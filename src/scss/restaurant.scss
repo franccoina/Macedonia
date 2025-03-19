@@ -252,13 +252,11 @@ body.open main {
     text-align: center;
     padding: 20px;
     border-radius: 10px;
-    background-image: url("../../public/img/knife-pic.webp");
-    background-position: center;
-    background-size: cover;
+    background-color: var(--white);
 }
 
 .header h1 {
-    font-size: 2rem;
+    font-size: 1.5rem;
     margin: 0;
 }
 
@@ -408,6 +406,7 @@ body.open main {
   
   .info-name{
     margin: 0;
+    margin-top: 3px;
     font-size: 1rem;
     font-weight: bold;
     color: var(--black);
@@ -436,6 +435,7 @@ body.open main {
     opacity: 0.7;
     font-size: 0.8rem;
     background-color: var(--blackpacity-light);
+    cursor: help;
   }
   
   .infoBtn{
@@ -481,8 +481,14 @@ body.open main {
   width: initial !important;
 }
 
+.modal-logo{
+  opacity: 0.5;
+  filter: invert(1);
+}
+
 .modal-title {
-  margin: 20px 0 !important;
+  margin: 0;
+  margin-bottom: 20px;
   padding: 15px;
   background-color: var(--blackpacity) !important;
   color: var(--white) !important;
@@ -490,6 +496,7 @@ body.open main {
   white-space: nowrap;
   transition: 0.6s ease-in-out !important;
   border-radius: 10px;
+  font-size: 1.1rem;
 }
 
 .modal-title:hover {
@@ -508,7 +515,7 @@ body.open main {
 }
 
 .modal-content {
-  border-radius: 0% !important;
+  border-radius: 10px !important;
   border: var(--black) 1px solid !important;
   padding: 50px !important;
   background-color: var(--page-bg) !important;
@@ -523,14 +530,21 @@ textarea {
   border: none !important;
   background-color: var(--blackpacity-light);
   border-radius: 10px;
-  padding: 10px;
+  padding: 15px;
   margin-top: 20px !important;
   width: 100%;
+  font-size: 14px;
 }
 
 input::placeholder,
 textarea::placeholder {
   color: var(--black) !important;
+}
+
+.form-date-hour{
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
 }
 
 .form-name {
@@ -650,6 +664,25 @@ textarea::placeholder {
 
 /*mobile*/
 @media (min-width: 320px) and (max-width: 769px) {
+  .modal-logo img{
+    width: 100px;
+    margin-bottom: 2rem !important;
+  }
+
+  .form-reservation {
+    padding-right: 0 !important;
+  }
+
+  .form-button {
+    margin-bottom: 0 !important;
+  }
+
+  .form-date-hour{
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
   .title1 span {
     display: none;
 }
@@ -760,7 +793,7 @@ textarea::placeholder {
 
   p {
     font-weight: normal;
-    font-size: 16px;
+    font-size: 15px;
   }
 
   .menu a {
@@ -803,7 +836,7 @@ textarea::placeholder {
 
   p {
     font-weight: normal;
-    font-size: 17px;
+    font-size: 15px;
   }
 
   .menu a {
@@ -847,7 +880,7 @@ textarea::placeholder {
 
   p {
     font-weight: normal;
-    font-size: 18px;
+    font-size: 16px;
   }
 
   .menu a {

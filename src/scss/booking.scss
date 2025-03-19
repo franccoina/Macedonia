@@ -216,6 +216,16 @@ ul {
   padding-bottom: 15px;
 }
 
+.restaurant-media{
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+  background-color: var(--white);
+}
+
 /*------------------------------ tables ------------------------------*/
 
 table th,
@@ -223,6 +233,7 @@ table td {
   background-color: transparent !important;
   border-bottom: var(--whitepacity) 1px solid !important;
   color: var(--white) !important;
+  font-size: 14px;
 
   & a{
     text-decoration: none;

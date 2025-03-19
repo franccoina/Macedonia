@@ -219,6 +219,7 @@ textarea {
   padding: 10px;
   width: 100%;
   border-radius: 10px;
+  font-size: 14px;
 }
 
 input::placeholder,
@@ -279,17 +280,17 @@ textarea::placeholder {
 }
 
 /* Social media link fields styling */
-.form-social-media1 {
+.form-social-contact {
   grid-column: 1 / 4;
   grid-row: 19 / 20;
 }
 
-.form-social-media2 {
+.form-social-media {
   grid-column: 4 / 8;
   grid-row: 19 / 20;
 }
 
-.form-social-media3 {
+.form-social-delivery {
   grid-column: 8 / 11;
   grid-row: 19 / 20;
 }

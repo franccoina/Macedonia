@@ -24,7 +24,7 @@ __Macedonia__ has been created to address the need for accessible information ab
 
 ## Tech stack
 
-- JavaScript, HTML, SCSS, Bootstrap 5, Vite, Railway (JSON Database)
+- JavaScript, HTML, SCSS, Bootstrap 5, Toastr, Vite, Railway (JSON Database)
 
 ## Producers
 

@@ -24,7 +24,11 @@ let btnLogout = document.getElementById("btnLogout");
 
 btnLogout.addEventListener("click", () => {
     localStorage.removeItem("userOnline");
-    window.location.href = "./admi.html";
+    toastr.info("Log out was succesful.");
+
+    setTimeout(() => {
+        window.location.href = "./admi.html"
+    }, 2000);
 });
 
 //------------------- Variables y elementos DOM -------------------
@@ -39,7 +43,7 @@ let cacheId;
 //------------------- Renderizar tabla con restaurantes -------------------
 
 async function index() {
-    console.log("Llamando a la función index()");
+    console.log("Calling index() function.");
     const response = await fetch(url);
     const data = await response.json();
     
@@ -66,7 +70,6 @@ async function index() {
             //--------------------------- Lógica para ver las reservas de cada restaurante ------------
             user.restaurants.forEach((element) => {
                 tbodyRestaurants.innerHTML += `
-                    <td>${element.id}</td>
                     <td>${element.name}</td>
                     <td>
                         <video src="${element.vid}"
@@ -93,18 +96,20 @@ async function index() {
                     </td>
                     <td>${element.keyWords}</td>
                     <td class="text-center">
-                        <a href="${element.socialMedia1}" class="text-center justify-content-center d-flex gap-1 text-light" target="_blank">
-                            1 <i class="bi bi-globe"></i>
-                        </a><br>
-                        <a href="${element.socialMedia1}" class="text-center justify-content-center d-flex gap-1 text-light" target="_blank">
-                            2 <i class="bi bi-globe"></i>
-                        </a><br>
-                        <a href="${element.socialMedia1}" class="text-center justify-content-center d-flex gap-1 text-light" target="_blank">
-                            3 <i class="bi bi-globe"></i>
+                    <div class="d-flex justify-content-around gap-2">
+                        <a href="${element.socialContact}" class="text-dark restaurant-media social-contact" target="_blank">
+                            <i class="bi bi-telephone"></i>
                         </a>
+                        <a href="${element.socialMedia}" class="text-dark restaurant-media social-media" target="_blank">
+                            <i class="bi bi-chat-dots"></i>
+                        </a>
+                        <a href="${element.socialDelivery}" class="text-dark restaurant-media social-delivery" target="_blank">
+                            <i class="bi bi-truck"></i>
+                        </a>
+                        </div>
                     </td>
                     <td>
-                        <button type="button" data-id=${element.id} class="btn btn-light">
+                        <button type="button" data-id=${element.id} class="btn btn-light toBooked">
                             ${element.reservations.length}
                         </button>
                     </td>
@@ -144,7 +149,7 @@ async function indexReservations(restaurantId) {
 //------------------- Evento para manejar clicks en la tabla de restaurantes -------------------
 
 tbodyRestaurants.addEventListener('click', async (event) => {
-    if (event.target.classList.contains('btn-dark')) {
+    if (event.target.classList.contains('btn-light')) {
         cacheId = event.target.dataset.id;
         await indexReservations(cacheId);
     }
@@ -183,12 +188,25 @@ async function renderProfile() {
 
 document.addEventListener('DOMContentLoaded', async () => {
     try {
+        // Llamadas asincrónicas para cargar la página
         await index();
         await indexReservations(cacheId);
         await renderProfile();
+
+        // Seleccionamos todos los botones que deben hacer el desplazamiento
+        const buttons = document.querySelectorAll('.toBooked');
+
+        // Añadimos un event listener a cada uno de esos botones
+        buttons.forEach(button => {
+            button.addEventListener('click', function() {
+                // Usamos scrollIntoView para desplazar a la sección 'booked'
+                document.getElementById('booked').scrollIntoView({
+                    behavior: 'smooth' 
+                });
+            });
+        });
+
     } catch (error) {
         console.error("Error al cargar la página:", error);
     }
 });
-
-

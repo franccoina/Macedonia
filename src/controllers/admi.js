@@ -4,6 +4,10 @@ import '../scss/admi.scss'
 // Import all of Bootstrap's JS
 import * as bootstrap from 'bootstrap'
 
+// Import toastr
+import toastr from 'toastr';
+import 'toastr/build/toastr.min.css';
+
 // Endpoint's Domain
 import { url } from './routes';
 
@@ -11,7 +15,7 @@ import { url } from './routes';
 
 let navbarBtn = document.getElementById("navbarBtn");
 navbarBtn.addEventListener("click", () => {
-    console.log("Abriendo el menú de navegación.");
+    console.log("Opening navbar menu.");
     document.body.classList.toggle("open");
 });
 
@@ -19,7 +23,7 @@ let navbarLinks = document.querySelectorAll(".navbarLink");
 
 navbarLinks.forEach(navbarLink => {
     navbarLink.addEventListener("click", () => {
-        console.log("Entrando a link seleccionado.");
+        console.log("Redirecting to selected link.");
         document.body.classList.toggle("open");
     });
 });
@@ -47,11 +51,15 @@ form.addEventListener("submit", async function (event) {
     // Se procura ser vago en la razón por la que no se pudo iniciar
     // para no dar pistas a hackers o intrusos.
     if (user.password === password.value) {
-        console.log("Bienvenido, Usuario.");
+        console.log("Log in was successful. Welcome!");
+        toastr.success("Log in was successful. Welcome!");
         localStorage.setItem("userOnline", JSON.stringify(user.id));
-        window.location.href = "./create.html";
+
+        setTimeout(() => {
+            window.location.href = "./create.html";
+        }, 2000);
     } else {
-        alert("No fue posible iniciar sesión. Usuario o contraseña incorrectos.");
+        toastr.error(`Couldn't log in. Incorrect username or password.`);
     }
 });
 

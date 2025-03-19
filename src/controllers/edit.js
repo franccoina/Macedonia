@@ -4,6 +4,10 @@ import '../scss/edit.scss'
 // Import all of Bootstrap's JS
 import * as bootstrap from 'bootstrap'
 
+// Import toastr
+import toastr from 'toastr';
+import 'toastr/build/toastr.min.css';
+
 // Endpoint's Domain
 import { url } from './routes';
 
@@ -22,8 +26,12 @@ import { url } from './routes';
 let btnLogout = document.getElementById("btnLogout")
 
 btnLogout.addEventListener("click", () => {
-    localStorage.removeItem("userOnline")
-    window.location.href = "./admi.html"
+    localStorage.removeItem("userOnline");
+    toastr.info("Log out was successful.");
+
+    setTimeout(() => {
+        window.location.href = "./admi.html"
+    }, 2000);
 })
 
 //--------------------------- FUNCIONES DE CRUD ---------------------------
@@ -40,9 +48,9 @@ const image1 = document.querySelector(".form-image1")
 const image2 = document.querySelector(".form-image2")
 const image3 = document.querySelector(".form-image3")
 const image4 = document.querySelector(".form-image4")
-const socialMedia1 = document.querySelector(".form-social-media1")
-const socialMedia2 = document.querySelector(".form-social-media2")
-const socialMedia3 = document.querySelector(".form-social-media3")
+const socialContact = document.querySelector(".form-social-contact")
+const socialMedia = document.querySelector(".form-social-media")
+const socialDelivery = document.querySelector(".form-social-delivery")
 const keyWords = document.querySelector(".form-key-word")
 
 const form = document.querySelector("form")
@@ -92,13 +100,3 @@ async function renderProfile() {
 document.addEventListener('DOMContentLoaded', async () => {
     await renderProfile();
 });
-
-
-
-
-
-
-
-
-
-

@@ -15,7 +15,7 @@ const restaurantList = document.querySelector("#restaurantList");
 const navbarBtn = document.getElementById("navbarBtn");
 if (navbarBtn) {
   navbarBtn.addEventListener("click", () => {
-    console.log("Abriendo el menú de navegación.");
+    console.log("Opening navbar menu.");
     document.body.classList.toggle("open");
   });
 }
@@ -23,7 +23,7 @@ if (navbarBtn) {
 const navbarLinks = document.querySelectorAll(".navbarLink");
 navbarLinks.forEach((navbarLink) => {
   navbarLink.addEventListener("click", () => {
-    console.log("Entrando a link seleccionado.");
+    console.log("Redirecting to selected link.");
     document.body.classList.toggle("open");
   });
 });
@@ -52,9 +52,9 @@ restaurantList.addEventListener("click", (event) => {
     if (userId && restaurantId) {
       localStorage.setItem("userId", userId);
       localStorage.setItem("restaurantId", restaurantId);
-      console.log(`Datos guardados en localStorage: userId=${userId}, restaurantId=${restaurantId}`);
+      console.log(`Data was saved in localStorage: userId=${userId}, restaurantId=${restaurantId}`);
     } else {
-      console.error("No se encontraron atributos data-user o data-id.");
+      console.error("No results for the attributes data-user or data-id.");
     }
   }
 });
@@ -97,7 +97,7 @@ async function research(searchWord) {
   if (!hasResults) {
     restaurantList.innerHTML = `
       <div class="img-restaurant">
-        <p>No se encontraron resultados para "${searchWord}".</p>
+        <p>No results found for "${searchWord}".</p>
       </div> 
     `;
   }
@@ -122,7 +122,7 @@ function renderRestaurant(userId, restaurant) {
   restaurantList.innerHTML += `
     <a href="./restaurant.html" class="img-restaurant text-dark" data-user="${userId}" data-id="${restaurant.id}">
       <section>
-        <h3><strong>${restaurant.name}</strong></h3>
+        <h4><strong>${restaurant.name}</strong></h4>
         <p>${restaurant.city}</p>
       </section>
       <video src="${restaurant.vid}" autoplay loop muted></video>
@@ -141,7 +141,7 @@ async function fetchUserData() {
   try {
     const response = await fetch(url);
     if (!response.ok) {
-      throw new Error("Error al obtener datos del servidor.");
+      throw new Error("Error fetching data from server.");
     }
     return await response.json();
   } catch (error) {

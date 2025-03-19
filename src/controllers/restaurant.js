@@ -3,6 +3,10 @@ import "../scss/restaurant.scss";
 // Import all of Bootstrap's JS
 import * as bootstrap from "bootstrap";
 
+// Import toastr
+import toastr from 'toastr';
+import 'toastr/build/toastr.min.css';
+
 // Endpoint's Domain
 import { url } from './routes';
 
@@ -18,7 +22,7 @@ const userId = localStorage.getItem("userId");
 const navbarBtn = document.getElementById("navbarBtn");
 if (navbarBtn) {
     navbarBtn.addEventListener("click", () => {
-        console.log("Abriendo el menú de navegación.");
+        console.log("Opening navbar menu.");
         document.body.classList.toggle("open");
     });
 }
@@ -26,7 +30,7 @@ if (navbarBtn) {
 const navbarLinks = document.querySelectorAll(".navbarLink");
 navbarLinks.forEach((navbarLink) => {
     navbarLink.addEventListener("click", () => {
-        console.log("Entrando a link seleccionado.");
+        console.log("Redirecting to selected link.");
         document.body.classList.toggle("open");
     });
 });
@@ -41,7 +45,7 @@ document.addEventListener("DOMContentLoaded", async () => {
             console.error("Error rendering restaurant:", error);
         }
     } else {
-        console.error("No se encontraron IDs en localStorage.");
+        console.error(`Couldn't find IDs in localStorage.`);
     }
 });
 
@@ -52,7 +56,7 @@ document.addEventListener("DOMContentLoaded", async () => {
  */
 async function renderRestaurant(userId, restaurantId) {
     if (!restaurantInfo) {
-        console.error("No se encontró el contenedor del restaurante.");
+        console.error(`Couldn't find the restaurant container.`);
         return;
     }
 
@@ -63,7 +67,7 @@ async function renderRestaurant(userId, restaurantId) {
 
         const user = data.find((user) => user.id === userId);
         if (!user) {
-            console.error("Usuario no encontrado.");
+            console.error("User not found.");
             return;
         }
 
@@ -71,7 +75,7 @@ async function renderRestaurant(userId, restaurantId) {
             (restaurant) => restaurant.id === restaurantId
         );
         if (!restaurant) {
-            console.error("Restaurante no encontrado.");
+            console.error("Restaurant not found.");
             return;
         }
 
@@ -80,12 +84,12 @@ async function renderRestaurant(userId, restaurantId) {
         // Renderiza el HTML del restaurante
         restaurantInfo.innerHTML = `
         <!-- Page Restaurant -->
-        <div class="header text-light">
-            <h1>${restaurant.name}</h1>
+        <div class="header text-secondary">
+            <h1><strong>${restaurant.name}</strong></h1>
             <div
                 class="w-100 d-flex align-items-center justify-content-between">
                 <p>${restaurant.city}</p>
-                <div class="d-flex text-light align-items-center gap-2">
+                <div class="d-flex text-secondary align-items-center gap-2">
                     <i class="bi bi-eye"></i>
                     <small><strong>${restaurant.reservations.length}</strong></small>
                 </div>
@@ -131,9 +135,9 @@ async function renderRestaurant(userId, restaurantId) {
 
                 <section>
                     <div class="w-100 text-end d-flex justify-content-end pt-2 gap-2">
-                        <a class="border restaurant-media" href="${restaurant.socialMedia1}" target="_blank"><i class="bi bi-instagram"></i></a>
-                        <a class="border restaurant-media" href="${restaurant.socialMedia2}" target="_blank"><i class="bi bi-facebook"></i></a>
-                        <a class="border restaurant-media" href="${restaurant.socialMedia3}" target="_blank"><i class="bi bi-whatsapp"></i></a>
+                        <a class="border restaurant-media social-contact" href="${restaurant.socialContact}" target="_blank"><i class="bi bi-telephone"></i></a>
+                        <a class="border restaurant-media social-media" href="${restaurant.socialMedia}" target="_blank"><i class="bi bi-chat-dots"></i></a>
+                        <a class="border restaurant-media social-delivery" href="${restaurant.socialDelivery}" target="_blank"><i class="bi bi-truck"></i></a>
                     </div>
                 </section>
             </div>
@@ -142,20 +146,13 @@ async function renderRestaurant(userId, restaurantId) {
             <div class="right-column">
                 <section class="restaurant-info">
                     <article class="button-container">
-                        <iframe style="border-radius:10px" 
-                            src="https://open.spotify.com/embed/track/6MRElrOE80xkeV2UkNqyL0?utm_source=generator&theme=0"
-                            width="100%" height="112" 
-                            frameBorder="0" allowfullscreen="" 
-                            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy">
-                        </iframe>
-
                         <a href=${restaurant.menu} target="_blank" class="infoBtn">
                             <div class="info-header gap-3">
-                                <i class="bi bi-list text-dark"></i>
+                                <i class="bi bi-view-list text-dark"></i>
                                 <div>
                                     <h1 class="info-name">Menu</h1>
                                     <p
-                                        class="info-text">Go to ${restaurant.name}'s menu</p>
+                                        class="info-text">${restaurant.name}'s menu</p>
                                 </div>
                             </div>
                         </a>
@@ -189,27 +186,31 @@ async function renderRestaurant(userId, restaurantId) {
             <div class="w-100 modal fade" id="${modalId}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content container d-flex flex-column align-items-center text-start">
-                <div>
-                    <h3 class="modal-title">${restaurant.name}</h3>
-                    <p class="modal-text">${restaurant.description}</p>
-                </div>
-                <div class="pt-4">
-                    <h3 class="modal-title">Reservation ?</h3>
-                    <p class="modal-text">To book a table at <strong>${restaurant.name}</strong>, please fill out the form below and discover more details.</p>
-                    <br>
-                    <form class="d-flex flex-column align-items-center" onsubmit="handleReservationSubmit(event)">
-                    <input class="form-name" type="text" id="fullName-${modalId}" name="fullName" placeholder="Full name" required>
-                    <input class="form-email" type="email" id="email-${modalId}" name="email" placeholder="Email" required>
-                    <input class="form-date" type="date" id="date-${modalId}" name="date" placeholder="Date" required>
-                    <input class="form-hour" type="time" id="hour-${modalId}" name="hour" placeholder="Hour" required>
-                    <textarea class="form-comment" id="comments-${modalId}" name="comments" rows="4" cols="50" placeholder="Type any comment for your reservation..."></textarea>
-                    <div class="text-end w-100">
-                        <button class="form-button w-50 btn border border-secondary mt-5 mb-4" type="submit"><i class="bi bi-arrow-right"> SEND</i></button>
+                    <div class="modal-logo">
+                        <img class="mb-5" src="../../public/img/logo-macedonia.webp" width="150vw" alt="logo-macedonia" />
                     </div>
-                    </form>
+                    <div>
+                        <h4 class="modal-title">${restaurant.name}</h4>
+                        <p class="modal-text">${restaurant.description}</p>
+                        <br>
+                        <h4 class="modal-title">Reservation ?</h4>
+                        <p class="modal-text">To book a table at <strong>${restaurant.name}</strong>, please fill out the form below and discover more details.</p>
+                        <br>
+                        <form class="form-reservation d-flex flex-column align-items-center pe-5" onsubmit="handleReservationSubmit(event)">
+                        <input class="form-name" type="text" id="fullName-${modalId}" name="fullName" placeholder="Full name" required>
+                        <input class="form-email" type="email" id="email-${modalId}" name="email" placeholder="Email" required>
+                        <div class="w-100 form-date-hour">
+                            <input class="form-date" type="date" id="date-${modalId}" name="date" placeholder="Date" required>
+                            <input class="form-hour" type="time" id="hour-${modalId}" name="hour" placeholder="Hour" required>
+                        </div>
+                        <textarea class="form-comment" id="comments-${modalId}" name="comments" rows="4" cols="50" placeholder="Type any comment for your reservation..."></textarea>
+                        <div class="text-end w-100">
+                            <button class="form-button w-50 btn border border-secondary mt-5 mb-4" type="submit"><i class="bi bi-arrow-right"> SEND</i></button>
+                        </div>
+                        </form>
+                    </div>
+                    </div>
                 </div>
-                </div>
-            </div>
             </div>
         </article>
         `;

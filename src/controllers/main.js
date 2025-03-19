@@ -8,7 +8,7 @@ import * as bootstrap from 'bootstrap'
 
 let navbarBtn = document.getElementById("navbarBtn");
 navbarBtn.addEventListener("click", () => {
-  console.log("Abriendo el menú de navegación.");
+  console.log("Opening navbar menu.");
   document.body.classList.toggle("open");
 });
 
@@ -16,7 +16,7 @@ let navbarLinks = document.querySelectorAll(".navbarLink");
 
 navbarLinks.forEach(navbarLink => {
   navbarLink.addEventListener("click", () => {
-    console.log("Entrando a link seleccionado.");
+    console.log("Redirecting to selected link.");
     document.body.classList.toggle("open");
   });
 });

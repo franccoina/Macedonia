@@ -4,6 +4,10 @@ import '../scss/create.scss'
 // Import all of Bootstrap's JS
 import * as bootstrap from 'bootstrap'
 
+// Import toastr
+import toastr from 'toastr';
+import 'toastr/build/toastr.min.css';
+
 // Endpoint's Domain
 import { url } from './routes';
 
@@ -22,8 +26,12 @@ import { url } from './routes';
 let btnLogout = document.getElementById("btnLogout")
 
 btnLogout.addEventListener("click", () => {
-    localStorage.removeItem("userOnline")
-    window.location.href = "./admi.html"
+    localStorage.removeItem("userOnline");
+    toastr.info("Log out was successful.");
+
+    setTimeout(() => {
+        window.location.href = "./admi.html"
+    }, 2000);
 })
 
 //--------------------------- FUNCIONES DE CRUD ---------------------------
@@ -40,9 +48,9 @@ const image1 = document.querySelector(".form-image1")
 const image2 = document.querySelector(".form-image2")
 const image3 = document.querySelector(".form-image3")
 const image4 = document.querySelector(".form-image4")
-const socialMedia1 = document.querySelector(".form-social-media1")
-const socialMedia2 = document.querySelector(".form-social-media2")
-const socialMedia3 = document.querySelector(".form-social-media3")
+const socialContact = document.querySelector(".form-social-contact")
+const socialMedia = document.querySelector(".form-social-media")
+const socialDelivery = document.querySelector(".form-social-delivery")
 const keyWords = document.querySelector(".form-key-word")
 
 const form = document.querySelector("form")
@@ -72,9 +80,9 @@ form.addEventListener('submit', async (event) => {
             image2: image2.value,
             image3: image3.value,
             image4: image4.value,
-            socialMedia1: socialMedia1.value,
-            socialMedia2: socialMedia2.value,
-            socialMedia3: socialMedia3.value,
+            socialContact: socialContact.value,
+            socialMedia: socialMedia.value,
+            socialDelivery: socialDelivery.value,
             keyWords: keyWords.value.toLowerCase(),
             reservations: []
         };
@@ -111,15 +119,16 @@ async function create(userId, newRestaurant) {
             body: JSON.stringify(user)
         });
 
-        if (!response.ok) throw new Error('Fallo en la actualización del usuario. No se pudo agregar nuevo restaurante.');
+        if (!response.ok) throw new Error(`Couldn't add new restaurant.`);
 
-        console.log('Restaurante agregado con éxito.');
-        alert('Restaurante agregado con éxito.');
+        console.log('Restaurant was added successfully.');
+        toastr.success("Restaurant was added successfully.");
 
         // Redirigir a la página de reservas
         window.location.href = "./booking.html";
     } catch (error) {
         console.error('Error:', error);
+        toastr.error(error);
     }
 }
 

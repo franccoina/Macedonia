@@ -324,6 +324,10 @@ body.open main {
     gap: 20px;
     border: white 2px solid;
     width: 100%;
+
+    & button {
+        cursor: help !important;
+    }
 }
 
 .btn-container-wrapper {
@@ -349,7 +353,7 @@ body.open main {
     gap: 40px;
     max-width: 1879px;
     margin: 0 auto;
-    padding-bottom: 100px;
+    padding-bottom: 75px;
 }
 
 .img-restaurant section {
@@ -563,7 +567,7 @@ body.open main {
 
     p {
         font-weight: normal;
-        font-size: 16px;
+        font-size: 15px;
     }
 
     .menu a {
@@ -598,18 +602,14 @@ body.open main {
         max-width: 769px;
     }
 
-    .img-restaurant-pic1 {
-        width: 300px;
-    }
-
     .img-restaurant-pic2 {
         display: none;
     }
 
+    .img-restaurant-pic1,
     .img-restaurant-pic3,
     .img-restaurant-pic4 {
-        position: relative;
-        left: 25px
+        width: 300px;
     }
 
     .modal-rest {
@@ -630,6 +630,10 @@ body.open main {
 
     .img-restaurant section {
         padding-left: 65px;
+
+        & p{
+            margin: 0;
+        }
     }
 
     body.open .navbar-burger {
@@ -649,7 +653,7 @@ body.open main {
 
     p {
         font-weight: normal;
-        font-size: 17px;
+        font-size: 15px;
     }
 
     .menu a {
@@ -681,8 +685,9 @@ body.open main {
     }
 
     .img-restaurant-pic1,
-    .img-restaurant-pic3 {
-        width: 180px;
+    .img-restaurant-pic3,
+    .img-restaurant-pic2 {
+        width: 190px;
     }
 
     .img-restaurant-pic4 {
@@ -691,6 +696,10 @@ body.open main {
 
     .img-restaurant section {
         padding-left: 20px;
+        
+        & p{
+            margin: 0;
+        }
     }
 
     .modal-rest {
@@ -716,7 +725,7 @@ body.open main {
 
     p {
         font-weight: normal;
-        font-size: 18px;
+        font-size: 16px;
     }
 
     .menu a {
@@ -764,6 +773,10 @@ body.open main {
 
     .img-restaurant section {
         padding-left: 110px;
+
+        & p{
+            margin: 0;
+        }
     }
 
     body.open .navbar-burger {
@@ -785,7 +798,7 @@ body.open main {
 
     p {
         font-weight: normal;
-        font-size: 18px;
+        font-size: 16px;
     }
 
     .menu a {
