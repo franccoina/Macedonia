@@ -187,8 +187,9 @@ async function renderRestaurant(userId, restaurantId) {
                 <div class="modal-dialog">
                     <div class="modal-content container d-flex flex-column align-items-center text-start">
                         <div class="modal-logo">
-                            <img class="mb-5" src="../../public/img/logo-macedonia.webp" width="150vw" alt="logo-macedonia" />
+                            <img class="mb-5" src="/img/logo-macedonia.webp" width="150vw" alt="logo-macedonia" />
                         </div>
+
                         <div>
                             <h4 class="modal-title">${restaurant.name}</h4>
                             <p class="modal-text">${restaurant.description}</p>
@@ -196,6 +197,7 @@ async function renderRestaurant(userId, restaurantId) {
                             <h4 class="modal-title">Reservation ?</h4>
                             <p class="modal-text">To book a table at <strong>${restaurant.name}</strong>, please fill out the form below and discover more details.</p>
                             <br>
+
                             <form class="form-reservation d-flex flex-column align-items-center pe-5" onsubmit="handleReservationSubmit(event)">
                                 <input class="form-name" type="text" id="fullName-${modalId}" name="fullName" placeholder="Full name" required>
                                 <input class="form-email" type="email" id="email-${modalId}" name="email" placeholder="Email" required>
