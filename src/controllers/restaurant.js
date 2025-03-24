@@ -186,6 +186,9 @@ async function renderRestaurant(userId, restaurantId) {
             <div class="w-100 modal fade" id="${modalId}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content container d-flex flex-column align-items-center text-start">
+                        <div class="modal-logo">
+                            <img class="mb-5" src="../../public/img/logo-macedonia.webp" width="150vw" alt="logo-macedonia" />
+                        </div>
                         <div>
                             <h4 class="modal-title">${restaurant.name}</h4>
                             <p class="modal-text">${restaurant.description}</p>

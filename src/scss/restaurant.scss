@@ -516,6 +516,11 @@ body.open main {
   background-color: var(--page-bg) !important;
 }
 
+.modal-logo{
+  opacity: 0.5;
+  filter: invert(1);
+}
+
 #reserva {
   background-color: var(--grad-gray) !important;
 }
@@ -659,6 +664,10 @@ textarea::placeholder {
 
 /*mobile*/
 @media (min-width: 320px) and (max-width: 769px) {
+
+  .modal-logo {
+    display: none;
+  }
 
   .form-reservation {
     padding-right: 0 !important;
