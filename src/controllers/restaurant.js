@@ -150,16 +150,16 @@ async function renderRestaurant(userId, restaurantId) {
                             <div class="info-header gap-3">
                                 <i class="bi bi-view-list text-dark"></i>
                                 <div>
-                                    <h1 class="info-name">Menu</h1>
+                                    <h1 class="info-name text-dark">Menu</h1>
                                     <p
-                                        class="info-text">${restaurant.name}'s menu</p>
+                                        class="info-text text-dark">${restaurant.name}'s menu</p>
                                 </div>
                             </div>
                         </a>
 
                         <div href="" class="infoBtn">
                             <div class="d-flex gap-3 mt-1">
-                                <i class="bi bi-tag text-dark"></i>
+                                <i class="bi bi-bookmarks text-secondary"></i>
                                 <div>
                                     <div class="tags">
                                         ${restaurant.keyWords.split(",").map(
@@ -173,7 +173,7 @@ async function renderRestaurant(userId, restaurantId) {
                     </article>
                 </section>
                 <section class="restaurant-info">
-                    <p class="info-text">${restaurant.description}</p>
+                    <p class="info-text text-dark">${restaurant.description}</p>
                 </section>
                 <button data-bs-toggle="modal" data-bs-target="#${modalId}" class="btn d-flex align-items-center justify-content-center gap-2 btn-dark w-100 reserveBtn">
                     <i class="bi bi-book"></i> Book a Table
