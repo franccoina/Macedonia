@@ -101,17 +101,17 @@ async function renderRestaurant(userId, restaurantId) {
             <!-- Columna izquierda -->
             <div class="left-column">
                 <section class="gallery">
-                    <video src="${restaurant.vid}" autoplay loop muted></video>
+                    <video src="${restaurant.vid}" autoplay="true" loop="true" muted alt="video-restaurant"></video>
                 </section>
 
                 <section class="gallery align-items-center justify-content-center w-100 d-flex gap-3 flex-column">
                     <div class="d-flex align-items-center justify-content-around w-100 gap-3">
-                        <img src=${restaurant.image1} alt="Imagen 1">
-                        <img src=${restaurant.image2} alt="Imagen 2">
+                        <img src=${restaurant.image1} alt="image-restaurant-1">
+                        <img src=${restaurant.image2} alt="image-restaurant-2">
                     </div>
                     <div class="d-flex align-items-center justify-content-around w-100 gap-3">
-                        <img src=${restaurant.image3} alt="Imagen 1">
-                        <img src=${restaurant.image4} alt="Imagen 2">
+                        <img src=${restaurant.image3} alt="image-restaurant-3">
+                        <img src=${restaurant.image4} alt="image-restaurant-4">
                     </div>
                 </section>
 

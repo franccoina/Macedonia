@@ -84,13 +84,13 @@ async function index() {
                     <td class="h-100">
                     <div class="h-100 d-flex">
                         <div>
-                        <img src=${element.image1} class="rounded m-1" width="30px" alt="restaurant-img" /><br>
-                            <img src=${element.image2} class="rounded m-1" width="30px" alt="restaurant-img" />
+                        <img src=${element.image1} class="rounded m-1" width="30px" alt="restaurant-img-1" /><br>
+                            <img src=${element.image2} class="rounded m-1" width="30px" alt="restaurant-img-2" />
                         </div>
                             <br>
                         <div>
-                            <img src=${element.image3} class="rounded m-1" width="30px" alt="restaurant-img" /><br>
-                            <img src=${element.image4} class="rounded m-1" width="30px" alt="restaurant-img" />
+                            <img src=${element.image3} class="rounded m-1" width="30px" alt="restaurant-img-3" /><br>
+                            <img src=${element.image4} class="rounded m-1" width="30px" alt="restaurant-img-4" />
                         </div>
                     </div>
                     </td>

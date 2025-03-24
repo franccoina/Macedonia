@@ -125,11 +125,11 @@ function renderRestaurant(userId, restaurant) {
         <h4><strong>${restaurant.name}</strong></h4>
         <p>${restaurant.city}</p>
       </section>
-      <video src="${restaurant.vid}" autoplay loop muted></video>
-      <div class="img-restaurant-pic1" style="background-image: url('${restaurant.image1}');">CLICK</div>
-      <div class="img-restaurant-pic2" style="background-image: url('${restaurant.image2}');"></div>
-      <div class="img-restaurant-pic3" style="background-image: url('${restaurant.image3}');"></div>
-      <div class="img-restaurant-pic4" style="background-image: url('${restaurant.image4}');"></div>
+      <video src="${restaurant.vid}" autoplay="true" loop="true" muted alt="video-restaurant"></video>
+      <div class="img-restaurant-pic1" alt="image-restaurant-1" style="background-image: url('${restaurant.image1}');">CLICK</div>
+      <div class="img-restaurant-pic2" alt="image-restaurant-2" style="background-image: url('${restaurant.image2}');"></div>
+      <div class="img-restaurant-pic3" alt="image-restaurant-3" style="background-image: url('${restaurant.image3}');"></div>
+      <div class="img-restaurant-pic4" alt="image-restaurant-4" style="background-image: url('${restaurant.image4}');"></div>
     </a>
   `;
 }
