@@ -481,11 +481,6 @@ body.open main {
   width: initial !important;
 }
 
-.modal-logo{
-  opacity: 0.5;
-  filter: invert(1);
-}
-
 .modal-title {
   margin: 0;
   margin-bottom: 20px;
@@ -664,10 +659,6 @@ textarea::placeholder {
 
 /*mobile*/
 @media (min-width: 320px) and (max-width: 769px) {
-  .modal-logo img{
-    width: 100px;
-    margin-bottom: 2rem !important;
-  }
 
   .form-reservation {
     padding-right: 0 !important;

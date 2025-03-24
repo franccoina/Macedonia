@@ -184,31 +184,28 @@ async function renderRestaurant(userId, restaurantId) {
         <!-- Modal -->
         <article class="container d-flex justify-content-center w-100">
             <div class="w-100 modal fade" id="${modalId}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content container d-flex flex-column align-items-center text-start">
-                    <div class="modal-logo">
-                        <img class="mb-5" src="../../public/img/logo-macedonia.webp" width="150vw" alt="logo-macedonia" />
-                    </div>
-                    <div>
-                        <h4 class="modal-title">${restaurant.name}</h4>
-                        <p class="modal-text">${restaurant.description}</p>
-                        <br>
-                        <h4 class="modal-title">Reservation ?</h4>
-                        <p class="modal-text">To book a table at <strong>${restaurant.name}</strong>, please fill out the form below and discover more details.</p>
-                        <br>
-                        <form class="form-reservation d-flex flex-column align-items-center pe-5" onsubmit="handleReservationSubmit(event)">
-                        <input class="form-name" type="text" id="fullName-${modalId}" name="fullName" placeholder="Full name" required>
-                        <input class="form-email" type="email" id="email-${modalId}" name="email" placeholder="Email" required>
-                        <div class="w-100 form-date-hour">
-                            <input class="form-date" type="date" id="date-${modalId}" name="date" placeholder="Date" required>
-                            <input class="form-hour" type="time" id="hour-${modalId}" name="hour" placeholder="Hour" required>
+                <div class="modal-dialog">
+                    <div class="modal-content container d-flex flex-column align-items-center text-start">
+                        <div>
+                            <h4 class="modal-title">${restaurant.name}</h4>
+                            <p class="modal-text">${restaurant.description}</p>
+                            <br>
+                            <h4 class="modal-title">Reservation ?</h4>
+                            <p class="modal-text">To book a table at <strong>${restaurant.name}</strong>, please fill out the form below and discover more details.</p>
+                            <br>
+                            <form class="form-reservation d-flex flex-column align-items-center pe-5" onsubmit="handleReservationSubmit(event)">
+                                <input class="form-name" type="text" id="fullName-${modalId}" name="fullName" placeholder="Full name" required>
+                                <input class="form-email" type="email" id="email-${modalId}" name="email" placeholder="Email" required>
+                                <div class="w-100 form-date-hour">
+                                    <input class="form-date" type="date" id="date-${modalId}" name="date" placeholder="Date" required>
+                                    <input class="form-hour" type="time" id="hour-${modalId}" name="hour" placeholder="Hour" required>
+                                </div>
+                                <textarea class="form-comment" id="comments-${modalId}" name="comments" rows="4" cols="50" placeholder="Type any comment for your reservation..."></textarea>
+                                <div class="text-end w-100">
+                                    <button class="form-button w-50 btn border border-secondary mt-5 mb-4" type="submit"><i class="bi bi-arrow-right"> SEND</i></button>
+                                </div>
+                            </form>
                         </div>
-                        <textarea class="form-comment" id="comments-${modalId}" name="comments" rows="4" cols="50" placeholder="Type any comment for your reservation..."></textarea>
-                        <div class="text-end w-100">
-                            <button class="form-button w-50 btn border border-secondary mt-5 mb-4" type="submit"><i class="bi bi-arrow-right"> SEND</i></button>
-                        </div>
-                        </form>
-                    </div>
                     </div>
                 </div>
             </div>
