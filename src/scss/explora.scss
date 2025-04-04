@@ -80,6 +80,15 @@ h5 {
     font-size: 30px;
 }
 
+hr {
+    margin: 50px 0;
+    width: 20%;
+    max-width: 500px;
+    height: 0;
+    border: none;
+    border-bottom: solid 1px var(--blackpacity);
+}
+
 li {
     list-style: none;
 }
@@ -93,12 +102,6 @@ button {
 
 a {
     text-decoration: none !important;
-}
-
-hr {
-    width: 80%;
-    border: 0;
-    border-bottom: 2px solid var(--black);
 }
 
 input,
@@ -344,6 +347,15 @@ body.open main {
 
 /*------------------------------ Food images Gallery ------------------------------*/
 
+#restaurantList{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 70px;
+    width: 100%;
+}
+
 .img-restaurant {
     width: 100%;
     height: auto;
@@ -353,7 +365,6 @@ body.open main {
     gap: 40px;
     max-width: 1879px;
     margin: 0 auto;
-    padding-bottom: 71px;
 }
 
 .img-restaurant section {
@@ -593,6 +604,11 @@ body.open main {
 
     .modal {
         --bs-modal-width: initial !important;
+    }
+
+    hr {
+        margin: 35px 0 25px 0;
+        width: 25%;
     }
 
     /* … */
