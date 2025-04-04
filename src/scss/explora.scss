@@ -74,6 +74,10 @@ h1 {
     margin: 0;
 }
 
+h4 {
+    font-size: calc(1.275rem + 0.3vw);
+}
+
 h5 {
     color: var(--whitepacity-light);
     font-weight: normal;
@@ -314,7 +318,7 @@ body.open main {
     white-space: nowrap;
     width: 80%;
     border: white 2px solid;
-    padding-bottom: 20px;
+    padding-bottom: 10px;
 }
 
 .btn-content {
@@ -352,7 +356,7 @@ body.open main {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    gap: 70px;
+    gap: 0;
     width: 100%;
 }
 

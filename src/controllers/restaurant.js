@@ -84,11 +84,11 @@ async function renderRestaurant(userId, restaurantId) {
         // Renderiza el HTML del restaurante
         restaurantInfo.innerHTML = `
         <!-- Page Restaurant -->
-        <div class="header text-secondary">
-            <h1><strong>${restaurant.name}</strong></h1>
+        <div class="header">
+            <h1 class="text-dark"><strong>${restaurant.name}</strong></h1>
             <div
                 class="w-100 d-flex align-items-center justify-content-between">
-                <p>${restaurant.city}</p>
+                <p class="text-secondary">${restaurant.city}</p>
                 <div class="d-flex text-secondary align-items-center gap-2">
                     <i class="bi bi-eye"></i>
                     <small><strong>${restaurant.reservations.length}</strong></small>
@@ -152,7 +152,7 @@ async function renderRestaurant(userId, restaurantId) {
                                 <div>
                                     <h1 class="info-name text-dark">Menu</h1>
                                     <p
-                                        class="info-text text-dark">${restaurant.name}'s menu</p>
+                                        class="info-text text-secondary">${restaurant.name}'s menu</p>
                                 </div>
                             </div>
                         </a>
@@ -173,7 +173,7 @@ async function renderRestaurant(userId, restaurantId) {
                     </article>
                 </section>
                 <section class="restaurant-info">
-                    <p class="info-text text-dark">${restaurant.description}</p>
+                    <p class="info-text text-secondary">${restaurant.description}</p>
                 </section>
                 <button data-bs-toggle="modal" data-bs-target="#${modalId}" class="btn d-flex align-items-center justify-content-center gap-2 btn-dark w-100 reserveBtn">
                     <i class="bi bi-book"></i> Book a Table

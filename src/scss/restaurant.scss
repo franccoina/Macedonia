@@ -256,7 +256,7 @@ body.open main {
 }
 
 .header h1 {
-    font-size: 1.5rem;
+    font-size: calc(1.275rem + 0.3vw);
     margin: 0;
 }
 
@@ -413,7 +413,6 @@ body.open main {
   
   .info-text{
     margin: 0;
-    opacity: 0.7;
     font-size: 0.8rem;
   }
 
@@ -749,7 +748,7 @@ textarea::placeholder {
 
   p {
     font-weight: normal;
-    font-size: 14px;
+    font-size: 15px;
   }
 
   .menu a {
@@ -834,7 +833,7 @@ textarea::placeholder {
 
   p {
     font-weight: normal;
-    font-size: 15px;
+    font-size: 16px;
   }
 
   .menu a {

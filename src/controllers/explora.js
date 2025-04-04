@@ -120,7 +120,7 @@ function matchesSearch(restaurant, searchWord) {
  */
 function renderRestaurant(userId, restaurant) {
   restaurantList.innerHTML += `
-    <a href="./restaurant.html" class="img-restaurant text-dark" data-user="${userId}" data-id="${restaurant.id}">
+    <a href="./restaurant.html" class="img-restaurant text-secondary" data-user="${userId}" data-id="${restaurant.id}">
       <section>
         <h4><strong>${restaurant.name}</strong></h4>
         <p>${restaurant.city}</p>
@@ -131,6 +131,7 @@ function renderRestaurant(userId, restaurant) {
       <div class="img-restaurant-pic3" alt="image-restaurant-3" style="background-image: url('${restaurant.image3}');"></div>
       <div class="img-restaurant-pic4" alt="image-restaurant-4" style="background-image: url('${restaurant.image4}');"></div>
     </a>
+    <hr>
   `;
 }
 
