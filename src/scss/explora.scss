@@ -516,10 +516,13 @@ body.open main {
         gap: 15px
     }
 
-    .img-restaurant-pic1, 
     .img-restaurant-pic2 {
-        width: 4rem;
+        width: 8rem;
         position: relative;
+    }
+
+    .img-restaurant-pic1 {
+        display: none;
     }
 
     .img-restaurant-pic3{
